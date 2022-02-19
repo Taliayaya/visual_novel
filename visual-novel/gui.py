@@ -1,10 +1,14 @@
 import string
 import tkinter as tk
 from PIL import ImageTk, Image
+import os
+import getAbsolutePath
 
 # Background Image
 IMAGEWIDTH = 1000
 IMAGEHEIGHT = 400
+
+script_dir = os.path.dirname(__file__)
 
 
 class App:
@@ -52,8 +56,10 @@ class App:
         self.root.config(menu=self.menuContainer)
 
     def setupBackground(self):
+        img = getAbsolutePath.getAbsolutePath(
+            script_dir, '../assets/images/space.jpg')
         self.bg = ImageTk.PhotoImage(Image.open(
-            '../assets/images/space.jpg').resize((IMAGEWIDTH, IMAGEHEIGHT), Image.ANTIALIAS))
+            img).resize((IMAGEWIDTH, IMAGEHEIGHT), Image.ANTIALIAS))
         canv = tk.Canvas(self.root, width=IMAGEWIDTH,
                          height=IMAGEHEIGHT, bg="white")
         canv.grid(row=0, column=0)
