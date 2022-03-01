@@ -4,10 +4,12 @@ from PIL import ImageTk, Image
 import os
 import visual_novel.getAbsolutePath
 import visual_novel.interpreter as interpreter
+import visual_novel.history_tree as htree
 
 # Background Image
 IMAGEWIDTH = 1000
 IMAGEHEIGHT = 400
+BACKGROUND_DIR = 'assets/images/'
 
 script_dir = os.path.dirname(__file__)
 
@@ -15,15 +17,16 @@ script_dir = os.path.dirname(__file__)
 class App:
     def __init__(self) -> None:
         self.root = tk.Tk()
-        self.currentFile = 'init.txt'
+        self.htree = htree.getHistoryTree()
+        self.currentFile = self.htree.getFile()
         self.currentLine = 0
         self.changeFile()
+        self.isChoosing = False
 
     def start(self):
         self.root.bind("<space>", lambda x: self.setDialogueBox())
         self.setupBackground()
         self.menu()
-        self.choiceContainer('Yes', 'No')
         self.chooseUsername()
         self.setDialogueBox(False)
         self.root.mainloop()
@@ -31,9 +34,41 @@ class App:
     def changeFile(self):
         self.history = interpreter.getHistory(self.currentFile)
 
+    def nextChapter(self, node: bool):
+        u"""
+        Change de noeud dans l'histoire et permet d'avancer d'un chapitre
+
+        Précondition:
+            node (bool) : correspond si l'histoire continue sur la branche
+            gauche (True) ou droite (False) de l'arbre
+
+        Postcondition:
+            Réinitialise le compteur de ligne
+            Retire la fenêtre de choix
+            Récupère le texte du nouveau chapitre
+            Affiche le nouveau texte"""
+        if node:
+            self.htree = self.htree.getLeft()
+        else:
+            self.htree = self.htree.getRight()
+        self.choiceContainer((None, None), (None,None), True)
+        self.currentFile = self.htree.getFile()
+        self.changeFile()
+        self.currentLine = 0
+        self.isChoosing = False
+        self.setDialogueBox(True)
+
     def setDialogueBox(self, destroy=True):
-        self.setCharacterMessage(
-            "Ilan", self.history[self.currentLine], destroy)
+        if self.isChoosing:
+            return
+        if self.history[self.currentLine]['type'] != "choice":
+            self.setCharacterMessage(
+           self.history[self.currentLine]["name"], self.history[self.currentLine]["text"], destroy)
+        else:
+            choice1 = self.history[self.currentLine]["choice1"]
+            choice2 = self.history[self.currentLine]["choice2"]
+            self.choiceContainer(choice1, choice2)
+            self.isChoosing = True
         if self.currentLine+1 < len(self.history):
             self.currentLine += 1
 
@@ -83,7 +118,7 @@ class App:
         Affiche l'image choisie comme décors du jeu
         """
         img = visual_novel.getAbsolutePath.getAbsolutePath(
-            script_dir, 'assets/images/space.jpg')
+            script_dir, f'{BACKGROUND_DIR}space.jpg')
         self.bg = ImageTk.PhotoImage(Image.open(
             img).resize((IMAGEWIDTH, IMAGEHEIGHT), Image.ANTIALIAS))
         canv = tk.Canvas(self.root, width=IMAGEWIDTH,
@@ -91,7 +126,7 @@ class App:
         canv.grid(row=0, column=0)
         canv.create_image(0, 0, anchor=tk.NW, image=self.bg)
 
-    def choiceContainer(self, choice1: tuple, choice2: tuple):
+    def choiceContainer(self, choice1: tuple, choice2: tuple, destroy=False):
         """
         Affiche deux boutons permettant de passer dans une
         nouvelle branche de l'arbre. Demande au joueur de faire un choix
@@ -103,17 +138,21 @@ class App:
         Postcondition:
             Affiche deux boutons de message tuple[0] et de destination tuple[1]
         """
+        if destroy:
+            self.choiceFrame.destroy()
+            return
         self.choiceFrame = tk.Frame(
             self.root, relief=tk.GROOVE, padx=10, pady=10)
         self.choiceFrame.grid(row=1, column=0)
 
         self.buttonLeft = tk.Button(
-            self.choiceFrame, text=choice1, padx=10, pady=10)
+            self.choiceFrame, text=choice1[0], padx=10, pady=10, command=lambda: self.nextChapter(True))
         self.buttonRight = tk.Button(
-            self.choiceFrame, text=choice2, padx=10, pady=10)
+            self.choiceFrame, text=choice2[0], padx=10, pady=10, command=lambda: self.nextChapter(False))
 
         self.buttonLeft.pack(side=tk.LEFT, expand="yes", padx=5, pady=5)
         self.buttonRight.pack(side=tk.RIGHT, expand="yes", padx=5, pady=5)
+        print(self.choiceFrame)
 
     def setCharacterMessage(self, name: str, message: str, destroy: bool=True):
         """Affiche le message du personnage sur l'interface et retire le précédent
