@@ -47,7 +47,16 @@ class App:
         bouton.grid(row=4, column=0)
 
     def menu(self):
-        """Create the upper menu
+        """
+        Permet la création du menu
+
+        Contient les catégories:
+            - FICHIER
+                - Nouvelle Partie
+                - Sauvegarder
+                - Quitter
+            - EDITER
+            - AIDE
         """
         self.menuContainer = tk.Menu(self.root)
 
@@ -70,8 +79,11 @@ class App:
         self.root.config(menu=self.menuContainer)
 
     def setupBackground(self):
+        """
+        Affiche l'image choisie comme décors du jeu
+        """
         img = visual_novel.getAbsolutePath.getAbsolutePath(
-            script_dir, '../assets/images/space.jpg')
+            script_dir, 'assets/images/space.jpg')
         self.bg = ImageTk.PhotoImage(Image.open(
             img).resize((IMAGEWIDTH, IMAGEHEIGHT), Image.ANTIALIAS))
         canv = tk.Canvas(self.root, width=IMAGEWIDTH,
@@ -79,7 +91,18 @@ class App:
         canv.grid(row=0, column=0)
         canv.create_image(0, 0, anchor=tk.NW, image=self.bg)
 
-    def choiceContainer(self, choice1, choice2):
+    def choiceContainer(self, choice1: tuple, choice2: tuple):
+        """
+        Affiche deux boutons permettant de passer dans une
+        nouvelle branche de l'arbre. Demande au joueur de faire un choix
+
+        Préconditions:
+            - choice1 (tuple): contient le message du bouton1 et son fichier de destination
+            - choice2 (tuple): contient le message du bouton2 et son fichier de destination
+
+        Postcondition:
+            Affiche deux boutons de message tuple[0] et de destination tuple[1]
+        """
         self.choiceFrame = tk.Frame(
             self.root, relief=tk.GROOVE, padx=10, pady=10)
         self.choiceFrame.grid(row=1, column=0)
@@ -92,7 +115,16 @@ class App:
         self.buttonLeft.pack(side=tk.LEFT, expand="yes", padx=5, pady=5)
         self.buttonRight.pack(side=tk.RIGHT, expand="yes", padx=5, pady=5)
 
-    def setCharacterMessage(self, name, message, destroy=True):
+    def setCharacterMessage(self, name: str, message: str, destroy: bool=True):
+        """Affiche le message du personnage sur l'interface et retire le précédent
+
+        Préconditions:
+            - name (str) est le nom du personnage qui parle
+            - message (str) est le message associé au personnage
+            - destroy (bool) retire ou non le message précédent
+
+        Postcondition:
+            Affiche le message name/message sur l'interface"""
         if destroy:
             self.char.destroy()
         self.char = tk.LabelFrame(self.root, text=name, padx=20, pady=20)

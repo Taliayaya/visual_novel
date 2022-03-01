@@ -2,7 +2,7 @@ import visual_novel.getAbsolutePath as getAbsolutePath
 import os
 
 script_dir = os.path.dirname(__file__)
-DATADIRECTORY = '../assets/history/'
+DATADIRECTORY = 'assets/history/'
 
 # SYMBOLES :
 CHOICE_START = '#'
