@@ -26,3 +26,23 @@ Did you ever hear the Tragedy of Darth Plagueis the Wise ?
 
 -   Choix 1 : No -> emmène vers dewit.txt
 -   Choix 2 : ... -> emmène vers tragedy.txt
+
+## Présence d'un dialogue 
+
+### Signification des symboles 
+
+| Symbole | Role                                 |
+| ------- | ------------------------------------ |
+| -       | Indique le début d'un dialogue       |
+| : -     | Délimite interlocuteur/texte         |
+
+### Exemple
+
+```
+- Palpatine : - "Did you ever hear the Tragedy of Darth Plagueis the Wise ?"
+```
+```
+{"type":"dialogue", "name":"Palpatine", "text":'"Did you ever hear the Tragedy of Darth Plagueis the Wise ?"'}
+```
+
+
