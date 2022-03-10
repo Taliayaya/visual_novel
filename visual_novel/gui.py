@@ -8,19 +8,19 @@ import visual_novel.history_tree as htree
 import visual_novel.arbre as arbre
 
 # Window
-WIDTH = 1000 
-HEIGHT = 550
+WIDTH = 1000
+HEIGHT = 500
 # Background Image
 IMAGEWIDTH = 1000
-IMAGEHEIGHT = 400
+IMAGEHEIGHT = 500
 BACKGROUND_DIR = 'assets/images/'
-# Character Image 
-CHRIMAGEWIDTH = 100 
+# Character Image
+CHRIMAGEWIDTH = 100
 CHRIMAGEHEIGHT = 300
-# Font 
+# Font
 FONTSIZE = 12
 FONTFAMILY = 'Arial'
-# Message Label 
+# Message Label
 LABELWIDTH = 100
 script_dir = os.path.dirname(__file__)
 
@@ -39,9 +39,9 @@ class App:
         self.root.bind("<space>", lambda x: self.setDialogueBox())
         self.setupBackground()
         self.menu()
-        #self.chooseUsername()
+        # self.chooseUsername()
         self.setDialogueBox(False)
-        #self.setCharacterImage()
+        self.setCharacterImage()
         self.root.mainloop()
 
     def changeFile(self):
@@ -65,7 +65,7 @@ class App:
         else:
             self.htree = self.htree.getRight()
         # Supprime la zone de choix
-        self.choiceContainer((None, None), (None,None), True)
+        self.choiceContainer((None, None), (None, None), True)
         # Récupère le nouveau fichier puis traite l'histoire
         self.currentFile = self.htree.getFile()
         self.changeFile()
@@ -76,22 +76,18 @@ class App:
 
     def setCharacterImage(self):
         img = visual_novel.getAbsolutePath.getAbsolutePath(
-            script_dir, f'{BACKGROUND_DIR}space.jpg')
-        self.chrimg = ImageTk.PhotoImage(Image.open(
-            img).resize((CHRIMAGEWIDTH, CHRIMAGEHEIGHT), Image.ANTIALIAS))
+            script_dir, f'{BACKGROUND_DIR}/chr/chr1.png')
+        self.chrimg = tk.PhotoImage(file=img)
         chrcanv = tk.Canvas(self.root, width=CHRIMAGEWIDTH,
-                         height=CHRIMAGEHEIGHT, bg="white")
-        chrcanv.grid(row=0, column=1)
+                            height=CHRIMAGEHEIGHT, bg="white")
+        chrcanv.place(x=0, y=0)
         chrcanv.create_image(0, 0, anchor=tk.NW, image=self.chrimg)
-
-  
-
 
     def setDialogueBox(self, destroy=True):
         u"""
         Traite l'histoire du jeu et décide quel affichage
         chaque ligne doit recevoir en fonction de son type. 
-        
+
         Récupère la variable self.history et la ligne actuelle
         pour récupérer un dictionnaire. Ce dictionnaire contient 
         une clef `type` qui identifie chaque ligne.
@@ -115,7 +111,7 @@ class App:
         # Renvoie vers l'affichage d'un texte
         if self.history[self.currentLine]['type'] != "choice":
             self.setCharacterMessage(
-           self.history[self.currentLine]["name"], self.history[self.currentLine]["text"], destroy)
+                self.history[self.currentLine]["name"], self.history[self.currentLine]["text"], destroy)
         else:
             # Renvoie vers une zone de choix
             choice1 = self.history[self.currentLine]["choice1"]
@@ -142,7 +138,7 @@ class App:
         input.grid(row=3, column=0)
         bouton = tk.Button(self.root, text="Commencer l'aventure",
                            command=lambda: self.setCharacterMessage(input.get(), 'No one can choose who he is in this world'))
-        bouton.grid(row=4, column=0)
+        bouton.pack()
 
     def menu(self):
         u"""
@@ -163,7 +159,8 @@ class App:
         # FICHIER MENU
         self.fichier = tk.Menu(self.menuContainer, tearoff=0)
         self.fichier.add_command(label="Nouvelle Partie")
-        self.fichier.add_command(label="Sauvegarder", command=lambda: arbre.writeSave(self.htree))
+        self.fichier.add_command(
+            label="Sauvegarder", command=lambda: arbre.writeSave(self.htree))
         self.fichier.add_command(label="Charger une sauvegarde")
         self.fichier.add_separator()
         self.fichier.add_command(label="Quitter", command=self.root.quit)
@@ -188,8 +185,8 @@ class App:
         self.bg = ImageTk.PhotoImage(Image.open(
             img).resize((IMAGEWIDTH, IMAGEHEIGHT), Image.ANTIALIAS))
         self.canv = tk.Canvas(self.root, width=IMAGEWIDTH,
-                         height=IMAGEHEIGHT, bg="white")
-        self.canv.grid(row=0, column=0)
+                              height=IMAGEHEIGHT, bg="white")
+        self.canv.place(x=0, y=0)
         self.canv.create_image(0, 0, anchor=tk.NW, image=self.bg)
 
     def choiceContainer(self, choice1: tuple, choice2: tuple, destroy=False):
@@ -213,19 +210,19 @@ class App:
             self.choiceFrame.destroy()
             return
         self.choiceFrame = tk.Frame(
-            self.root, relief=tk.GROOVE, padx=10, pady=10)
-        self.choiceFrame.grid(row=1, column=0)
+            self.root, relief=tk.GROOVE)
+        self.choiceFrame.pack(fill="none", expand=True)
 
         self.buttonLeft = tk.Button(
             self.choiceFrame, text=choice1[0], padx=10, pady=10, command=lambda: self.nextChapter(True))
         self.buttonRight = tk.Button(
             self.choiceFrame, text=choice2[0], padx=10, pady=10, command=lambda: self.nextChapter(False))
 
-        self.buttonLeft.pack(side=tk.LEFT, expand="yes", padx=5, pady=5)
-        self.buttonRight.pack(side=tk.RIGHT, expand="yes", padx=5, pady=5)
+        self.buttonLeft.pack(expand="yes")
+        self.buttonRight.pack(expand="yes")
         print(self.choiceFrame)
 
-    def setCharacterMessage(self, name: str, message: str, destroy: bool=True):
+    def setCharacterMessage(self, name: str, message: str, destroy: bool = True):
         u"""
         Affiche le message du personnage sur l'interface
         et retire le précédent
@@ -245,9 +242,10 @@ class App:
         if destroy:
             self.char.destroy()
         self.char = tk.LabelFrame(self.root, text=name, padx=20, pady=20)
-        self.char.grid(row=2, column=0, padx=10, pady=10)
-        self.message = tk.Label(self.char, text=message, width=LABELWIDTH, font=(FONTFAMILY, FONTSIZE))
-        self.message.grid(row=0, column=0)
+        self.char.pack(side=tk.BOTTOM, padx=10, pady=10)
+        self.message = tk.Label(self.char, text=message,
+                                width=LABELWIDTH, font=(FONTFAMILY, FONTSIZE))
+        self.message.pack()
 
 
 if __name__ == "__main__":
