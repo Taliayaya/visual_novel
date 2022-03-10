@@ -1,3 +1,10 @@
+import visual_novel.getAbsolutePath as getAbsolutePath
+import tkinter.messagebox
+import os 
+
+script_dir = os.path.dirname(__file__)
+SAVEDIRECTORY = 'assets/saves/'
+
 class Arbre:
     u"""
     Représente un Arbre Binaire
@@ -38,7 +45,7 @@ class Arbre:
         Change le fils droit du noeud actuel en un nouveau noeud 
         ayant comme attributs value et file
     """
-
+    choices = []
     def __init__(self, value: str, file: str, left=None, right=None) -> None:
         u"""
         Initialise le noeud racine de l'arbre binaire ou un de
@@ -98,6 +105,7 @@ class Arbre:
             ou None si le noeud actuel ne possède pas de fils
             gauche. 
         """
+        self.choices.append('L')
         return self._left
 
     def getRight(self):
@@ -110,6 +118,7 @@ class Arbre:
             ou None si le noeud actuel ne possède pas de fils
             droit. 
         """
+        self.choices.append('R')
         return self._right
 
     def addLeft(self, value: str, file: str) -> None:
@@ -158,7 +167,21 @@ class Arbre:
         """
         self._right = Arbre(value, file)
 
+def writeSave(abr):
+    choices = ' '.join(abr.choices)
+    filelocation = getAbsolutePath.getAbsolutePath(script_dir, f'{SAVEDIRECTORY}save.txt')
+    try:
+        with open(filelocation, 'w') as f:
+            f.write(choices)
+        tkinter.messagebox.showinfo("Sauvegarde réussie",  "La partie a été sauvergardée !")
+    except Exception:
+        tkinter.messagebox.showerror("Échec de la sauvegarde", "La sauvegarde de la partie a échoué. Veuillez réessayer.")
 
 if __name__ == "__main__":
     abr = Arbre('Init', 'init.txt')
-    print(abr)
+    abr.addLeft('L1', 'l1.txt')
+    abr = abr.getLeft()
+    abr.addRight('R2','')
+    abr = abr.getRight()
+    print(abr.choices)
+    writeSave(abr)

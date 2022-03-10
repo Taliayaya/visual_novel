@@ -5,18 +5,30 @@ import os
 import visual_novel.getAbsolutePath
 import visual_novel.interpreter as interpreter
 import visual_novel.history_tree as htree
+import visual_novel.arbre as arbre
 
+# Window
+WIDTH = 1000 
+HEIGHT = 550
 # Background Image
 IMAGEWIDTH = 1000
 IMAGEHEIGHT = 400
 BACKGROUND_DIR = 'assets/images/'
-
+# Character Image 
+CHRIMAGEWIDTH = 100 
+CHRIMAGEHEIGHT = 300
+# Font 
+FONTSIZE = 12
+FONTFAMILY = 'Arial'
+# Message Label 
+LABELWIDTH = 100
 script_dir = os.path.dirname(__file__)
 
 
 class App:
     def __init__(self) -> None:
         self.root = tk.Tk()
+        self.root.geometry(f'{WIDTH}x{HEIGHT}')
         self.htree = htree.getHistoryTree()
         self.currentFile = self.htree.getFile()
         self.currentLine = 0
@@ -27,8 +39,9 @@ class App:
         self.root.bind("<space>", lambda x: self.setDialogueBox())
         self.setupBackground()
         self.menu()
-        self.chooseUsername()
+        #self.chooseUsername()
         self.setDialogueBox(False)
+        #self.setCharacterImage()
         self.root.mainloop()
 
     def changeFile(self):
@@ -60,6 +73,19 @@ class App:
         # Permet à l'utilisateur de continuer l'histoire
         self.isChoosing = False
         self.setDialogueBox(True)
+
+    def setCharacterImage(self):
+        img = visual_novel.getAbsolutePath.getAbsolutePath(
+            script_dir, f'{BACKGROUND_DIR}space.jpg')
+        self.chrimg = ImageTk.PhotoImage(Image.open(
+            img).resize((CHRIMAGEWIDTH, CHRIMAGEHEIGHT), Image.ANTIALIAS))
+        chrcanv = tk.Canvas(self.root, width=CHRIMAGEWIDTH,
+                         height=CHRIMAGEHEIGHT, bg="white")
+        chrcanv.grid(row=0, column=1)
+        chrcanv.create_image(0, 0, anchor=tk.NW, image=self.chrimg)
+
+  
+
 
     def setDialogueBox(self, destroy=True):
         u"""
@@ -127,6 +153,7 @@ class App:
             - FICHIER
                 - Nouvelle Partie
                 - Sauvegarder
+                - Charger une sauvegarde
                 - Quitter
             - EDITER
             - AIDE
@@ -136,7 +163,8 @@ class App:
         # FICHIER MENU
         self.fichier = tk.Menu(self.menuContainer, tearoff=0)
         self.fichier.add_command(label="Nouvelle Partie")
-        self.fichier.add_command(label="Sauvegarder")
+        self.fichier.add_command(label="Sauvegarder", command=lambda: arbre.writeSave(self.htree))
+        self.fichier.add_command(label="Charger une sauvegarde")
         self.fichier.add_separator()
         self.fichier.add_command(label="Quitter", command=self.root.quit)
         self.menuContainer.add_cascade(label="Fichier", menu=self.fichier)
@@ -159,10 +187,10 @@ class App:
             script_dir, f'{BACKGROUND_DIR}space.jpg')
         self.bg = ImageTk.PhotoImage(Image.open(
             img).resize((IMAGEWIDTH, IMAGEHEIGHT), Image.ANTIALIAS))
-        canv = tk.Canvas(self.root, width=IMAGEWIDTH,
+        self.canv = tk.Canvas(self.root, width=IMAGEWIDTH,
                          height=IMAGEHEIGHT, bg="white")
-        canv.grid(row=0, column=0)
-        canv.create_image(0, 0, anchor=tk.NW, image=self.bg)
+        self.canv.grid(row=0, column=0)
+        self.canv.create_image(0, 0, anchor=tk.NW, image=self.bg)
 
     def choiceContainer(self, choice1: tuple, choice2: tuple, destroy=False):
         u"""
@@ -218,7 +246,7 @@ class App:
             self.char.destroy()
         self.char = tk.LabelFrame(self.root, text=name, padx=20, pady=20)
         self.char.grid(row=2, column=0, padx=10, pady=10)
-        self.message = tk.Label(self.char, text=message)
+        self.message = tk.Label(self.char, text=message, width=LABELWIDTH, font=(FONTFAMILY, FONTSIZE))
         self.message.grid(row=0, column=0)
 
 

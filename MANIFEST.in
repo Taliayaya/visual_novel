@@ -1,3 +1,4 @@
-include visual_novel/assets/*
+include visual_novel/assets
 include visual_novel/assets/history/*
 include visual_novel/assets/images/*
+include visual_novel/assets/saves/*
