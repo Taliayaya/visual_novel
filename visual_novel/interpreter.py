@@ -12,6 +12,7 @@ CHOICE_DESTINATION = '~'
 DIALOGUE_START = '-'
 DIALOGUE_DELIMITER = ': -'
 
+
 def getChoices(line: str) -> list:
     u"""Récupère dans la ligne la question et forme une liste contenant les questions et leur destination
 
@@ -31,7 +32,8 @@ def getChoices(line: str) -> list:
     choice1, choice2 = choices.split(CHOICE_DELIMITER)
     choice1, choice1_dest = choice1.split(CHOICE_DESTINATION)
     choice2, choice2_dest = choice2.split(CHOICE_DESTINATION)
-    return {"type":"choice", "choice1":(choice1, choice1_dest),"choice2":(choice2, choice2_dest)}
+    return {"type": "choice", "choice1": (choice1, choice1_dest), "choice2": (choice2, choice2_dest)}
+
 
 def getDialogue(line: str) -> dict:
     u"""Récupère une ligne de dialogue et la formate pour l'utilisation
@@ -56,7 +58,8 @@ def getDialogue(line: str) -> dict:
     """
     name, text = line.split(DIALOGUE_DELIMITER)
     name = name[1:]
-    return {"type":"dialogue","name":name, "text":text}
+    return {"type": "dialogue", "name": name, "text": text}
+
 
 def getDescription(line: str) -> dict:
     u"""Récupère une ligne de description et la formate pour l'utilisation
@@ -76,12 +79,13 @@ def getDescription(line: str) -> dict:
         Expected Output :
         >>> {"type":"description", "name":"", "text":'"You\'re finally awake !"'}
     """
-    return {"type":"description", "name":"", "text":line}
+    return {"type": "description", "name": "", "text": line}
+
 
 def getHistory(file):
     file_dir = getAbsolutePath.getAbsolutePath(script_dir, DATADIRECTORY+file)
     history = []
-    with open(file_dir) as f:
+    with open(file_dir, encoding='utf-8') as f:
         for line in f.readlines():
             if line[0] == CHOICE_START:
                 history.append(getChoices(line))
