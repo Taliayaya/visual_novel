@@ -1,3 +1,4 @@
+from email.mime import image
 import string
 import tkinter as tk
 from PIL import ImageTk, Image
@@ -41,7 +42,7 @@ class App:
         self.menu()
         # self.chooseUsername()
         self.setDialogueBox(False)
-        self.setCharacterImage()
+        # self.setCharacterImage()
         self.root.mainloop()
 
     def changeFile(self):
@@ -74,32 +75,23 @@ class App:
         self.isChoosing = False
         self.setDialogueBox(True)
 
-    def setCharacterImage(self):
-        img = visual_novel.getAbsolutePath.getAbsolutePath(
-            script_dir, f'{BACKGROUND_DIR}/chr/chr1.png')
-        self.chrimg = tk.PhotoImage(file=img)
-        chrcanv = tk.Canvas(self.root, width=CHRIMAGEWIDTH,
-                            height=CHRIMAGEHEIGHT, bg="white")
-        chrcanv.place(x=0, y=0)
-        chrcanv.create_image(0, 0, anchor=tk.NW, image=self.chrimg)
-
     def setDialogueBox(self, destroy=True):
         u"""
         Traite l'histoire du jeu et décide quel affichage
-        chaque ligne doit recevoir en fonction de son type. 
+        chaque ligne doit recevoir en fonction de son type.
 
         Récupère la variable self.history et la ligne actuelle
-        pour récupérer un dictionnaire. Ce dictionnaire contient 
+        pour récupérer un dictionnaire. Ce dictionnaire contient
         une clef `type` qui identifie chaque ligne.
 
-        Précondition: 
-            destroy : bool 
+        Précondition:
+            destroy : bool
                 indique si la frame précédente doit être
                 détruite ou non. True pour destroy, False pour keep.
-                True par défaut. 
+                True par défaut.
 
-        Postcondition: 
-            Renvoie vers l'une des fonctions permettant de traiter 
+        Postcondition:
+            Renvoie vers l'une des fonctions permettant de traiter
             le cas de la ligne actuelle.
             Augmente de 1 la ligne actuelle dans l'histoire.
         """
@@ -176,18 +168,25 @@ class App:
 
         self.root.config(menu=self.menuContainer)
 
-    def setupBackground(self):
+    def setupBackground(self, changeBg=True):
         u"""
         Affiche l'image choisie comme décors du jeu
         """
-        img = visual_novel.getAbsolutePath.getAbsolutePath(
-            script_dir, f'{BACKGROUND_DIR}space.jpg')
-        self.bg = ImageTk.PhotoImage(Image.open(
-            img).resize((IMAGEWIDTH, IMAGEHEIGHT), Image.ANTIALIAS))
-        self.canv = tk.Canvas(self.root, width=IMAGEWIDTH,
-                              height=IMAGEHEIGHT, bg="white")
-        self.canv.place(x=0, y=0)
-        self.canv.create_image(0, 0, anchor=tk.NW, image=self.bg)
+        if changeBg:
+            self.canv = tk.Canvas(self.root, width=IMAGEWIDTH,
+                                  height=IMAGEHEIGHT)
+            img = visual_novel.getAbsolutePath.getAbsolutePath(
+                script_dir, f'{BACKGROUND_DIR}space.jpg')
+            self.bg = ImageTk.PhotoImage(Image.open(
+                img).resize((IMAGEWIDTH, IMAGEHEIGHT), Image.ANTIALIAS))
+            self.canv.create_image(0, 0, anchor=tk.NW, image=self.bg)
+        else:
+            chrimg = visual_novel.getAbsolutePath.getAbsolutePath(
+                script_dir, f'{BACKGROUND_DIR}chr/chr1.png')
+            self.canv.place(x=0, y=0)
+            self.chrbg = ImageTk.PhotoImage(Image.open(
+                chrimg).resize((150, 300), Image.ANTIALIAS))
+            self.canv.create_image(10, 10, anchor=tk.NW, image=self.chrbg)
 
     def choiceContainer(self, choice1: tuple, choice2: tuple, destroy=False):
         u"""
@@ -246,6 +245,7 @@ class App:
         self.message = tk.Label(self.char, text=message,
                                 width=LABELWIDTH, font=(FONTFAMILY, FONTSIZE))
         self.message.pack()
+        self.setupBackground(False)
 
 
 if __name__ == "__main__":
