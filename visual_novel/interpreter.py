@@ -11,6 +11,9 @@ CHOICE_DESTINATION = '~'
 
 DIALOGUE_START = '-'
 DIALOGUE_DELIMITER = ': -'
+DIALOGUE_CHR_IMAGE = '@'
+
+BG_START = '='
 
 
 def getChoices(line: str) -> list:
@@ -57,9 +60,12 @@ def getDialogue(line: str) -> dict:
         >>> {"type":"Dialogue", "name":"Palpatine", "text":"Do you know the Tragedy of Darth Plageuis the Wise ?"}
     """
     name, text = line.split(DIALOGUE_DELIMITER)
-    name = name[1:]
-    return {"type": "dialogue", "name": name, "text": text}
+    name, image = name[1:].split(DIALOGUE_CHR_IMAGE)
+    return {"type": "dialogue", "name": name, "text": text, "image":image}
 
+def getBackground(line: str) -> dict:
+    u""""""
+    return {"type": "bg", "name": line[1:-1]}
 
 def getDescription(line: str) -> dict:
     u"""Récupère une ligne de description et la formate pour l'utilisation
@@ -91,6 +97,8 @@ def getHistory(file):
                 history.append(getChoices(line))
             elif line[0] == DIALOGUE_START:
                 history.append(getDialogue(line))
+            elif line[0] == BG_START:
+                history.append(getBackground(line))
             else:
                 history.append(getDescription(line))
     return history
