@@ -1,2 +1,3 @@
+=gameover.jpg
 Dans ce cas, pourquoi jouez vous à ce jeu ?
 Game Over
