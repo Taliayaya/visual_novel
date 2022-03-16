@@ -1,7 +1,7 @@
 from email.mime import image
 import string
 import tkinter as tk
-from PIL import ImageTk, Image
+from PIL import ImageTk, Image, ImageFilter
 import os
 import visual_novel.getAbsolutePath
 import visual_novel.interpreter as interpreter
@@ -192,16 +192,20 @@ class App:
             img = visual_novel.getAbsolutePath.getAbsolutePath(
                 script_dir, f'{BACKGROUND_DIR}bg/{self.bgimage}')
             self.bg = ImageTk.PhotoImage(Image.open(
-                img).resize((IMAGEWIDTH, IMAGEHEIGHT), Image.ANTIALIAS))
+                img).resize((IMAGEWIDTH, IMAGEHEIGHT), Image.ANTIALIAS).filter(ImageFilter.GaussianBlur(1)))
             self.canv.create_image(0, 0, anchor=tk.NW, image=self.bg)
         else:
             if self.chrimage:
                 chrimg = visual_novel.getAbsolutePath.getAbsolutePath(
-                script_dir, f'{BACKGROUND_DIR}chr/{self.chrimage}')
+                script_dir, f'{BACKGROUND_DIR}chr/{self.chrimage[0]}')
                 self.canv.place(x=0, y=0)
                 self.chrbg = ImageTk.PhotoImage(Image.open(
                 chrimg).resize((200, 400), Image.ANTIALIAS))
-                self.canv.create_image(10, 120, anchor=tk.NW, image=self.chrbg)
+                # left : 10, 120
+                if self.chrimage[1] == 'r': 
+                    self.canv.create_image(810, 120, anchor=tk.NW, image=self.chrbg)
+                else:
+                    self.canv.create_image(10, 120, anchor=tk.NW, image=self.chrbg)
 
     def choiceContainer(self, choice1: tuple, choice2: tuple, destroy=False):
         u"""
@@ -263,7 +267,7 @@ class App:
         if image:
             self.chrimage = image
         else:
-            self.chrimage = 'chr1.png'
+            self.chrimage = ('chr1.png','l')
         self.setupBackground(False)
 
 
