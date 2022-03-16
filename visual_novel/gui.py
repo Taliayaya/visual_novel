@@ -35,6 +35,8 @@ class App:
         self.currentLine = 0
         self.changeFile()
         self.isChoosing = False
+        self.chrimage = ''
+        self.bgimage = 'cour-palais.jpg'
 
     def start(self):
         self.root.bind("<space>", lambda x: self.setDialogueBox())
@@ -100,10 +102,22 @@ class App:
         # la boite de dialogue pour éviter d'en créer plus d'une
         if self.isChoosing:
             return
-        # Renvoie vers l'affichage d'un texte
-        if self.history[self.currentLine]['type'] != "choice":
-            self.setCharacterMessage(
-                self.history[self.currentLine]["name"], self.history[self.currentLine]["text"], destroy)
+ 
+        if self.history[self.currentLine]['type'] == 'bg':
+            self.bgimage = self.history[self.currentLine]['name']
+            self.setupBackground()
+            self.currentLine+=1
+
+       # Renvoie vers l'affichage d'un texte
+
+        if self.history[self.currentLine]['type'] != "choice" and self.history[self.currentLine]['type'] != 'bg':
+            print(self.history[self.currentLine])
+            if 'image' in self.history[self.currentLine]:
+                self.setCharacterMessage(
+                self.history[self.currentLine]["name"], self.history[self.currentLine]["text"],self.history[self.currentLine]['image'], destroy)
+            else:
+                self.setCharacterMessage(
+                    self.history[self.currentLine]["name"], self.history[self.currentLine]["text"],'', destroy)
         else:
             # Renvoie vers une zone de choix
             choice1 = self.history[self.currentLine]["choice1"]
@@ -176,17 +190,18 @@ class App:
             self.canv = tk.Canvas(self.root, width=IMAGEWIDTH,
                                   height=IMAGEHEIGHT)
             img = visual_novel.getAbsolutePath.getAbsolutePath(
-                script_dir, f'{BACKGROUND_DIR}space.jpg')
+                script_dir, f'{BACKGROUND_DIR}bg/{self.bgimage}')
             self.bg = ImageTk.PhotoImage(Image.open(
                 img).resize((IMAGEWIDTH, IMAGEHEIGHT), Image.ANTIALIAS))
             self.canv.create_image(0, 0, anchor=tk.NW, image=self.bg)
         else:
-            chrimg = visual_novel.getAbsolutePath.getAbsolutePath(
-                script_dir, f'{BACKGROUND_DIR}chr/chr1.png')
-            self.canv.place(x=0, y=0)
-            self.chrbg = ImageTk.PhotoImage(Image.open(
-                chrimg).resize((150, 300), Image.ANTIALIAS))
-            self.canv.create_image(10, 10, anchor=tk.NW, image=self.chrbg)
+            if self.chrimage:
+                chrimg = visual_novel.getAbsolutePath.getAbsolutePath(
+                script_dir, f'{BACKGROUND_DIR}chr/{self.chrimage}')
+                self.canv.place(x=0, y=0)
+                self.chrbg = ImageTk.PhotoImage(Image.open(
+                chrimg).resize((200, 400), Image.ANTIALIAS))
+                self.canv.create_image(10, 120, anchor=tk.NW, image=self.chrbg)
 
     def choiceContainer(self, choice1: tuple, choice2: tuple, destroy=False):
         u"""
@@ -221,7 +236,7 @@ class App:
         self.buttonRight.pack(expand="yes")
         print(self.choiceFrame)
 
-    def setCharacterMessage(self, name: str, message: str, destroy: bool = True):
+    def setCharacterMessage(self, name: str, message: str, image: str, destroy: bool = True):
         u"""
         Affiche le message du personnage sur l'interface
         et retire le précédent
@@ -245,6 +260,10 @@ class App:
         self.message = tk.Label(self.char, text=message, wraplength=900, justify=tk.CENTER,
                                 width=LABELWIDTH, font=(FONTFAMILY, FONTSIZE))
         self.message.pack()
+        if image:
+            self.chrimage = image
+        else:
+            self.chrimage = 'chr1.png'
         self.setupBackground(False)
 
 
