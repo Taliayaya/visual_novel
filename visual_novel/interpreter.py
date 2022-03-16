@@ -15,6 +15,8 @@ DIALOGUE_CHR_IMAGE = '@'
 
 BG_START = '='
 
+CHR_IMG = ','
+
 
 def getChoices(line: str) -> list:
     u"""Récupère dans la ligne la question et forme une liste contenant les questions et leur destination
@@ -61,6 +63,9 @@ def getDialogue(line: str) -> dict:
     """
     name, text = line.split(DIALOGUE_DELIMITER)
     name, image = name[1:].split(DIALOGUE_CHR_IMAGE)
+    if image != '':
+        image = image.split(CHR_IMG)
+
     return {"type": "dialogue", "name": name, "text": text, "image":image}
 
 def getBackground(line: str) -> dict:
