@@ -242,7 +242,7 @@ class App:
             self.char.destroy()
         self.char = tk.LabelFrame(self.root, text=name, padx=20, pady=20)
         self.char.pack(side=tk.BOTTOM, padx=10, pady=10)
-        self.message = tk.Label(self.char, text=message,
+        self.message = tk.Label(self.char, text=message, wraplength=900, justify=tk.CENTER,
                                 width=LABELWIDTH, font=(FONTFAMILY, FONTSIZE))
         self.message.pack()
         self.setupBackground(False)
