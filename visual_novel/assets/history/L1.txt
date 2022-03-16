@@ -4,8 +4,8 @@ Je décide de rentrer à mon auberge et de me reposer.
 =auberge.jpg
 En arrivant, je croise mon logeur.
 Je lui parle de l'événement de la soirée.
-- Aubergiste@: - "Si vous voulez en savoir plus, il y a deux options : l'atelier de peinture dans le centre ou bien le Palais des Doges."
-- Aubergiste@: - "Ces deux lieux ont l'avantage d'être fréquentés par bon nombre de personnes et les informations y circulent vite."
-- Aubergiste@: - "Ceci étant dit, bonne nuit Monsieur. Je vais me coucher et vous feriez bien d'en faire de même."
+- Aubergiste@innkeeper.png,l: - "Si vous voulez en savoir plus, il y a deux options : l'atelier de peinture dans le centre ou bien le Palais des Doges."
+- Aubergiste@innkeeper.png,l: - "Ces deux lieux ont l'avantage d'être fréquentés par bon nombre de personnes et les informations y circulent vite."
+- Aubergiste@innkeeper.png,l: - "Ceci étant dit, bonne nuit Monsieur. Je vais me coucher et vous feriez bien d'en faire de même."
 Où irai-je demain ?
 # L'atelier~LL2.txt|Le Palais des Doges~LR2.txt$
