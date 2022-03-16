@@ -1,0 +1,9 @@
+En me rendant au palais des Doges, je croise un attroupement avec une femme au centre.
+-Femme : - "Oui, moi je vous dis que le mort a un lien avec le palais.
+-Femme : - Y a tout le monde qu'est bizarre là-bas.
+-Femme : - Et je sais de quoi je parle, j'y suis cuisinière."
+-Femme 2 : - "Encore en train de raconter des salades, non ?
+-Femme 2 : - Bien sûr que tout le monde est bizarre au Palais, le mort est quelqu'un d'important."
+-Cuisinière : - "Des morts importants il y en a tout les jours, à cause de bandits. Pourquoi çui-là poserait plus de problèmes que les autres ?
+-Cuisinière : - Hep vous, vous aussi vous trouvez qu'elle est bizarre cette mort, pas vrai ?"
+# Oui, je suis d'accord et voudrais en savoir plus. ~LRL3.txt| Je souhaite juste continuer mon chemin... ~LRR3.txt$
