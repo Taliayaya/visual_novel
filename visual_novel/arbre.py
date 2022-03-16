@@ -1,14 +1,15 @@
 import visual_novel.getAbsolutePath as getAbsolutePath
 import tkinter.messagebox
-import os 
+import os
 
 script_dir = os.path.dirname(__file__)
 SAVEDIRECTORY = 'assets/saves/'
 
+
 class Arbre:
     u"""
     Représente un Arbre Binaire
-    
+
     Contient des noeuds qui contiennent eux-même
     0, 1 ou 2 autres noeuds : un fils gauche et un fils droit 
     L'initialisation de la class Arbre crée un noeud racine. 
@@ -46,6 +47,7 @@ class Arbre:
         ayant comme attributs value et file
     """
     choices = []
+
     def __init__(self, value: str, file: str, left=None, right=None) -> None:
         u"""
         Initialise le noeud racine de l'arbre binaire ou un de
@@ -67,7 +69,7 @@ class Arbre:
             Initialise une instance de la class Arbre 
             en créant un noeud à l'aide des arguments donnés 
         """
-        self._value = value  
+        self._value = value
         self._left = left
         self._right = right
         self._file = file
@@ -95,7 +97,7 @@ class Arbre:
         """
         return self._file
 
-    def getLeft(self) -> None:
+    def getLeft(self) -> 'Arbre':
         u"""
         Renvoie le fils gauche du noeud actuel
 
@@ -108,7 +110,7 @@ class Arbre:
         self.choices.append('L')
         return self._left
 
-    def getRight(self):
+    def getRight(self) -> 'Arbre':
         u"""
         Renvoie le fils droit du noeud actuel
 
@@ -167,21 +169,26 @@ class Arbre:
         """
         self._right = Arbre(value, file)
 
+
 def writeSave(abr):
     choices = ' '.join(abr.choices)
-    filelocation = getAbsolutePath.getAbsolutePath(script_dir, f'{SAVEDIRECTORY}save.txt')
+    filelocation = getAbsolutePath.getAbsolutePath(
+        script_dir, f'{SAVEDIRECTORY}save.txt')
     try:
         with open(filelocation, 'w') as f:
             f.write(choices)
-        tkinter.messagebox.showinfo("Sauvegarde réussie",  "La partie a été sauvergardée !")
+        tkinter.messagebox.showinfo(
+            "Sauvegarde réussie",  "La partie a été sauvergardée !")
     except Exception:
-        tkinter.messagebox.showerror("Échec de la sauvegarde", "La sauvegarde de la partie a échoué. Veuillez réessayer.")
+        tkinter.messagebox.showerror(
+            "Échec de la sauvegarde", "La sauvegarde de la partie a échoué. Veuillez réessayer.")
+
 
 if __name__ == "__main__":
     abr = Arbre('Init', 'init.txt')
     abr.addLeft('L1', 'l1.txt')
     abr = abr.getLeft()
-    abr.addRight('R2','')
+    abr.addRight('R2', '')
     abr = abr.getRight()
     print(abr.choices)
     writeSave(abr)
