@@ -1,0 +1,18 @@
+Secrétaire@: - "Dans ce cas, je suppose que vous êtes là pour voir le Doge."
+J'acquiesce.
+Secrétaire@: - "Veuillez attendre quelques instants."
+Après un moment d'attente, le Doge est là.
+Doge@: - "Donc...vous vouliez me parler ?"
+Moi@: - "Oui"
+Doge@: - "Êtes vous sûr ?"
+Moi@: - "Oui"
+Doge@: - "Je vois...vous êtes quelqu'un d'obstiné."
+Doge@: - "C'est dommage, moins d'obstination aurait pû vous permettre vivre plus longtemps."
+Doge@: - "Mais dans l'état actuel des choses..."
+Doge@: - "Je suis désolé, mais si vous fouinez plus longtemps, vous découvrirez la vérité."
+Doge@: - "Et donc..."
+Doge@: - "Je vais devoir vous éliminer."
+Doge@: - "Ne m'en veuillez pas."
+Je sens un poignard se frayer un chemin entre mes côtes.
+=gameover.jpg
+Game Over
