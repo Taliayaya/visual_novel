@@ -77,6 +77,16 @@ class App:
         self.isChoosing = False
         self.setDialogueBox(True)
 
+    def loadHistoryFromSave(self):
+        mainTree = htree.getHistoryTree() 
+        save = arbre.loadSave()
+        self.htree = arbre.saveToTree(mainTree, save)
+        self.currentLine = 0
+        self.currentFile = self.htree.getFile()
+        self.changeFile()
+        self.isChoosing=False
+        self.setDialogueBox()
+
     def setDialogueBox(self, destroy=True):
         u"""
         Traite l'histoire du jeu et décide quel affichage
@@ -167,7 +177,7 @@ class App:
         self.fichier.add_command(label="Nouvelle Partie")
         self.fichier.add_command(
             label="Sauvegarder", command=lambda: arbre.writeSave(self.htree))
-        self.fichier.add_command(label="Charger une sauvegarde")
+        self.fichier.add_command(label="Charger une sauvegarde", command=self.loadHistoryFromSave)
         self.fichier.add_separator()
         self.fichier.add_command(label="Quitter", command=self.root.quit)
         self.menuContainer.add_cascade(label="Fichier", menu=self.fichier)

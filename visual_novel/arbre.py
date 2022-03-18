@@ -97,9 +97,14 @@ class Arbre:
         """
         return self._file
 
-    def getLeft(self) -> 'Arbre':
+    def getLeft(self, isConstructing = False) -> 'Arbre':
         u"""
         Renvoie le fils gauche du noeud actuel
+
+        Précondition: 
+            isConstructing : bool 
+                si on enregistre (False) ou non le choix dans l'arbre.
+                Cela est utilisé pour la construction de l'arbre
 
         Postcondition: 
             Renvoie le fis gauche du noeud actuel. 
@@ -107,12 +112,18 @@ class Arbre:
             ou None si le noeud actuel ne possède pas de fils
             gauche. 
         """
-        self.choices.append('L')
+        if not isConstructing:
+            self.choices.append('L')
         return self._left
 
-    def getRight(self) -> 'Arbre':
+    def getRight(self, isConstructing = False) -> 'Arbre':
         u"""
         Renvoie le fils droit du noeud actuel
+
+        Précondition: 
+            isConstructing : bool 
+                si on enregistre (False) ou non le choix dans l'arbre.
+                Cela est utilisé pour la construction de l'arbre
 
         Postcondition: 
             Renvoie le fis droit du noeud actuel. 
@@ -120,7 +131,8 @@ class Arbre:
             ou None si le noeud actuel ne possède pas de fils
             droit. 
         """
-        self.choices.append('R')
+        if not isConstructing:
+            self.choices.append('R')
         return self._right
 
     def addLeft(self, value: str, file: str) -> None:
@@ -170,8 +182,21 @@ class Arbre:
         self._right = Arbre(value, file)
 
 
-def writeSave(abr):
+def writeSave(abr: 'Arbre'):
+    u"""
+    Écris un fichier de sauvegarde de l'état actuel de
+    l'arbre. Ce fichier contient les choix effectués,
+    gauche (L) ou droite(R). 
+
+    Précondition: 
+        abr : Arbre 
+            L'Arbre actuel qu'il faut sauvegarder. 
+
+    Postcondition:
+        Écris un fichier contenant les choix
+    """
     choices = ' '.join(abr.choices)
+    print(choices)
     filelocation = getAbsolutePath.getAbsolutePath(
         script_dir, f'{SAVEDIRECTORY}save.txt')
     try:
@@ -183,12 +208,59 @@ def writeSave(abr):
         tkinter.messagebox.showerror(
             "Échec de la sauvegarde", "La sauvegarde de la partie a échoué. Veuillez réessayer.")
 
+def loadSave() -> list:
+    u"""
+    Récupère la dernière sauvegarde si elle existe.
+    Renvoie la liste de choix identique à celle qui
+    a été entrée. Renvoie une erreur s'il n'y a pas
+    de sauvegarde. 
+    
+    Postcondition:
+        Renvoie une liste de choix
+    """
+    filelocation = getAbsolutePath.getAbsolutePath(script_dir, f'{SAVEDIRECTORY}save.txt')
+    try: 
+        with open(filelocation, 'r') as f:
+            line = f.read()
+        return line.split(' ')
+    except Exception:
+        print('Error')
+
+def saveToTree(abr: 'Arbre', save: list) -> 'Arbre':
+    u"""
+    Convertie récursivement une liste de choix en un arbre à la 
+    position équivalent à ces choix. 
+
+    Préconditions:
+        abr : Arbre 
+            Est l'Arbre principale. Lors de l'appel, il correspond à
+            l'arbre complet de l'histoire. Au fils des appels, on 
+            parcours l'arbre
+        save : list 
+            Est la sauvegarde récupérée. Elle évolue au file des appels
+
+    Postcondition:
+        Renvoie un arbre à la position de la sauvegarde 
+    """
+    print(abr)
+    print(save)
+    print()
+    if len(save) == 0:
+        print('arbre',abr)
+        return abr
+    if save[0] == 'L':
+        return saveToTree(abr.getLeft(True), save[1:])
+    else:
+        return saveToTree(abr.getRight(True), save[1:])
 
 if __name__ == "__main__":
     abr = Arbre('Init', 'init.txt')
     abr.addLeft('L1', 'l1.txt')
-    abr = abr.getLeft()
-    abr.addRight('R2', '')
-    abr = abr.getRight()
+    abrL = abr.getLeft(True)
+    abrL.addRight('R2', '')
+    abrLR = abr.getRight(True)
     print(abr.choices)
+    print(abr)
     writeSave(abr)
+    print(loadSave())
+    print(saveToTree(abr, loadSave()))
