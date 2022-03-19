@@ -8,4 +8,4 @@ Je lui parle de l'événement de la soirée.
 - Aubergiste@innkeeper.png,l: - "Ces deux lieux ont l'avantage d'être fréquentés par bon nombre de personnes et les informations y circulent vite."
 - Aubergiste@innkeeper.png,l: - "Ceci étant dit, bonne nuit Monsieur. Je vais me coucher et vous feriez bien d'en faire de même."
 Où irai-je demain ?
-# L'atelier~LL2.txt|Le Palais des Doges~LR2.txt$
+#L'atelier~LL2.txt|Le Palais des Doges~LR2.txt $

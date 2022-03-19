@@ -1,0 +1,16 @@
+Léonard@: - "Oh, très bien."
+Léonard@: - "Il est là, je te laisse."
+Michel-Ange@: "Bonjour, tu souhaitais me parler ?"
+Je lui demande ce qu'il sais à propos du mort d'hier soir.
+Michel-Ange@: - "Malheureusement, je ne sais pas grand-chose à propos de cette histoire."
+Michel-Ange@: - "Cependant, l'apprenti était à la fête hier, comme toi."
+Michel-Ange@: - "Il en saura sûrement plus que moi."
+Je remarque en effet l'apprenti qui est arrivé entre temps.
+C'est un enfant assez jeune.
+Apprenti@: - "Bonjour M'sieur"
+Apprenti@: - "Vous vouliez me parler ?"
+J'acquiesce.
+Il prend une mine de conspirateur.
+Apprenti@: - "C'est pas très sûr par ici..."
+Apprenti@: - "Vous préférez qu'on aille voir les gondoles ou que je vous emmène dans un endroit secret ?"
+#Gondoles~L/LLLL4.txt|Endroit secret~R/LLLR4.txt$

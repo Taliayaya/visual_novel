@@ -1,0 +1,22 @@
+Musicien@: - "Vous serez ravis d'apprendre dans ce cas que le Doge est assez vieux."
+Musicien@: - "Il doit préparer sa succession."
+Musicien@: - "Cependant, selon les lois de Venise, le Doge est élu par un conseil."
+Musicien@: - "Donc pour que son fils puisse accéder au poste de Doge, il lui faut éliminer toute menace ou..."
+Musicien@: - "concurrent."
+Musicien@: - "Vous comprenez dans ce cas que la mort d'un jeune archevêque brillant est une aubaine pour lui."
+Musicien@: - "De plus, je travaille assez tard le soir, à chanter et jouer de la vielle."
+Musicien@: - "Et hier, peu avant que le carnaval ne commence, il y a eu un grand remue-ménage dans la cour."
+Musicien@: - "Je me suis caché pour éviter de me me faire chasser."
+Musicien@: - "Une troupe de soldats s'est habillée avec des costumes de carnaval et est partie se fondre dans la foule."
+Musicien@: - "Pourquoi une chose pareille ?"
+Musicien@: - "Le chef de la garnison n'est pas du genre à accorder des permissions, surtout en période de Carnaval où il faut d'autant plus veiller à la sécurité."
+Musicien@: - "Et voilà tout ce que je sais."
+C'est absolument incroyable.
+Voilà l'affaire résolue.
+Par un musicien dans la cour du Palais.
+Que faudrait-il faire maintenant ?
+Il est impossible de faire arrêter le Doge par les voies normales.
+Faudrait-il aller voir le conseil et tenter de faire arrêter le Doge avec des mesures exeptionnelles ?
+Faudrait-il tenter de confronter le Doge ?
+Que doit-je faire ?
+#Aller voir le conseil ~LRLLL5.txt| Aller voir le doge ~LRLLR5.txt$

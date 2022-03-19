@@ -1,0 +1,11 @@
+Doge@: - "Bien, je vous souhaite une bonne continuation."
+Doge@: - "Cependant, vos...investigations ont un peu perturbé notre population."
+Doge@: - "Je vous suggère pour votre propre sécurité de quitter Venise le plus vite possible."
+Doge@: - "Je vais demander à une troupe de vous escorter."
+Une troupe de soldats surgit de derrière la porte.
+Je suis reconduit hors de la ville.
+Viens-je vraiment de me faire chasser comme un malpropre ?
+Mon enquête a échoué.
+Il ne me reste plus qu'à rentrer chez moi.
+=gameover.jpg
+Game Over

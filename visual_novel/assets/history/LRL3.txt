@@ -1,11 +1,11 @@
-Cuisinière@: - "Bah si vous voulez vraiment en savoir plus sur ce que j'dis, 'pouvez allez voir le musicien qui joue dans la cour du Palais.
-Il a vu et entendu des choses intéressantes."
-Femme 2@: - "Tu veux surtout pousser les badauds à aller le voir.
-C'est mignon l'amour mais tes manigances ça va pas l'aider pour les fins de mois."
-Cuisinière@: - Si Monsieur veux pas aller voir mon musicien, je vais pas le forcer.
+Cuisinière@: - "Bah si vous voulez vraiment en savoir plus sur ce que j'dis, 'pouvez allez voir le musicien qui joue dans la cour du Palais."
+Cuisinière@: - "Il a vu et entendu des choses intéressantes."
+Femme 2@: - "Tu veux surtout pousser les badauds à aller le voir."
+Femme 2@: - "C'est mignon l'amour mais tes manigances ça va pas l'aider pour les fins de mois."
+Cuisinière@: - "Si Monsieur veux pas aller voir mon musicien, je vais pas le forcer."
 Je rassure la femme et me met en direction du Palais.
 Je trouve le fameux musicien et commence à le questionner.
-Musicien@: - "Donc, pour commencer...je ne vous ai rien dit du tout.
-Si on vous pose la moindre question sur le sujet, ce n'est pas à moi que vous avez posé des questions.
-Est-ce clair ?"
-# Oui ~LRLL4.txt| Non ~LRLR4.txt$
+Musicien@: - "Donc, pour commencer...je ne vous ai rien dit du tout."
+Musicien@: - "Si on vous pose la moindre question sur le sujet, ce n'est pas à moi que vous avez posé des questions."
+Musicien@: - "Est-ce clair ?"
+#Oui ~LRLL4.txt|Non ~LRLR4.txt$
