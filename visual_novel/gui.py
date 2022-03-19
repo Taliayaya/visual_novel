@@ -277,7 +277,7 @@ class App:
         if image:
             self.chrimage = image
         else:
-            self.chrimage = ('chr1.png','l')
+            self.chrimage = ('none.png','l')
         self.setupBackground(False)
 
 
