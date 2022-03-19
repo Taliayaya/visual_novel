@@ -1,0 +1,6 @@
+Musicien@: - "Dans ce cas, Monsieur, j'ai le regret de vous dire que je ne sais rien du tout."
+Musicien@: - "Bonne journée."
+Je décide d'aller voir le secrétaire du Doge.
+Secrétaire@: - "Oui Monsieur, que voulez-vous ?"
+Secrétaire@: - "Oh, il me semble que vous parliez à l'instant avec le musicien assis dans la cour, n'est-ce pas ?"
+# Oui, le musicien semblait savoir des choses~LRLRL5.txt| Non, pas du tout~LRLRR5.txt$

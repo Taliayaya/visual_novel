@@ -30,13 +30,7 @@ class App:
     def __init__(self) -> None:
         self.root = tk.Tk()
         self.root.geometry(f'{WIDTH}x{HEIGHT}')
-        self.htree = htree.getHistoryTree()
-        self.currentFile = self.htree.getFile()
-        self.currentLine = 0
-        self.changeFile()
-        self.isChoosing = False
-        self.chrimage = ''
-        self.bgimage = 'cour-palais.jpg'
+        self.newParty()
 
     def start(self):
         self.root.bind("<space>", lambda x: self.setDialogueBox())
@@ -46,6 +40,19 @@ class App:
         self.setDialogueBox(False)
         # self.setCharacterImage()
         self.root.mainloop()
+
+    def newParty(self, move = False):
+        self.htree = htree.getHistoryTree()
+        self.currentFile = self.htree.getFile()
+        self.currentLine = 0
+        self.changeFile()
+        self.isChoosing = False
+        self.chrimage = ''
+        self.bgimage = 'cour-palais.jpg'
+        if move:
+            self.setupBackground()
+            self.setDialogueBox()
+
 
     def changeFile(self):
         self.history = interpreter.getHistory(self.currentFile)
@@ -76,6 +83,20 @@ class App:
         # Permet à l'utilisateur de continuer l'histoire
         self.isChoosing = False
         self.setDialogueBox(True)
+
+    def loadHistoryFromSave(self):
+        u"""Permet de charger la dernière sauvegarde effectuée
+        Le fichier de sauvegarde est interprété, transformé en un
+        arbre d'histoire, navigué dedans puis met à jour l'affichage
+        graphique."""
+        mainTree = htree.getHistoryTree() 
+        save = arbre.loadSave()
+        self.htree = arbre.saveToTree(mainTree, save)
+        self.currentLine = 0
+        self.currentFile = self.htree.getFile()
+        self.changeFile()
+        self.isChoosing=False
+        self.setDialogueBox()
 
     def setDialogueBox(self, destroy=True):
         u"""
@@ -164,10 +185,10 @@ class App:
 
         # FICHIER MENU
         self.fichier = tk.Menu(self.menuContainer, tearoff=0)
-        self.fichier.add_command(label="Nouvelle Partie")
+        self.fichier.add_command(label="Nouvelle Partie", command=lambda :self.newParty(True))
         self.fichier.add_command(
             label="Sauvegarder", command=lambda: arbre.writeSave(self.htree))
-        self.fichier.add_command(label="Charger une sauvegarde")
+        self.fichier.add_command(label="Charger une sauvegarde", command=self.loadHistoryFromSave)
         self.fichier.add_separator()
         self.fichier.add_command(label="Quitter", command=self.root.quit)
         self.menuContainer.add_cascade(label="Fichier", menu=self.fichier)
@@ -184,7 +205,17 @@ class App:
 
     def setupBackground(self, changeBg=True):
         u"""
+        Permet de gérer l'affichage du background et des images
+        des personnages. 
+
+        Préconditions:
+            changeBg : bool
+                Indique s'il faut change le background ou bien 
+                l'image de personnage 
+
         Affiche l'image choisie comme décors du jeu
+        Postcondition:
+            Change le type d'image demandé
         """
         if changeBg:
             self.canv = tk.Canvas(self.root, width=IMAGEWIDTH,
@@ -267,7 +298,7 @@ class App:
         if image:
             self.chrimage = image
         else:
-            self.chrimage = ('chr1.png','l')
+            self.chrimage = ('none.png','l')
         self.setupBackground(False)
 
 

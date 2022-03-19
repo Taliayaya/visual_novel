@@ -1,0 +1,43 @@
+{
+    "root": {
+        "file": "init.txt",
+        "left": {
+            "file": "L1.txt",
+            "left": {
+                "file": "LL2.txt",
+                "left": {
+                    "file": "LLL3.txt",
+                    "left": {},
+                    "right": {}
+                },
+                "right": {
+                    "file": "LLR3.txt",
+                    "left": {},
+                    "right": {}
+                },
+                "right": {
+                    "file": "LR2.txt",
+                    "left": {
+                        "file": "LRL3.txt",
+                        "left": {
+                            "file": "LRLL4.txt",
+                            "left": {},
+                            "right": {}
+                        },
+                        "right": {}
+                    },
+                    "right": {
+                        "file": "LRR3.txt",
+                        "left": {},
+                        "right": {}
+                    }
+                }
+            }
+        },
+        "right": {
+            "file": "R1.txt",
+            "left": {},
+            "right": {}
+        }
+    }
+}
