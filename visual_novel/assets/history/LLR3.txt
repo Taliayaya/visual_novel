@@ -1,0 +1,12 @@
+Ses yeux s'éclairent.
+Léonard@: - "Vraiment ?"
+Léonard@: - "J'en suis ravi."
+Léonard@: - "Pour être honnête, je ne suis pas juste ici pour voir l'atelier de Michel-Ange"
+Léonard@: - "Le conseil de Venise m'a demandé de concevoir une nouvelle machine de guerre."
+Léonard@: - "Regarde, elle est là sous ce drap."
+Il soulève le drap.
+Moi@: - "Wouah ! Impressionante."
+Léonard@: - "Merci, je suis touché."
+Léonard@: - "D'ailleurs, je vais la livrer demain."
+Léonard@: - "Voudrais-tu m'accompagner ?"
+#Oui~LLRL4.txt|Non~LLRR4.txt$

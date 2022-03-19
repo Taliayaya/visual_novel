@@ -36,7 +36,7 @@ class App:
         self.changeFile()
         self.isChoosing = False
         self.chrimage = ''
-        self.bgimage = 'cour-palais.jpg'
+        self.bgimage = 'quai_nuit.png'
 
     def start(self):
         self.root.bind("<space>", lambda x: self.setDialogueBox())

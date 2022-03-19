@@ -1,0 +1,15 @@
+Moi@: - "Non, je doit continuer mon enquête."
+Léonard@: - "Ah, très bien."
+Il semble déçu.
+Je quitte l'atelier et vais sur les quais.
+Il semble y avoir de l'agitation.
+Une femme harangue la foule.
+Cuisinière@: - "Ces bourges ont tué mon mari !"
+Cuisinière@: - "Comme d'habitude, les riches se débarrassent de nous quand ils ont plus besoin de nous."
+Cuisinière@: - "A mort les bourges !"
+La foule me remarque soudain.
+Je suis tétanisé.
+Cuisinière@: - "A mort les bourges !"
+Je me prend un coup de fourche.
+=gameover.jpg
+Game over
