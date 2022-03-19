@@ -1,30 +1,31 @@
-Léonard@: - "Encore merci."
-Léonard@: - "Mais il commence à être tard, tu devrais rentrer à ton auberge."
-Moi@: - "En effet, je vais y aller."
+-Léonard@: - "Encore merci."
+-Léonard@: - "Mais il commence à être tard, tu devrais rentrer à ton auberge."
+-Moi@: - "En effet, je vais y aller."
 =black_screen.png
 Je rentre à l'auberge et dors jusqu'au lendemain.
 =atelier.jpg
-Léonard@: - "Merci de m'accompagner, pour être honnête, je suis un peu nerveux."
+-Léonard@: - "Merci de m'accompagner, pour être honnête, je suis un peu nerveux."
 Nous nous rendons vers le palais des doges.
+=cour-palais.jpg
 Dans la cour, nous croisons un musicien.
 Je décide d'aller lui parler.
-Musicien@: - Oui Monsieur, que me voulez vous ?"
+-Musicien@: - Oui Monsieur, que me voulez vous ?"
 Je lui demande s'il aurait des informations sur le mort d'hier soir.
-Musicien@: - "Oh je vois."
+-Musicien@: - "Oh je vois."
 Il baisse la voix.
-Musicien@: - "Le Doge est assez vieux."
-Musicien@: - "Il doit préparer sa succession."
-Musicien@: - "Cependant, selon les lois de Venise, le Doge est élu par un conseil."
-Musicien@: - "Donc pour que son fils puisse accéder au poste de Doge, il lui faut éliminer toute menace ou..."
-Musicien@: - "concurrent."
-Musicien@: - "Vous comprenez dans ce cas que la mort d'un jeune archevêque brillant est une aubaine pour lui."
-Musicien@: - "De plus, je travaille assez tard le soir, à chanter et jouer de la vielle."
-Musicien@: - "Et hier, peu avant que le carnaval ne commence, il y a eu un grand remue-ménage dans la cour."
-Musicien@: - "Je me suis caché pour éviter de me me faire chasser."
-Musicien@: - "Une troupe de soldats s'est habillée avec des costumes de carnaval et est partie se fondre dans la foule."
-Musicien@: - "Pourquoi une chose pareille ?"
-Musicien@: - "Le chef de la garnison n'est pas du genre à accorder des permissions, surtout en période de Carnaval où il faut d'autant plus veiller à la sécurité."
-Musicien@: - "Et voilà tout ce que je sais."
+-Musicien@: - "Le Doge est assez vieux."
+-Musicien@: - "Il doit préparer sa succession."
+-Musicien@: - "Cependant, selon les lois de Venise, le Doge est élu par un conseil."
+-Musicien@: - "Donc pour que son fils puisse accéder au poste de Doge, il lui faut éliminer toute menace ou..."
+-Musicien@: - "concurrent."
+-Musicien@: - "Vous comprenez dans ce cas que la mort d'un jeune archevêque brillant est une aubaine pour lui."
+-Musicien@: - "De plus, je travaille assez tard le soir, à chanter et jouer de la vielle."
+-Musicien@: - "Et hier, peu avant que le carnaval ne commence, il y a eu un grand remue-ménage dans la cour."
+-Musicien@: - "Je me suis caché pour éviter de me me faire chasser."
+-Musicien@: - "Une troupe de soldats s'est habillée avec des costumes de carnaval et est partie se fondre dans la foule."
+-Musicien@: - "Pourquoi une chose pareille ?"
+-Musicien@: - "Le chef de la garnison n'est pas du genre à accorder des permissions, surtout en période de Carnaval où il faut d'autant plus veiller à la sécurité."
+-Musicien@: - "Et voilà tout ce que je sais."
 C'est absolument incroyable.
 Voilà l'affaire résolue.
 Par un musicien dans la cour du Palais.

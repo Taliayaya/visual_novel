@@ -1,19 +1,19 @@
-Doge@: - "Vraiment ?"
-Doge@: - "Pourquoi m'avoir attendu dans ce cas ?"
-Doge@: - "Ah...je vois."
-Doge@: - "Ce n'est pas grave."
-Doge@: - "Nous allons prendre soin de vous."
+-Doge@: - "Vraiment ?"
+-Doge@: - "Pourquoi m'avoir attendu dans ce cas ?"
+-Doge@: - "Ah...je vois."
+-Doge@: - "Ce n'est pas grave."
+-Doge@: - "Nous allons prendre soin de vous."
 Il murmure quelque chose à son secrétaire.
 Celui-ci me sourit gentiment.
 Que se passe-t-il ?
 Ils semblent me prendre pour un imbécile.
 Ou pour un fou ?
 Le secrétaire me prend par l'épaule.
-Secrétaire@: - "Venez avec moi."
+-Secrétaire@: - "Venez avec moi."
 Il me fait traverser un pont et me conduit à l'Hôtel-Dieu.
 En voyant cela, je me débat.
 Il demande à des passant de l'aide.
-Secrétaire@: - "C'est un fou, venez m'aider à le maîtriser !"
+-Secrétaire@: - "C'est un fou, venez m'aider à le maîtriser !"
 =gameover.jpg
 Je me retrouve donc enfermé dans une maison de malades et de fous.
 Pour toujours.

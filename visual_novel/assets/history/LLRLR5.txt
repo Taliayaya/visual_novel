@@ -1,24 +1,24 @@
 Je retourne voir Léonard.
-Léonard@: - "Tout va bien ?"
-Moi@: - "Oui, oui."
-Moi@: - "Ca n'a jamais été aussi bien"
-Moi@: - "J'ai trouvé la solution de l'énigme."
-Moi@: - "Après ta présentation au conseil, ne m'attends pas."
-Moi@: - "J'ai quelque chose à faire."
+-Léonard@: - "Tout va bien ?"
+-Moi@: - "Oui, oui."
+-Moi@: - "Ca n'a jamais été aussi bien"
+-Moi@: - "J'ai trouvé la solution de l'énigme."
+-Moi@: - "Après ta présentation au conseil, ne m'attends pas."
+-Moi@: - "J'ai quelque chose à faire."
 La présentation de Léonard se passe sans problème.
 Je me dirige vers le bureau du Doge.
 Le secrétaire m'introduit auprès du Doge.
-Doge@: - "Oui, qu'y a-t-il ?"
-Moi@: - "C'est vous."
-Doge@: - "Je ne comprends pas, tout va bien Monsieur ?"
-Moi@: - "C'est vous qui avez commandité l'assassinat de cet archevêque."
-Doge@: - "Oh je vois."
-Doge@: - "Et vous avez pensé pouvoir me causer le moindre tort ?"
-Doge@: - "Malheureusement pour vous, je suis Doge."
-Doge@: - "Vous ne pouvez pas juste m'accuser et espérer que tout se passe bien."
+-Doge@: - "Oui, qu'y a-t-il ?"
+-Moi@: - "C'est vous."
+-Doge@: - "Je ne comprends pas, tout va bien Monsieur ?"
+-Moi@: - "C'est vous qui avez commandité l'assassinat de cet archevêque."
+-Doge@: - "Oh je vois."
+-Doge@: - "Et vous avez pensé pouvoir me causer le moindre tort ?"
+-Doge@: - "Malheureusement pour vous, je suis Doge."
+-Doge@: - "Vous ne pouvez pas juste m'accuser et espérer que tout se passe bien."
 Il sort un poignard.
-Doge@: - "Dans un certain sens, c'est vous le responsable de votre mort."
-Doge@: - "C'était assez stupide de votre part de venir voir un meurtrier."
+-Doge@: - "Dans un certain sens, c'est vous le responsable de votre mort."
+-Doge@: - "C'était assez stupide de votre part de venir voir un meurtrier."
 Je veux partir mais mes jambes ne répondent plus.
 Il me plante son poignard en plein coeur.
 =gameover.jpg

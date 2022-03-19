@@ -1,13 +1,13 @@
-Apprenti@: - "Très bien."
+-Apprenti@: - "Très bien."
 Nous nous dirigeons vers un ponton devant lequel des gondoles passent.
 Il semble assez nerveux et regarde tout autour de lui.
-Apprenti@: - "Voilà."
-Apprenti@: - "C'est le doge qui a commandité l'assassinat d'hier."
-Apprenti@: - "Je l'ai vu donner des ordres à des soldats."
-Apprenti@: - "Je sui sû qu'il est responsable."
+-Apprenti@: - "Voilà."
+-Apprenti@: - "C'est le Doge qui a commandité l'assassinat d'hier."
+-Apprenti@: - "Je l'ai vu donner des ordres à des soldats."
+-Apprenti@: - "Je suis sûr qu'il est responsable."
 Une voix retentit derrière nous.
-Capitaine@: - "C'est une accusation bien grave jeune homme."
-Capitaine@: - "Je vous arrête tous deux pour diffamation."
-Je tente de mm'enfuir et saute dans le canal quand une pierre me frappe en pleine tête.
+-Capitaine@: - "C'est une accusation bien grave jeune homme."
+-Capitaine@: - "Je vous arrête tous deux pour diffamation."
+Je tente de m'enfuir et saute dans le canal quand une pierre me frappe en pleine tête.
 =gameover.jpg
 Game over

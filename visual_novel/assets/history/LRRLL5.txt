@@ -1,2 +1,2 @@
-Doge@: - "Êtes vous sûr ?"
+-Doge@: - "Êtes vous sûr ?"
 #Oui~LRRLLL6.txt|Non~LRRLLR6.txt$
