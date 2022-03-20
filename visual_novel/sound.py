@@ -30,7 +30,6 @@ class GameSound:
             target=self.startNewSound, args=(soundName,))
         soundThread.start()
         soundThread.join()
-        print(self._music_playing)
         return self._infiniteSound(soundName)
 
     def startInfiniteSound(self, soundName: str):
@@ -110,13 +109,14 @@ class GameSound:
         u"""
         Arrête tous les sons en cours et les retire de la liste
         """
-        [self.stopSound(num) for num in self._music_playing]
+        [self.stopSound(num) for num in range(len(self._music_playing))]
 
     def stopAllInfiniteSounds(self):
         u"""
         Arrête tous les sons infinis en cours et les retire de la liste
         """
-        [self.stopInfiniteSound(num) for num in self._infinite_music_playing]
+        [self.stopInfiniteSound(num)
+         for num in range(len(self._infinite_music_playing))]
 
     def stopEverything(self):
         u"""
@@ -135,3 +135,4 @@ class GameSound:
 if __name__ == "__main__":
     sound = GameSound()
     sound.startInfiniteSound('test.wav')
+    sound.stopAllInfiniteSounds()
