@@ -1,4 +1,5 @@
 import string
+import sys
 import tkinter as tk
 from PIL import ImageTk, Image, ImageFilter
 import os
@@ -33,6 +34,7 @@ script_dir = os.path.dirname(__file__)
 
 class App:
     def __init__(self) -> None:
+
         self.root = tk.Tk()
         # Modifie les intéractions avec le close icon
         self.root.protocol('WM_DELETE_WINDOW', self.onClosing)
@@ -43,33 +45,36 @@ class App:
         self.chrimage = ('none.png', 'l')
         self.newGame()
         self.soundPlayer = sound.GameSound()
+        self.soundPlayer.startInfiniteSound('main.wav')
         self.root.rowconfigure(2, minsize=30)
 
     def homePage(self, destroy=False):
         if destroy:
             self.frame.destroy()
+            self.soundPlayer.stopEverything()
             return
 
         # LOAD IMAGES
         self.newGameImg = ImageTk.PhotoImage(Image.open(
-            f'{MENU_DIR}newGame.jpg').resize((200, 76)))
+            visual_novel.getAbsolutePath.getAbsolutePath(script_dir, f'{MENU_DIR}newGame.jpg')).resize((200, 76)))
         self.continueImg = ImageTk.PhotoImage(Image.open(
-            f'{MENU_DIR}continue.jpg').resize((200, 76)))
+            visual_novel.getAbsolutePath.getAbsolutePath(script_dir, f'{MENU_DIR}continue.jpg')).resize((200, 76)))
         self.quitImg = ImageTk.PhotoImage(Image.open(
-            f'{MENU_DIR}quit.jpg').resize((200, 76)))
+            visual_novel.getAbsolutePath.getAbsolutePath(script_dir, f'{MENU_DIR}quit.jpg')).resize((200, 76)))
 
         self.frame = tk.Frame(self.root)
         self.frame.pack(fill="none", expand=True)
         play = tk.Button(self.frame, text='Nouvelle Partie',
-                         image=self.newGameImg, command=self.startGame)
+                         image=self.newGameImg, command=self.startGame, cursor="hand1")
         play.grid(row=0, column=0)
-        continueBtn = tk.Button(self.frame, text='Continuer',
+        continueBtn = tk.Button(self.frame, text='Continuer', cursor="hand1",
                                 image=self.continueImg, command=self.continueGame)
         continueBtn.grid(row=1, column=0)
         tk.Label(self.frame).grid(row=2, column=0)
         quitBtn = tk.Button(self.frame, text='Quitter',
-                            image=self.quitImg, command=self.root.quit)
+                            image=self.quitImg, command=self.onClosing)
         quitBtn.grid(row=3, column=0)
+        self.soundPlayer.startNewSound('startsound.wav')
 
     def continueGame(self):
         self.startGame()
@@ -77,6 +82,7 @@ class App:
 
     def startGame(self):
         self.homePage(True)
+        self.soundPlayer.startNewSound('startsound.wav')
         self.root.bind("<space>", self.setDialogueBox)
         self.menu()
         self.bgimage = 'quai_nuit.png'
@@ -92,6 +98,7 @@ class App:
         if tkinter.messagebox.askokcancel("Quitter le jeu", "Êtes-vous sûr de vouloir quitter le jeu ? Toute progression non-sauvegardée sera perdu. "):
             self.soundPlayer.stopEverything()
             self.root.quit()
+            sys.exit(0)
 
     def start(self):
         self.setupBackground()
