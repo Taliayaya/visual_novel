@@ -17,6 +17,8 @@ BG_START = '='
 
 CHR_IMG = ','
 
+SOUND_START = '♪'
+
 
 def getChoices(line: str) -> list:
     u"""Récupère dans la ligne la question et forme une liste contenant les questions et leur destination
@@ -66,11 +68,13 @@ def getDialogue(line: str) -> dict:
     if image != '':
         image = image.split(CHR_IMG)
 
-    return {"type": "dialogue", "name": name, "text": text, "image":image}
+    return {"type": "dialogue", "name": name, "text": text, "image": image}
+
 
 def getBackground(line: str) -> dict:
     u""""""
     return {"type": "bg", "name": line[1:-1]}
+
 
 def getDescription(line: str) -> dict:
     u"""Récupère une ligne de description et la formate pour l'utilisation
@@ -93,6 +97,10 @@ def getDescription(line: str) -> dict:
     return {"type": "description", "name": "", "text": line}
 
 
+def getSound(line: str) -> dict:
+    return {"type": "sound", "name": line[1:-1]}
+
+
 def getHistory(file):
     file_dir = getAbsolutePath.getAbsolutePath(script_dir, DATADIRECTORY+file)
     history = []
@@ -104,6 +112,8 @@ def getHistory(file):
                 history.append(getDialogue(line))
             elif line[0] == BG_START:
                 history.append(getBackground(line))
+            elif line[0] == SOUND_START:
+                history.append(getSound(line))
             else:
                 history.append(getDescription(line))
     return history

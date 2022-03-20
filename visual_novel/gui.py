@@ -32,7 +32,7 @@ class App:
         self.root = tk.Tk()
         self.root.geometry(f'{WIDTH}x{HEIGHT}')
         self.newGame()
-        self.soundPlayer = sound()
+        self.soundPlayer = sound.GameSound()
 
     def start(self):
         self.root.bind("<space>", lambda x: self.setDialogueBox())
@@ -52,7 +52,6 @@ class App:
         self.isChoosing = False
         self.chrimage = ''
         self.bgimage = 'quai_nuit.png'
-        self.startNewSound('main.wav')
         if move:
             self.setupBackground()
             self.setDialogueBox()
@@ -100,7 +99,6 @@ class App:
         self.changeFile()
         self.isChoosing = False
         self.setDialogueBox()
-        self.stopSound(0)
 
     def setDialogueBox(self, destroy=True):
         u"""
@@ -128,25 +126,34 @@ class App:
         if self.isChoosing:
             return
 
-        if self.history[self.currentLine]['type'] == 'bg':
-            self.bgimage = self.history[self.currentLine]['name']
+        line = self.history[self.currentLine]
+
+        if line['type'] == 'bg':
+            self.bgimage = line['name']
             self.setupBackground()
             self.currentLine += 1
 
+        elif line["type"] == "sound":
+            self.soundPlayer.startNewSound(line['name'])
+            self.currentLine += 1
+        print(line)
+
+        line = self.history[self.currentLine]
+
        # Renvoie vers l'affichage d'un texte
 
-        if self.history[self.currentLine]['type'] != "choice" and self.history[self.currentLine]['type'] != 'bg':
-            print(self.history[self.currentLine])
-            if 'image' in self.history[self.currentLine]:
+        if line['type'] != "choice" and line['type'] != 'bg':
+            print(line)
+            if 'image' in line:
                 self.setCharacterMessage(
-                    self.history[self.currentLine]["name"], self.history[self.currentLine]["text"], self.history[self.currentLine]['image'], destroy)
+                    line["name"], line['text'], line['image'], destroy)
             else:
                 self.setCharacterMessage(
-                    self.history[self.currentLine]["name"], self.history[self.currentLine]["text"], '', destroy)
+                    line["name"], line['text'], '', destroy)
         else:
             # Renvoie vers une zone de choix
-            choice1 = self.history[self.currentLine]["choice1"]
-            choice2 = self.history[self.currentLine]["choice2"]
+            choice1 = line["choice1"]
+            choice2 = line["choice2"]
             self.choiceContainer(choice1, choice2)
             self.isChoosing = True
         # Augmente d'une ligne tant que l'historie n'est pas finie
