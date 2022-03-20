@@ -34,6 +34,7 @@ class App:
         # Modifie les intéractions avec le close icon
         self.root.protocol('WM_DELETE_WINDOW', self.onClosing)
         self.root.geometry(f'{WIDTH}x{HEIGHT}')
+        self.root.resizable(0, 0)
         self.newGame()
         self.soundPlayer = sound.GameSound()
 
