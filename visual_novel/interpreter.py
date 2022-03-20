@@ -22,6 +22,9 @@ CHR_IMG = ','
 
 SOUND_START = '♪'  # ALT + 13
 INFINITE_SOUND_START = '♫'  # ALT + 14
+STOP_SOUND = '/♪'
+STOP_INFINITE_SOUND = '/♫'
+STOP_ALL_SOUNDS = '§'
 
 
 def getChoices(line: str) -> list:
@@ -109,6 +112,18 @@ def getInfiniteSound(line: str) -> dict:
     return {"type": "inf_sound", "name": line[1:-1]}
 
 
+def stopInfinitesound(line: str) -> dict:
+    return {"type": "stop_inf_sound", "num": line[1:-1]}
+
+
+def stopSound(line: str) -> dict:
+    return {"type": "stop_sound", "num": line[1:-1]}
+
+
+def stopEverySounds() -> dict:
+    return {"type": "stop_all"}
+
+
 def addTextToLastLine(line: str, lastLine: dict) -> dict:
     if 'image' in lastLine:
         image = lastLine["image"]
@@ -123,17 +138,25 @@ def getHistory(file):
     with open(file_dir, encoding='utf-8') as f:
         for line in f.readlines():
             if line[0] == CHOICE_START:
-                history.append(getChoices(line))
+                lineDic = getChoices(line)
             elif line[0] == DIALOGUE_START:
-                history.append(getDialogue(line))
+                lineDic = getDialogue(line)
             elif line[0] == BG_START:
-                history.append(getBackground(line))
+                lineDic = getBackground(line)
             elif line[0] == SOUND_START:
-                history.append(getSound(line))
+                lineDic = getSound(line)
             elif line[0] == ADD_LINE:
-                history.append(addTextToLastLine(line, history[-1]))
+                lineDic = addTextToLastLine(line, history[-1])
+            elif line[0] == STOP_ALL_SOUNDS:
+                lineDic = stopEverySounds()
+            elif line[0:2] == STOP_INFINITE_SOUND:
+                lineDic = stopInfinitesound(line)
+            elif line[0:2] == STOP_SOUND:
+                lineDic = stopSound(line)
             else:
-                history.append(getDescription(line))
+                lineDic = getDescription(line)
+
+            history.append(lineDic)
     return history
 
 

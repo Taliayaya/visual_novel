@@ -150,6 +150,20 @@ class App:
         elif line["type"] == "sound":
             self.soundPlayer.startNewSound(line['name'])
             self.currentLine += 1
+
+        elif line["type"] == "inf_sound":
+            self.soundPlayer.startInfiniteSound(line["name"])
+            self.currentLine += 1
+        elif line["type"] == 'stop_inf_sound':
+            self.soundPlayer.stopInfiniteSound(line['num'])
+            self.currentLine += 1
+        elif line['type'] == 'stop_sound':
+            self.soundPlayer.stopSound(line["num"])
+            self.currentLine += 1
+        elif line['type'] == 'stop_all':
+            self.soundPlayer.stopEverything()
+            self.currentLine += 1
+
         print(line)
 
         line = self.history[self.currentLine]
