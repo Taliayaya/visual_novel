@@ -129,7 +129,7 @@ class GameSound:
         u"""
         Renvoie la liste des threads
         """
-        return self._music_playing
+        return self._music_playing, self._infinite_music_playing
 
 
 if __name__ == "__main__":
