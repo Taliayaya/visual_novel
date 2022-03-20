@@ -44,7 +44,7 @@ class App:
 
         En quittant le jeu, demande une confirmation et arrête toutes les musiques
         """
-        if tkinter.messagebox.askokcancel("Quitter le jeu", "Êtes-vous sûr de vouloir quitter le jeu ? Toute progression non-sauvegardée sera perdu. "):
+        if tkinter.messagebox.askokcancel("Quitter le jeu", "Êtes-vous sûr de vouloir quitter le jeu ? Toute progression non-sauvegardée sera perdue. "):
             self.soundPlayer.stopEverything()
             self.root.quit()
 
