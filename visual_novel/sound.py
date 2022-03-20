@@ -92,14 +92,42 @@ class GameSound:
             self._music_playing[num].terminate()
             self._music_playing.pop(num)
 
+    def stopInfiniteSound(self, num: int):
+        u"""
+        Met fin au thread associé du son infini au numéro donné
+
+        Précondition:
+            num : int
+                la position du thread dans la liste des sons
+
+        Postcondition:
+            Arrête le son infini et le retire de la liste des sons en cours
+        """
+        if num < len(self._infinite_music_playing):
+            self._infinite_music_playing[num].terminate()
+            self._infinite_music_playing.pop(num)
+
     def stopAllSounds(self):
         u"""
         Arrête tous les sons en cours et les retire de la liste
         """
         [self.stopSound(num) for num in self._music_playing]
 
-    def getMusicPlaying(self):
+    def stopAllInfiniteSounds(self):
+        u"""
+        Arrête tous les sons infinis en cours et les retire de la liste
         """
+        [self.stopInfiniteSound(num) for num in self._infinite_music_playing]
+
+    def stopEverything(self):
+        u"""
+        Arrête tous les sons lancés, peu importe le type
+        """
+        self.stopAllSounds()
+        self.stopAllInfiniteSounds()
+
+    def getMusicPlaying(self):
+        u"""
         Renvoie la liste des threads
         """
         return self._music_playing
