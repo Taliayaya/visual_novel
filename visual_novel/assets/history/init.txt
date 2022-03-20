@@ -2,11 +2,11 @@ Les senteurs de la nuit embaument l'air.
 Le grand carnaval de Venise est vraiment magnifique. Des masques de toutes couleurs et de toutes formes dissimulent les visages d'arlequins et de rois.
 Tous profitent de la fête quand soudain un cri retenti.
 La foule s'agite : un homme déguisé en roi mage se tient péniblement debout.
-- Roi mage @: - "Là, dans le canal..."
+- Roi mage @roimage.png,r: - "Là, dans le canal..."
 Des exclamations fusent.
-- Personne 1@: - "Un cadavre !"
-- Personne 2 @: - "C'est Lorenzo Pazzi !"
-- Personne 3 @: - "Que s'est-il passé ?"
+- Personne 1@person1.png,l: - "Un cadavre !"
+- Personne 2 @person2.png,r: - "C'est Lorenzo Pazzi !"
+- Personne 3 @person3.png,l: - "Que s'est-il passé ?"
 Cet homme, ce noyé... ne semble pas particulièrement fragile physiquement.
 Aurait-il vraiment pu se noyer de manière accidentelle ?
 Et dans le doute, ne vaudrait-il pas mener une enquête ?

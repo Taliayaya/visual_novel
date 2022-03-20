@@ -1,4 +1,3 @@
-from email.mime import image
 import string
 import tkinter as tk
 from PIL import ImageTk, Image, ImageFilter
@@ -7,6 +6,8 @@ import visual_novel.getAbsolutePath
 import visual_novel.interpreter as interpreter
 import visual_novel.history_tree as htree
 import visual_novel.arbre as arbre
+import visual_novel.sound as sound
+
 
 # Window
 WIDTH = 1000
@@ -30,13 +31,8 @@ class App:
     def __init__(self) -> None:
         self.root = tk.Tk()
         self.root.geometry(f'{WIDTH}x{HEIGHT}')
-        self.htree = htree.getHistoryTree()
-        self.currentFile = self.htree.getFile()
-        self.currentLine = 0
-        self.changeFile()
-        self.isChoosing = False
-        self.chrimage = ''
-        self.bgimage = 'quai_nuit.png'
+        self.newGame()
+        self.soundPlayer = sound()
 
     def start(self):
         self.root.bind("<space>", lambda x: self.setDialogueBox())
@@ -46,6 +42,20 @@ class App:
         self.setDialogueBox(False)
         # self.setCharacterImage()
         self.root.mainloop()
+
+    def newGame(self, move=False):
+        self.htree = htree.getHistoryTree()
+        self.currentFile = self.htree.getFile()
+        self.currentLine = 0
+
+        self.changeFile()
+        self.isChoosing = False
+        self.chrimage = ''
+        self.bgimage = 'quai_nuit.png'
+        self.startNewSound('main.wav')
+        if move:
+            self.setupBackground()
+            self.setDialogueBox()
 
     def changeFile(self):
         self.history = interpreter.getHistory(self.currentFile)
@@ -78,14 +88,19 @@ class App:
         self.setDialogueBox(True)
 
     def loadHistoryFromSave(self):
-        mainTree = htree.getHistoryTree() 
+        u"""Permet de charger la dernière sauvegarde effectuée
+        Le fichier de sauvegarde est interprété, transformé en un
+        arbre d'histoire, navigué dedans puis met à jour l'affichage
+        graphique."""
+        mainTree = htree.getHistoryTree()
         save = arbre.loadSave()
         self.htree = arbre.saveToTree(mainTree, save)
         self.currentLine = 0
         self.currentFile = self.htree.getFile()
         self.changeFile()
-        self.isChoosing=False
+        self.isChoosing = False
         self.setDialogueBox()
+        self.stopSound(0)
 
     def setDialogueBox(self, destroy=True):
         u"""
@@ -112,11 +127,11 @@ class App:
         # la boite de dialogue pour éviter d'en créer plus d'une
         if self.isChoosing:
             return
- 
+
         if self.history[self.currentLine]['type'] == 'bg':
             self.bgimage = self.history[self.currentLine]['name']
             self.setupBackground()
-            self.currentLine+=1
+            self.currentLine += 1
 
        # Renvoie vers l'affichage d'un texte
 
@@ -124,10 +139,10 @@ class App:
             print(self.history[self.currentLine])
             if 'image' in self.history[self.currentLine]:
                 self.setCharacterMessage(
-                self.history[self.currentLine]["name"], self.history[self.currentLine]["text"],self.history[self.currentLine]['image'], destroy)
+                    self.history[self.currentLine]["name"], self.history[self.currentLine]["text"], self.history[self.currentLine]['image'], destroy)
             else:
                 self.setCharacterMessage(
-                    self.history[self.currentLine]["name"], self.history[self.currentLine]["text"],'', destroy)
+                    self.history[self.currentLine]["name"], self.history[self.currentLine]["text"], '', destroy)
         else:
             # Renvoie vers une zone de choix
             choice1 = self.history[self.currentLine]["choice1"]
@@ -174,10 +189,12 @@ class App:
 
         # FICHIER MENU
         self.fichier = tk.Menu(self.menuContainer, tearoff=0)
-        self.fichier.add_command(label="Nouvelle Partie")
+        self.fichier.add_command(
+            label="Nouvelle Partie", command=lambda: self.newGame(True))
         self.fichier.add_command(
             label="Sauvegarder", command=lambda: arbre.writeSave(self.htree))
-        self.fichier.add_command(label="Charger une sauvegarde", command=self.loadHistoryFromSave)
+        self.fichier.add_command(
+            label="Charger une sauvegarde", command=self.loadHistoryFromSave)
         self.fichier.add_separator()
         self.fichier.add_command(label="Quitter", command=self.root.quit)
         self.menuContainer.add_cascade(label="Fichier", menu=self.fichier)
@@ -194,7 +211,17 @@ class App:
 
     def setupBackground(self, changeBg=True):
         u"""
+        Permet de gérer l'affichage du background et des images
+        des personnages. 
+
+        Préconditions:
+            changeBg : bool
+                Indique s'il faut change le background ou bien 
+                l'image de personnage 
+
         Affiche l'image choisie comme décors du jeu
+        Postcondition:
+            Change le type d'image demandé
         """
         if changeBg:
             self.canv = tk.Canvas(self.root, width=IMAGEWIDTH,
@@ -207,15 +234,17 @@ class App:
         else:
             if self.chrimage:
                 chrimg = visual_novel.getAbsolutePath.getAbsolutePath(
-                script_dir, f'{BACKGROUND_DIR}chr/{self.chrimage[0]}')
+                    script_dir, f'{BACKGROUND_DIR}chr/{self.chrimage[0]}')
                 self.canv.place(x=0, y=0)
                 self.chrbg = ImageTk.PhotoImage(Image.open(
-                chrimg).resize((200, 400), Image.ANTIALIAS))
+                    chrimg).resize((200, 400), Image.ANTIALIAS))
                 # left : 10, 120
-                if self.chrimage[1] == 'r': 
-                    self.canv.create_image(810, 120, anchor=tk.NW, image=self.chrbg)
+                if self.chrimage[1] == 'r':
+                    self.canv.create_image(
+                        810, 120, anchor=tk.NW, image=self.chrbg)
                 else:
-                    self.canv.create_image(10, 120, anchor=tk.NW, image=self.chrbg)
+                    self.canv.create_image(
+                        10, 120, anchor=tk.NW, image=self.chrbg)
 
     def choiceContainer(self, choice1: tuple, choice2: tuple, destroy=False):
         u"""
@@ -277,7 +306,7 @@ class App:
         if image:
             self.chrimage = image
         else:
-            self.chrimage = ('chr1.png','l')
+            self.chrimage = ('none.png', 'l')
         self.setupBackground(False)
 
 
