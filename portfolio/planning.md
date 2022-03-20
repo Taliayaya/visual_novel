@@ -21,3 +21,5 @@ La répartition du travail ainsi que les différentes features et objectifs sont
 | Fioc   | Irène  | Construction de l'arbre binaire   | 45min |
 | Mayeux | Ilan   | Création d'une class pour le son  | 2h30  |
 | Mayeux | Ilan   | Amélioration du GUI               | 3h    |
+| Mayeux | Ilan   | Création du menu principal        | 3h    |
+| Mayeux | Ilan   | Réalisation des images            | 1h30  |
