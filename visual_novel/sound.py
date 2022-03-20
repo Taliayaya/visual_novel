@@ -3,7 +3,7 @@ import os
 import multiprocessing
 import playsound as ps
 
-SOUND_DIR = 'assets/audio/'
+SOUND_DIR = 'visual_novel/assets/audio/'
 script_dir = os.path.dirname(__file__)
 
 
@@ -65,8 +65,7 @@ class GameSound:
             Ajoute le son à la liste des sons lancés et joue l'audio
         """
         # Charge le fichier
-        soundFile = visual_novel.getAbsolutePath.getAbsolutePath(
-            script_dir, f'{SOUND_DIR}{soundName}')
+        soundFile = f'{SOUND_DIR}{soundName}'
         # Crée un thread pour lancer en simultané une musique
         soundThread = multiprocessing.Process(
             target=ps.playsound, args=(soundFile,))
@@ -136,5 +135,3 @@ class GameSound:
 if __name__ == "__main__":
     sound = GameSound()
     sound.startInfiniteSound('test.wav')
-    while True:
-        print(1)
