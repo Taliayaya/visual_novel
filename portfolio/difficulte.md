@@ -12,5 +12,5 @@ De même, permettre d'afficher des images de fond et des personnages a causé de
 
 ## Travail de Groupe
 
-Le travail de groupe a été la cause de beaucoup de stresse. Les deadlines n'étaient pas respectées par l'autre partenaire, ce qui à causé beaucoup de retard pour la réalisation du code. 
+Le travail de groupe a été la cause de beaucoup de stress. Les deadlines n'étaient pas respectées par l'autre partenaire, ce qui a causé beaucoup de retard pour la réalisation du code. 
 

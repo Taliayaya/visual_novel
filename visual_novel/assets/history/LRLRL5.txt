@@ -1,18 +1,18 @@
-Secrétaire@: - "Vraiment ? Très intéressant."
-Secrétaire@: - "Cependant, je n'ai pas beaucoup de temps à vous accorder alors je vous prierais de vous en aller."
+-Secrétaire@: - "Vraiment ? Très intéressant."
+-Secrétaire@: - "Cependant, je n'ai pas beaucoup de temps à vous accorder alors je vous prierais de vous en aller."
 Je quitte le Palais et flâne en ville, admirant le travail des fameux verriers de Murano.
 Le soir arrive.
 Je décide de rentrer à mon auberge quand je croise un groupe de gens.
 Je reconnais celui de ce matin.
-Cuisinière@: - "Vous croyez que c'est sa faute ?"
-Femme 2@: - "Il l'a vraiment balancé..."
-Homme@: "Il va payer."
+-Cuisinière@: - "Vous croyez que c'est sa faute ?"
+-Femme 2@: - "Il l'a vraiment balancé..."
+-Homme@: "Il va payer."
 Je demande ce qu'il se passe, effrayé.
-Cuisinière@: - "Il se passe que mon musicien s'est fait exécuter pour espionnage."
-Cuisinière@: - "Et que c'est ta faute."
+-Cuisinière@: - "Il se passe que mon musicien s'est fait exécuter pour espionnage."
+-Cuisinière@: - "Et que c'est ta faute."
 Elle me crache au visage.
-Cuisinière : - "Et maintenant..."
-Cuisinière@: - "Tu va payer"
+-Cuisinière : - "Et maintenant..."
+-Cuisinière@: - "Tu va payer"
 Je sens un bâton s'écraser dans mon dos.
 Un autre atterrit sur ma tête.
 =gameover.jpg

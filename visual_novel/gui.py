@@ -41,7 +41,7 @@ class App:
         # self.setCharacterImage()
         self.root.mainloop()
 
-    def newParty(self, move = False):
+    def newParty(self, move=False):
         self.htree = htree.getHistoryTree()
         self.currentFile = self.htree.getFile()
         self.currentLine = 0
@@ -52,7 +52,6 @@ class App:
         if move:
             self.setupBackground()
             self.setDialogueBox()
-
 
     def changeFile(self):
         self.history = interpreter.getHistory(self.currentFile)
@@ -89,13 +88,13 @@ class App:
         Le fichier de sauvegarde est interprété, transformé en un
         arbre d'histoire, navigué dedans puis met à jour l'affichage
         graphique."""
-        mainTree = htree.getHistoryTree() 
+        mainTree = htree.getHistoryTree()
         save = arbre.loadSave()
         self.htree = arbre.saveToTree(mainTree, save)
         self.currentLine = 0
         self.currentFile = self.htree.getFile()
         self.changeFile()
-        self.isChoosing=False
+        self.isChoosing = False
         self.setDialogueBox()
 
     def setDialogueBox(self, destroy=True):
@@ -123,11 +122,11 @@ class App:
         # la boite de dialogue pour éviter d'en créer plus d'une
         if self.isChoosing:
             return
- 
+
         if self.history[self.currentLine]['type'] == 'bg':
             self.bgimage = self.history[self.currentLine]['name']
             self.setupBackground()
-            self.currentLine+=1
+            self.currentLine += 1
 
        # Renvoie vers l'affichage d'un texte
 
@@ -135,10 +134,10 @@ class App:
             print(self.history[self.currentLine])
             if 'image' in self.history[self.currentLine]:
                 self.setCharacterMessage(
-                self.history[self.currentLine]["name"], self.history[self.currentLine]["text"],self.history[self.currentLine]['image'], destroy)
+                    self.history[self.currentLine]["name"], self.history[self.currentLine]["text"], self.history[self.currentLine]['image'], destroy)
             else:
                 self.setCharacterMessage(
-                    self.history[self.currentLine]["name"], self.history[self.currentLine]["text"],'', destroy)
+                    self.history[self.currentLine]["name"], self.history[self.currentLine]["text"], '', destroy)
         else:
             # Renvoie vers une zone de choix
             choice1 = self.history[self.currentLine]["choice1"]
@@ -185,10 +184,12 @@ class App:
 
         # FICHIER MENU
         self.fichier = tk.Menu(self.menuContainer, tearoff=0)
-        self.fichier.add_command(label="Nouvelle Partie", command=lambda :self.newParty(True))
+        self.fichier.add_command(
+            label="Nouvelle Partie", command=lambda: self.newParty(True))
         self.fichier.add_command(
             label="Sauvegarder", command=lambda: arbre.writeSave(self.htree))
-        self.fichier.add_command(label="Charger une sauvegarde", command=self.loadHistoryFromSave)
+        self.fichier.add_command(
+            label="Charger une sauvegarde", command=self.loadHistoryFromSave)
         self.fichier.add_separator()
         self.fichier.add_command(label="Quitter", command=self.root.quit)
         self.menuContainer.add_cascade(label="Fichier", menu=self.fichier)
@@ -228,15 +229,17 @@ class App:
         else:
             if self.chrimage:
                 chrimg = visual_novel.getAbsolutePath.getAbsolutePath(
-                script_dir, f'{BACKGROUND_DIR}chr/{self.chrimage[0]}')
+                    script_dir, f'{BACKGROUND_DIR}chr/{self.chrimage[0]}')
                 self.canv.place(x=0, y=0)
                 self.chrbg = ImageTk.PhotoImage(Image.open(
-                chrimg).resize((200, 400), Image.ANTIALIAS))
+                    chrimg).resize((200, 400), Image.ANTIALIAS))
                 # left : 10, 120
-                if self.chrimage[1] == 'r': 
-                    self.canv.create_image(810, 120, anchor=tk.NW, image=self.chrbg)
+                if self.chrimage[1] == 'r':
+                    self.canv.create_image(
+                        810, 120, anchor=tk.NW, image=self.chrbg)
                 else:
-                    self.canv.create_image(10, 120, anchor=tk.NW, image=self.chrbg)
+                    self.canv.create_image(
+                        10, 120, anchor=tk.NW, image=self.chrbg)
 
     def choiceContainer(self, choice1: tuple, choice2: tuple, destroy=False):
         u"""
@@ -298,7 +301,7 @@ class App:
         if image:
             self.chrimage = image
         else:
-            self.chrimage = ('none.png','l')
+            self.chrimage = ('none.png', 'l')
         self.setupBackground(False)
 
 

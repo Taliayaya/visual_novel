@@ -1,43 +1,106 @@
 {
-    "root": {
-        "file": "init.txt",
-        "left": {
-            "file": "L1.txt",
-            "left": {
-                "file": "LL2.txt",
-                "left": {
-                    "file": "LLL3.txt",
+  "root": {
+      "file": "init.txt",
+      "left": {
+          "file": "L1.txt",
+          "left": {
+              "file": "LL2.txt",
+              "left": {
+                  "file": "LLL3.txt",
+                  "left": {
+                    "file": "LLLL4.txt",
                     "left": {},
                     "right": {}
-                },
-                "right": {
-                    "file": "LLR3.txt",
+                  },
+                  "right": {
+                    "file": "LLLR4.txt",
                     "left": {},
                     "right": {}
-                },
-                "right": {
-                    "file": "LR2.txt",
+                  }
+              },
+              "right": {
+                  "file": "LLR3.txt",
+                  "left": {
+                    "file": "LLRL4.txt",
                     "left": {
-                        "file": "LRL3.txt",
-                        "left": {
-                            "file": "LRLL4.txt",
+                      "file": "LLRLL5.txt",
+                      "left": {},
+                      "right": {}
+                    }
+                  },
+                  "right": {
+                    "file": "LLRLR5.txt",
+                    "left": {},
+                    "right": {}
+                  }
+              }
+            },
+           "right": {
+                  "file": "LR2.txt",
+                  "left": {
+                      "file": "LRL3.txt",
+                      "left": {
+                          "file": "LRLL4.txt",
+                          "left": {
+                            "file": "LRLLL5.txt",
                             "left": {},
                             "right": {}
+                          },
+                          "right": {
+                            "file": "LRLLR5.txt",
+                            "left": {},
+                            "right": {}
+                          }
+                      },
+                      "right": {
+                        "file": "LRLR4.txt",
+                        "left": {
+                          "file": "LRLRL5.txt",
+                          "left": {},
+                          "right": {}
                         },
-                        "right": {}
-                    },
-                    "right": {
-                        "file": "LRR3.txt",
+                        "right": {
+                          "file": "LRLRR5.txt",
+                          "left": {},
+                          "right": {}
+                        }
+                      }
+                  },
+                  "right": {
+                      "file": "LRR3.txt",
+                      "left": {
+                        "file": "LRRL4.txt",
+                        "left": {
+                          "file": "LRRLL5.txt",
+                          "left": {
+                            "file": "LRRLLL6.txt",
+                            "left": {},
+                            "right": {}
+                          },
+                          "right": {
+                            "file": "LRRLLR6.txt",
+                            "left": {},
+                            "right": {}
+                          }
+                        },
+                        "right": {
+                          "file": "LRRLR5.txt",
+                          "left": {},
+                          "right": {}
+                        }
+                      },
+                      "right": {
+                        "file": "LRRR4.txt",
                         "left": {},
                         "right": {}
-                    }
-                }
-            }
-        },
-        "right": {
-            "file": "R1.txt",
-            "left": {},
-            "right": {}
-        }
-    }
-}
+                      }
+                  }
+              }
+          }
+      },
+      "right": {
+          "file": "R1.txt",
+          "left": {},
+          "right": {}
+      }
+  }

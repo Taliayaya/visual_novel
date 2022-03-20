@@ -1,0 +1,15 @@
+Je retourne voir Léonard.
+-Léonard@: - "Tout va bien ?"
+-Moi@: - "Oui, oui."
+-Moi@: - "Ca n'a jamais été aussi bien"
+-Moi@: - "J'ai trouvé la solution de l'énigme."
+-Moi@: - "Après ta présentation au conseil, ne m'attends pas."
+-Moi@: - "J'ai quelque chose à faire."
+La présentation de Léonard se passe sans problème.
+Je vais parler au chef du conseil.
+Je lui explique tout ce que je sais.
+Il me rassure et m'assure qu'il va prendre les mesures nécessaires.
+Quelques jours plus tard, le doge est arrêté.
+Il est comdamné à la prison à vie pour avoir tenté de renverser la république de Venise.
+=record-coupe.png
+GG ^^

@@ -15,4 +15,7 @@ La répartition du travail ainsi que les différentes features et objectifs sont
 | Mayeux | Ilan   | Correction de bugs               | 3h    |
 | Mayeux | Ilan   | Changement de l'interface du GUI | 2h    |
 | Mayeux | Ilan   | Système pour faire une sauvegarde| 1h30  |
-| Mayeux | Ilan | Écriture du portfolio | 4h |
+| Mayeux | Ilan   | Écriture du portfolio            | 4h    |
+|  Fioc  | Irène  | Écriture de l'histoire           | 6h    |
+|  Fioc  | Irène  | Finition de l'arborescence json  | 30min |
+|  Fioc  | Irène  | Construction de l'arbre binaire  | 45min |
