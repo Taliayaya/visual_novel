@@ -7,6 +7,7 @@ import visual_novel.interpreter as interpreter
 import visual_novel.history_tree as htree
 import visual_novel.arbre as arbre
 import visual_novel.sound as sound
+import tkinter.messagebox
 
 
 # Window
@@ -30,12 +31,25 @@ script_dir = os.path.dirname(__file__)
 class App:
     def __init__(self) -> None:
         self.root = tk.Tk()
+        # Modifie les intéractions avec le close icon
+        self.root.protocol('WM_DELETE_WINDOW', self.onClosing)
         self.root.geometry(f'{WIDTH}x{HEIGHT}')
+        self.root.resizable(0, 0)
         self.newGame()
-        self.soundPlayer = sound()
+        self.soundPlayer = sound.GameSound()
+
+    def onClosing(self):
+        u"""
+        Permet de gérer manuellement l'action de quitter le jeu.
+
+        En quittant le jeu, demande une confirmation et arrête toutes les musiques
+        """
+        if tkinter.messagebox.askokcancel("Quitter le jeu", "Êtes-vous sûr de vouloir quitter le jeu ? Toute progression non-sauvegardée sera perdu. "):
+            self.soundPlayer.stopEverything()
+            self.root.quit()
 
     def start(self):
-        self.root.bind("<space>", lambda x: self.setDialogueBox())
+        self.root.bind("<space>", self.setDialogueBox)
         self.setupBackground()
         self.menu()
         # self.chooseUsername()
@@ -52,7 +66,6 @@ class App:
         self.isChoosing = False
         self.chrimage = ''
         self.bgimage = 'quai_nuit.png'
-        self.startNewSound('main.wav')
         if move:
             self.setupBackground()
             self.setDialogueBox()
@@ -100,7 +113,6 @@ class App:
         self.changeFile()
         self.isChoosing = False
         self.setDialogueBox()
-        self.stopSound(0)
 
     def setDialogueBox(self, destroy=True):
         u"""
@@ -128,25 +140,48 @@ class App:
         if self.isChoosing:
             return
 
-        if self.history[self.currentLine]['type'] == 'bg':
-            self.bgimage = self.history[self.currentLine]['name']
+        line = self.history[self.currentLine]
+
+        if line['type'] == 'bg':
+            self.bgimage = line['name']
             self.setupBackground()
             self.currentLine += 1
 
+        elif line["type"] == "sound":
+            self.soundPlayer.startNewSound(line['name'])
+            self.currentLine += 1
+
+        elif line["type"] == "inf_sound":
+            self.soundPlayer.startInfiniteSound(line["name"])
+            self.currentLine += 1
+        elif line["type"] == 'stop_inf_sound':
+            self.soundPlayer.stopInfiniteSound(line['num'])
+            self.currentLine += 1
+        elif line['type'] == 'stop_sound':
+            self.soundPlayer.stopSound(line["num"])
+            self.currentLine += 1
+        elif line['type'] == 'stop_all':
+            self.soundPlayer.stopEverything()
+            self.currentLine += 1
+
+        print(line)
+
+        line = self.history[self.currentLine]
+
        # Renvoie vers l'affichage d'un texte
 
-        if self.history[self.currentLine]['type'] != "choice" and self.history[self.currentLine]['type'] != 'bg':
-            print(self.history[self.currentLine])
-            if 'image' in self.history[self.currentLine]:
+        if line['type'] != "choice" and line['type'] != 'bg':
+            print(line)
+            if 'image' in line:
                 self.setCharacterMessage(
-                    self.history[self.currentLine]["name"], self.history[self.currentLine]["text"], self.history[self.currentLine]['image'], destroy)
+                    line["name"], line['text'], line['image'], destroy)
             else:
                 self.setCharacterMessage(
-                    self.history[self.currentLine]["name"], self.history[self.currentLine]["text"], '', destroy)
+                    line["name"], line['text'], '', destroy)
         else:
             # Renvoie vers une zone de choix
-            choice1 = self.history[self.currentLine]["choice1"]
-            choice2 = self.history[self.currentLine]["choice2"]
+            choice1 = line["choice1"]
+            choice2 = line["choice2"]
             self.choiceContainer(choice1, choice2)
             self.isChoosing = True
         # Augmente d'une ligne tant que l'historie n'est pas finie
@@ -196,7 +231,7 @@ class App:
         self.fichier.add_command(
             label="Charger une sauvegarde", command=self.loadHistoryFromSave)
         self.fichier.add_separator()
-        self.fichier.add_command(label="Quitter", command=self.root.quit)
+        self.fichier.add_command(label="Quitter", command=self.onClosing)
         self.menuContainer.add_cascade(label="Fichier", menu=self.fichier)
 
         # EDIT MENU

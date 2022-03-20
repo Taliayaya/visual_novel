@@ -1,3 +1,4 @@
+from asyncio.windows_events import INFINITE
 import visual_novel.getAbsolutePath as getAbsolutePath
 import os
 
@@ -13,9 +14,17 @@ DIALOGUE_START = '-'
 DIALOGUE_DELIMITER = ': -'
 DIALOGUE_CHR_IMAGE = '@'
 
+ADD_LINE = '+'
+
 BG_START = '='
 
 CHR_IMG = ','
+
+SOUND_START = '♪'  # ALT + 13
+INFINITE_SOUND_START = '♫'  # ALT + 14
+STOP_SOUND = '/♪'
+STOP_INFINITE_SOUND = '/♫'
+STOP_ALL_SOUNDS = '§'
 
 
 def getChoices(line: str) -> list:
@@ -66,11 +75,13 @@ def getDialogue(line: str) -> dict:
     if image != '':
         image = image.split(CHR_IMG)
 
-    return {"type": "dialogue", "name": name, "text": text, "image":image}
+    return {"type": "dialogue", "name": name, "text": text, "image": image}
+
 
 def getBackground(line: str) -> dict:
     u""""""
     return {"type": "bg", "name": line[1:-1]}
+
 
 def getDescription(line: str) -> dict:
     u"""Récupère une ligne de description et la formate pour l'utilisation
@@ -93,22 +104,62 @@ def getDescription(line: str) -> dict:
     return {"type": "description", "name": "", "text": line}
 
 
+def getSound(line: str) -> dict:
+    return {"type": "sound", "name": line[1:-1]}
+
+
+def getInfiniteSound(line: str) -> dict:
+    return {"type": "inf_sound", "name": line[1:-1]}
+
+
+def stopInfinitesound(line: str) -> dict:
+    return {"type": "stop_inf_sound", "num": line[1:-1]}
+
+
+def stopSound(line: str) -> dict:
+    return {"type": "stop_sound", "num": line[1:-1]}
+
+
+def stopEverySounds() -> dict:
+    return {"type": "stop_all"}
+
+
+def addTextToLastLine(line: str, lastLine: dict) -> dict:
+    if 'image' in lastLine:
+        image = lastLine["image"]
+    else:
+        image = ''
+    return {"type": "dialogue", "name": lastLine['name'], "text": f'{lastLine["text"][:-1]} {line[1:-1]}', "image": image}
+
+
 def getHistory(file):
     file_dir = getAbsolutePath.getAbsolutePath(script_dir, DATADIRECTORY+file)
     history = []
     with open(file_dir, encoding='utf-8') as f:
         for line in f.readlines():
             if line[0] == CHOICE_START:
-                history.append(getChoices(line))
+                lineDic = getChoices(line)
             elif line[0] == DIALOGUE_START:
-                history.append(getDialogue(line))
+                lineDic = getDialogue(line)
             elif line[0] == BG_START:
-                history.append(getBackground(line))
+                lineDic = getBackground(line)
+            elif line[0] == SOUND_START:
+                lineDic = getSound(line)
+            elif line[0] == ADD_LINE:
+                lineDic = addTextToLastLine(line, history[-1])
+            elif line[0] == STOP_ALL_SOUNDS:
+                lineDic = stopEverySounds()
+            elif line[0:2] == STOP_INFINITE_SOUND:
+                lineDic = stopInfinitesound(line)
+            elif line[0:2] == STOP_SOUND:
+                lineDic = stopSound(line)
             else:
-                history.append(getDescription(line))
+                lineDic = getDescription(line)
+
+            history.append(lineDic)
     return history
 
 
 if __name__ == "__main__":
     file = 'init.txt'
-    print(getHistory(file))
+    getHistory(file)

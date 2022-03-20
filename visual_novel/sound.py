@@ -3,7 +3,7 @@ import os
 import multiprocessing
 import playsound as ps
 
-SOUND_DIR = 'assets/audio/'
+SOUND_DIR = 'visual_novel/assets/audio/'
 script_dir = os.path.dirname(__file__)
 
 
@@ -30,7 +30,6 @@ class GameSound:
             target=self.startNewSound, args=(soundName,))
         soundThread.start()
         soundThread.join()
-        print(self._music_playing)
         return self._infiniteSound(soundName)
 
     def startInfiniteSound(self, soundName: str):
@@ -65,8 +64,7 @@ class GameSound:
             Ajoute le son à la liste des sons lancés et joue l'audio
         """
         # Charge le fichier
-        soundFile = visual_novel.getAbsolutePath.getAbsolutePath(
-            script_dir, f'{SOUND_DIR}{soundName}')
+        soundFile = f'{SOUND_DIR}{soundName}'
         # Crée un thread pour lancer en simultané une musique
         soundThread = multiprocessing.Process(
             target=ps.playsound, args=(soundFile,))
@@ -111,13 +109,14 @@ class GameSound:
         u"""
         Arrête tous les sons en cours et les retire de la liste
         """
-        [self.stopSound(num) for num in self._music_playing]
+        [self.stopSound(num) for num in range(len(self._music_playing))]
 
     def stopAllInfiniteSounds(self):
         u"""
         Arrête tous les sons infinis en cours et les retire de la liste
         """
-        [self.stopInfiniteSound(num) for num in self._infinite_music_playing]
+        [self.stopInfiniteSound(num)
+         for num in range(len(self._infinite_music_playing))]
 
     def stopEverything(self):
         u"""
@@ -130,11 +129,10 @@ class GameSound:
         u"""
         Renvoie la liste des threads
         """
-        return self._music_playing
+        return self._music_playing, self._infinite_music_playing
 
 
 if __name__ == "__main__":
     sound = GameSound()
     sound.startInfiniteSound('test.wav')
-    while True:
-        print(1)
+    sound.stopAllInfiniteSounds()
