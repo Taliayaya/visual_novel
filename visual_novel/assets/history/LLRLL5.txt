@@ -1,6 +1,6 @@
 =cour-palais.jpg
 Je retourne voir Léonard.
--Léonard@: - "Tout va bien ?"
+-Léonard@devinci.png,r: - "Tout va bien ?"
 -Moi@: - "Oui, oui."
 -Moi@: - "Ca n'a jamais été aussi bien"
 -Moi@: - "J'ai trouvé la solution de l'énigme."

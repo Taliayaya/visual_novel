@@ -1,5 +1,5 @@
 =atelier.jpg
--Apprenti@: - "Alors suivez moi, M'sieur."
+-Apprenti@apprenti.png,l: - "Alors suivez moi, M'sieur."
 =quai_jour.png
 Il m'entraîne vers le palais des doges.
 Arrivés au niveau d'un pont, il s'arrête, cherche autour de lui.
@@ -7,25 +7,25 @@ Il se dirige vers une petite porte, sous le pont.
 Nous nous retrouvons dans un tunnel assez sombre.
 =black_screen.png
 Pendant que nous progressins dans le tunnel, il rompt le silence.
--Apprenti@: - "Vous êtes-vous jamais senti inutile, M'sieur ?"
--Apprenti@: - "Moi oui."
--Apprenti@: - "Avant que je devienne apprenti, j'étais un gamin des rues."
--Apprenti@: - "Je me sentais comme un poids pour les autres."
--Apprenti@: - "Mais j'ai encore cette impression."
--Apprenti@: - "Quand les maîtres peignent une toile, ils ne me laissent quasiment pas les aider."
--Apprenti@: - "Je le vois bien dans leurs yeux, ils ont peur que je gâche tout."
--Apprenti@: - "Ils ont probablement raison."
--Apprenti@: - "Je ne sert à rien."
--Apprenti@: - "Mais si je disparaissais, quelqu'un serait triste, non ?"
+-Apprenti@apprenti.png,l: - "Vous êtes-vous jamais senti inutile, M'sieur ?"
+-Apprenti@apprenti.png,l: - "Moi oui."
+-Apprenti@apprenti.png,l: - "Avant que je devienne apprenti, j'étais un gamin des rues."
+-Apprenti@apprenti.png,l: - "Je me sentais comme un poids pour les autres."
+-Apprenti@apprenti.png,l: - "Mais j'ai encore cette impression."
+-Apprenti@apprenti.png,l: - "Quand les maîtres peignent une toile, ils ne me laissent quasiment pas les aider."
+-Apprenti@apprenti.png,l: - "Je le vois bien dans leurs yeux, ils ont peur que je gâche tout."
+-Apprenti@apprenti.png,l: - "Ils ont probablement raison."
+-Apprenti@apprenti.png,l: - "Je ne sert à rien."
+-Apprenti@apprenti.png,l: - "Mais si je disparaissais, quelqu'un serait triste, non ?"
 Il s'interrompt.
--Apprenti@: - "Plus un bruit maintenant."
+-Apprenti@apprenti.png,l: - "Plus un bruit maintenant."
 A travers une fente dans le mur, on apperçoit le bureau du Doge.
 Il continue à voix basse.
--Apprenti@: - "Je viens parfois ici pour espionner le Doge."
--Apprenti@: - "J'ai l'impression d'être un agent secret."
--Apprenti@: - "Hier, peu avant la fête, il a donné des ordres à un capitaine."
--Apprenti@: - "Je n'ai pas tout entendu mais il semblait assez inquiet de savoir si les hommes au service de ce capitaine étaient fiables."
--Apprenti@: - "Je crois que c'est le Doge qui a commandité le meurtre d'hier soir."
+-Apprenti@apprenti.png,l: - "Je viens parfois ici pour espionner le Doge."
+-Apprenti@apprenti.png,l: - "J'ai l'impression d'être un agent secret."
+-Apprenti@apprenti.png,l: - "Hier, peu avant la fête, il a donné des ordres à un capitaine."
+-Apprenti@apprenti.png,l: - "Je n'ai pas tout entendu mais il semblait assez inquiet de savoir si les hommes au service de ce capitaine étaient fiables."
+-Apprenti@apprenti.png,l: - "Je crois que c'est le Doge qui a commandité le meurtre d'hier soir."
 Une voix s'élève derrière nous.
 -Capitaine@capitaine.png,r: - "Et moi je crois que vous en savez trop."
 Un homme en armure se tient devant nous.

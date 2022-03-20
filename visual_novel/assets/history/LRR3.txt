@@ -1,5 +1,5 @@
 =quai_jour.png
--Cuisinière@: - "Si c'est votre décision Môôsieur..."
+-Cuisinière@cuisiniere.png,r: - "Si c'est votre décision Môôsieur..."
 Elle semble vexée.
 =cour-palais.jpg
 Je me rends donc au Palais et je vais voir le secrétaire du Doge.
