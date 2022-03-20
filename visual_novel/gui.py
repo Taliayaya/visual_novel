@@ -47,9 +47,12 @@ class App:
         self.soundPlayer.startInfiniteSound('main.wav')
         self.root.rowconfigure(2, minsize=30)
 
+        self.char = ''
+
     def homePage(self, destroy=False):
         if destroy:
             self.frame.destroy()
+            self.quitBtn.destroy()
             self.soundPlayer.stopEverything()
             return
 
@@ -69,10 +72,9 @@ class App:
         continueBtn = tk.Button(self.frame, text='Continuer', cursor="hand1",
                                 image=self.continueImg, command=self.continueGame)
         continueBtn.grid(row=1, column=0)
-        tk.Label(self.frame).grid(row=2, column=0)
-        quitBtn = tk.Button(self.root, text='Quitter',
-                            image=self.quitImg, command=self.onClosing)
-        quitBtn.pack(fill="none", expand=True)
+        self.quitBtn = tk.Button(self.root, text='Quitter', cursor='hand1',
+                                 image=self.quitImg, command=self.onClosing)
+        self.quitBtn.pack(fill="none", expand=True)
         self.soundPlayer.startNewSound('startsound.wav')
 
     def continueGame(self):
@@ -94,7 +96,7 @@ class App:
 
         En quittant le jeu, demande une confirmation et arrête toutes les musiques
         """
-        if tkinter.messagebox.askokcancel("Quitter le jeu", "Êtes-vous sûr de vouloir quitter le jeu ? Toute progression non-sauvegardée sera perdu. "):
+        if tkinter.messagebox.askokcancel("Quitter le jeu", "Êtes-vous sûr de vouloir quitter le jeu ?\nToute progression non-sauvegardée sera perdu. "):
             self.soundPlayer.stopEverything()
             self.root.quit()
             sys.exit(0)
@@ -164,6 +166,8 @@ class App:
         self.currentFile = self.htree.getFile()
         self.changeFile()
         self.isChoosing = False
+        self.setCharacterMessage('', '', '')
+        self.setCharacterMessage('', '', '', True, True)
         self.setDialogueBox()
 
     def setDialogueBox(self, destroy=True):
@@ -196,6 +200,7 @@ class App:
 
         if line['type'] == 'bg':
             self.bgimage = line['name']
+            self.setCharacterMessage('', '', '', True, True)
             self.setupBackground()
             self.currentLine += 1
             return self.setDialogueBox(False)
@@ -370,7 +375,7 @@ class App:
         self.buttonRight.pack(expand="yes")
         print(self.choiceFrame)
 
-    def setCharacterMessage(self, name: str, message: str, image: str, destroy: bool = True):
+    def setCharacterMessage(self, name: str, message: str, image: str, destroy: bool = True, changeBg=False):
         u"""
         Affiche le message du personnage sur l'interface
         et retire le précédent
@@ -389,16 +394,20 @@ class App:
 
         if destroy:
             self.char.destroy()
+            # self.message.destroy()
+
         self.char = tk.LabelFrame(self.root, text=name, padx=20, pady=20)
         self.char.pack(side=tk.BOTTOM, padx=10, pady=10)
         if message:
             self.message = tk.Label(self.char, text=message, wraplength=900, justify=tk.CENTER,
                                     width=LABELWIDTH, font=(FONTFAMILY, FONTSIZE))
-            self.message.pack(side=tk.BOTTOM)
+            self.message.pack()
         if image:
             self.chrimage = image
         else:
             self.chrimage = ('none.png', 'l')
+        if changeBg:
+            self.char.destroy()
         self.setupBackground(False)
 
 
