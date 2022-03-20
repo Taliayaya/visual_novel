@@ -4,7 +4,6 @@ import tkinter as tk
 from PIL import ImageTk, Image, ImageFilter
 import os
 
-from matplotlib.pyplot import grid
 import visual_novel.getAbsolutePath
 import visual_novel.interpreter as interpreter
 import visual_novel.history_tree as htree
@@ -71,9 +70,9 @@ class App:
                                 image=self.continueImg, command=self.continueGame)
         continueBtn.grid(row=1, column=0)
         tk.Label(self.frame).grid(row=2, column=0)
-        quitBtn = tk.Button(self.frame, text='Quitter',
+        quitBtn = tk.Button(self.root, text='Quitter',
                             image=self.quitImg, command=self.onClosing)
-        quitBtn.grid(row=3, column=0)
+        quitBtn.pack(fill="none", expand=True)
         self.soundPlayer.startNewSound('startsound.wav')
 
     def continueGame(self):
@@ -323,11 +322,11 @@ class App:
             self.bg = ImageTk.PhotoImage(Image.open(
                 img).resize((IMAGEWIDTH, IMAGEHEIGHT), Image.ANTIALIAS).filter(ImageFilter.GaussianBlur(1)))
             self.canv.create_image(0, 0, anchor=tk.NW, image=self.bg)
+            self.canv.place(x=0, y=0)
         else:
             if self.chrimage:
                 chrimg = visual_novel.getAbsolutePath.getAbsolutePath(
                     script_dir, f'{BACKGROUND_DIR}chr/{self.chrimage[0]}')
-                self.canv.place(x=0, y=0)
                 self.chrbg = ImageTk.PhotoImage(Image.open(
                     chrimg).resize((200, 400), Image.ANTIALIAS))
                 # left : 10, 120
@@ -395,7 +394,7 @@ class App:
         if message:
             self.message = tk.Label(self.char, text=message, wraplength=900, justify=tk.CENTER,
                                     width=LABELWIDTH, font=(FONTFAMILY, FONTSIZE))
-            self.message.pack()
+            self.message.pack(side=tk.BOTTOM)
         if image:
             self.chrimage = image
         else:

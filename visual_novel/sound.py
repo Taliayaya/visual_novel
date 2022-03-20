@@ -1,8 +1,7 @@
-import visual_novel.getAbsolutePath
 import os
 import multiprocessing
 import playsound as ps
-
+import time
 SOUND_DIR = 'visual_novel/assets/audio/'
 script_dir = os.path.dirname(__file__)
 
@@ -18,7 +17,7 @@ class GameSound:
         u"""
         Joue un son à l'infini jusqu'à la fin du programme
 
-        Précondition: 
+        Précondition:
             soundName : str
                 Le nom du son à jouer à l'infini
 
@@ -30,6 +29,7 @@ class GameSound:
             target=self.startNewSound, args=(soundName,))
         soundThread.start()
         soundThread.join()
+
         return self._infiniteSound(soundName)
 
     def startInfiniteSound(self, soundName: str):
@@ -88,6 +88,7 @@ class GameSound:
         """
         if num < len(self._music_playing):
             self._music_playing[num].terminate()
+            self._music_playing[num].join()
             self._music_playing.pop(num)
 
     def stopInfiniteSound(self, num: int):
@@ -101,8 +102,13 @@ class GameSound:
         Postcondition:
             Arrête le son infini et le retire de la liste des sons en cours
         """
+
         if num < len(self._infinite_music_playing):
+
+            self.stopAllSounds()
             self._infinite_music_playing[num].terminate()
+
+            self._infinite_music_playing[num].join()
             self._infinite_music_playing.pop(num)
 
     def stopAllSounds(self):
@@ -134,5 +140,6 @@ class GameSound:
 
 if __name__ == "__main__":
     sound = GameSound()
-    sound.startInfiniteSound('test.wav')
-    sound.stopAllInfiniteSounds()
+    sound.startNewSound('main.wav')
+    time.sleep(3)
+    sound.stopSound(0)
