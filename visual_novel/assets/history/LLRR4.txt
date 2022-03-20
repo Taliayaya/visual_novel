@@ -1,6 +1,8 @@
+=cour-palais.jpg
 -Moi@: - "Non, je doit continuer mon enquête."
 -Léonard@: - "Ah, très bien."
 Il semble déçu.
+=quai_jour.png
 Je quitte l'atelier et vais sur les quais.
 Il semble y avoir de l'agitation.
 Une femme harangue la foule.

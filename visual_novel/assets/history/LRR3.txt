@@ -1,5 +1,7 @@
+=quai_jour.png
 -Cuisinière@: - "Si c'est votre décision Môôsieur..."
 Elle semble vexée.
+=cour-palais.jpg
 Je me rends donc au Palais et je vais voir le secrétaire du Doge.
 -Secrétaire@: - "Le Doge n'est pas là mais si vous voulez attendre un peu, je pourais vous obtenir un rendez-vous."
 -Secrétaire@: - "Souhaitez vous attendre ?"

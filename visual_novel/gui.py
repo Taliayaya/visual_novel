@@ -44,7 +44,7 @@ class App:
         self.chrimage = ('none.png', 'l')
         self.newGame()
         self.soundPlayer = sound.GameSound()
-        self.soundPlayer.startInfiniteSound('main.wav')
+        self.soundPlayer.startInfiniteSound('musique_vive.wav')
         self.root.rowconfigure(2, minsize=30)
 
         self.char = ''
@@ -96,7 +96,7 @@ class App:
 
         En quittant le jeu, demande une confirmation et arrête toutes les musiques
         """
-        if tkinter.messagebox.askokcancel("Quitter le jeu", "Êtes-vous sûr de vouloir quitter le jeu ?\nToute progression non-sauvegardée sera perdu. "):
+        if tkinter.messagebox.askokcancel("Quitter le jeu", "Êtes-vous sûr de vouloir quitter le jeu ?\nToute progression non-sauvegardée sera perdue. "):
             self.soundPlayer.stopEverything()
             self.root.quit()
             sys.exit(0)

@@ -1,3 +1,4 @@
+=quai_jour.png
 En me rendant au palais des Doges, je croise un attroupement avec une femme au centre.
 -Femme@: - "Oui, moi je vous dis que le mort a un lien avec le palais."
 -Femme@: - "Y a tout le monde qu'est bizarre là-bas."

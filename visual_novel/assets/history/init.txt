@@ -1,6 +1,6 @@
 Les senteurs de la nuit embaument l'air.
 Le grand carnaval de Venise est vraiment magnifique. Des masques de toutes couleurs et de toutes formes dissimulent les visages d'arlequins et de rois.
-Tous profitent de la fête quand soudain un cri retenti.
+Tous profitent de la fête quand soudain un cri retentit.
 La foule s'agite : un homme déguisé en roi mage se tient péniblement debout.
 - Roi mage @roimage.png,r: - "Là, dans le canal..."
 Des exclamations fusent.
