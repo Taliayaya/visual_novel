@@ -1,3 +1,4 @@
+=quai_jour.png
 -Cuisinière@: - "Bah si vous voulez vraiment en savoir plus sur ce que j'dis, 'pouvez allez voir le musicien qui joue dans la cour du Palais."
 -Cuisinière@: - "Il a vu et entendu des choses intéressantes."
 -Femme 2@: - "Tu veux surtout pousser les badauds à aller le voir."

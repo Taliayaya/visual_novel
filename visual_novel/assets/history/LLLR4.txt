@@ -1,8 +1,11 @@
+=atelier.jpg
 -Apprenti@: - "Alors suivez moi, M'sieur."
+=quai_jour.png
 Il m'entraîne vers le palais des doges.
 Arrivés au niveau d'un pont, il s'arrête, cherche autour de lui.
 Il se dirige vers une petite porte, sous le pont.
 Nous nous retrouvons dans un tunnel assez sombre.
+=black_screen.png
 Pendant que nous progressins dans le tunnel, il rompt le silence.
 -Apprenti@: - "Vous êtes-vous jamais senti inutile, M'sieur ?"
 -Apprenti@: - "Moi oui."
@@ -24,10 +27,11 @@ Il continue à voix basse.
 -Apprenti@: - "Je n'ai pas tout entendu mais il semblait assez inquiet de savoir si les hommes au service de ce capitaine étaient fiables."
 -Apprenti@: - "Je crois que c'est le Doge qui a commandité le meurtre d'hier soir."
 Une voix s'élève derrière nous.
--Inconnu@: - "Et moi je crois que vous en savez trop."
-Un homme en armure se tiens devant nous.
+-Capitaine@capitaine.png,r: - "Et moi je crois que vous en savez trop."
+Un homme en armure se tient devant nous.
 Plusieurs autres soldats semblent le suivre.
 Nous sommes rapidement arrêtés, malgré une résistance de ma part.
+=cour-palais.jpg
 Quelques jours plus tard, à la prison, la soupe arrive.
 Je la bois sans grand appétit.
 Soudain, une douleur terrible me tord le ventre.

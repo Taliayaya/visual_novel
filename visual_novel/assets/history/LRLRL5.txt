@@ -1,5 +1,7 @@
+=cour-palais.jpg
 -Secrétaire@: - "Vraiment ? Très intéressant."
 -Secrétaire@: - "Cependant, je n'ai pas beaucoup de temps à vous accorder alors je vous prierais de vous en aller."
+=quai_jour.png
 Je quitte le Palais et flâne en ville, admirant le travail des fameux verriers de Murano.
 Le soir arrive.
 Je décide de rentrer à mon auberge quand je croise un groupe de gens.

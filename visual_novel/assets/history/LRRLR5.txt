@@ -1,3 +1,4 @@
+=cour-palais.jpg
 -Doge@: - "Vraiment ?"
 -Doge@: - "Pourquoi m'avoir attendu dans ce cas ?"
 -Doge@: - "Ah...je vois."
@@ -10,6 +11,7 @@ Ils semblent me prendre pour un imbécile.
 Ou pour un fou ?
 Le secrétaire me prend par l'épaule.
 -Secrétaire@: - "Venez avec moi."
+=quai_jour.png
 Il me fait traverser un pont et me conduit à l'Hôtel-Dieu.
 En voyant cela, je me débat.
 Il demande à des passant de l'aide.

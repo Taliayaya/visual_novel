@@ -1,3 +1,4 @@
+=cour-palais.jpg
 Après un moment d'attente, le Doge est là.
 -Doge@: - "Donc...vous vouliez me parler ?"
 #Oui~LRRLL5.txt|Non~LRRLR5.txt$

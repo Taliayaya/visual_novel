@@ -1,3 +1,4 @@
+=atelier.jpg
 -Léonard@devinci.png,r: - "Oh, très bien."
 -Léonard@devinci.png,r: - "Il est là, je te laisse."
 -Michel-Ange@: - "Bonjour, tu souhaitais me parler ?"
