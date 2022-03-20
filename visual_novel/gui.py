@@ -1,4 +1,3 @@
-from email.mime import image
 import string
 import tkinter as tk
 from PIL import ImageTk, Image, ImageFilter
@@ -7,6 +6,8 @@ import visual_novel.getAbsolutePath
 import visual_novel.interpreter as interpreter
 import visual_novel.history_tree as htree
 import visual_novel.arbre as arbre
+import visual_novel.sound as sound
+
 
 # Window
 WIDTH = 1000
@@ -30,7 +31,8 @@ class App:
     def __init__(self) -> None:
         self.root = tk.Tk()
         self.root.geometry(f'{WIDTH}x{HEIGHT}')
-        self.newParty()
+        self.newGame()
+        self.soundPlayer = sound()
 
     def start(self):
         self.root.bind("<space>", lambda x: self.setDialogueBox())
@@ -41,14 +43,16 @@ class App:
         # self.setCharacterImage()
         self.root.mainloop()
 
-    def newParty(self, move=False):
+    def newGame(self, move=False):
         self.htree = htree.getHistoryTree()
         self.currentFile = self.htree.getFile()
         self.currentLine = 0
+
         self.changeFile()
         self.isChoosing = False
         self.chrimage = ''
         self.bgimage = 'quai_nuit.png'
+        self.startNewSound('main.wav')
         if move:
             self.setupBackground()
             self.setDialogueBox()
@@ -96,6 +100,7 @@ class App:
         self.changeFile()
         self.isChoosing = False
         self.setDialogueBox()
+        self.stopSound(0)
 
     def setDialogueBox(self, destroy=True):
         u"""
@@ -185,7 +190,7 @@ class App:
         # FICHIER MENU
         self.fichier = tk.Menu(self.menuContainer, tearoff=0)
         self.fichier.add_command(
-            label="Nouvelle Partie", command=lambda: self.newParty(True))
+            label="Nouvelle Partie", command=lambda: self.newGame(True))
         self.fichier.add_command(
             label="Sauvegarder", command=lambda: arbre.writeSave(self.htree))
         self.fichier.add_command(
