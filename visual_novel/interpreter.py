@@ -1,3 +1,4 @@
+from asyncio.windows_events import INFINITE
 import visual_novel.getAbsolutePath as getAbsolutePath
 import os
 
@@ -13,11 +14,14 @@ DIALOGUE_START = '-'
 DIALOGUE_DELIMITER = ': -'
 DIALOGUE_CHR_IMAGE = '@'
 
+ADD_LINE = '+'
+
 BG_START = '='
 
 CHR_IMG = ','
 
-SOUND_START = '♪'
+SOUND_START = '♪'  # ALT + 13
+INFINITE_SOUND_START = '♫'  # ALT + 14
 
 
 def getChoices(line: str) -> list:
@@ -101,6 +105,18 @@ def getSound(line: str) -> dict:
     return {"type": "sound", "name": line[1:-1]}
 
 
+def getInfiniteSound(line: str) -> dict:
+    return {"type": "inf_sound", "name": line[1:-1]}
+
+
+def addTextToLastLine(line: str, lastLine: dict) -> dict:
+    if 'image' in lastLine:
+        image = lastLine["image"]
+    else:
+        image = ''
+    return {"type": "dialogue", "name": lastLine['name'], "text": f'{lastLine["text"][:-1]} {line[1:-1]}', "image": image}
+
+
 def getHistory(file):
     file_dir = getAbsolutePath.getAbsolutePath(script_dir, DATADIRECTORY+file)
     history = []
@@ -114,6 +130,8 @@ def getHistory(file):
                 history.append(getBackground(line))
             elif line[0] == SOUND_START:
                 history.append(getSound(line))
+            elif line[0] == ADD_LINE:
+                history.append(addTextToLastLine(line, history[-1]))
             else:
                 history.append(getDescription(line))
     return history
@@ -121,4 +139,4 @@ def getHistory(file):
 
 if __name__ == "__main__":
     file = 'init.txt'
-    print(getHistory(file))
+    getHistory(file)
