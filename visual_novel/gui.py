@@ -45,7 +45,7 @@ class App:
         self.chrimage = ('none.png', 'l')
         self.newGame()
         self.soundPlayer = sound.GameSound()
-        self.soundPlayer.startInfiniteSound('main.wav')
+        self.soundPlayer.startInfiniteSound('musique_vive.wav')
         self.root.rowconfigure(2, minsize=30)
 
     def homePage(self, destroy=False):
