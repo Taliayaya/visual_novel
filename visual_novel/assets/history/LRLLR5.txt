@@ -15,6 +15,7 @@ Après un moment d'attente, le Doge est là.
 -Doge@doge.png,r: - "Et donc..."
 -Doge@doge.png,r: - "Je vais devoir vous éliminer."
 -Doge@doge.png,r: - "Ne m'en veuillez pas."
+/♫0
 ♪defeat1.wav
 =gameover.jpg
 Je sens un poignard se frayer un chemin entre mes côtes.
