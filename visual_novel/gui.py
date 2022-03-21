@@ -127,7 +127,7 @@ class App:
 
 
         label = tk.Label(troll, text=reps[variable_de_l_easter_egg])
-        input = tk.Entry(troll, textvariable=string, width=50)
+        input = tk.Entry(troll, width=50)
         bouton = tk.Button(troll, text = "Ok", command = change_rep)
         
         label.pack()
