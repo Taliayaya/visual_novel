@@ -2,6 +2,10 @@ import os
 import multiprocessing
 import playsound as ps
 import time
+import pygame
+import time
+
+
 SOUND_DIR = 'visual_novel/assets/audio/'
 script_dir = os.path.dirname(__file__)
 
@@ -12,25 +16,7 @@ class GameSound:
     def __init__(self) -> None:
         self._music_playing = []
         self._infinite_music_playing = []
-
-    def _infiniteSound(self, soundName: str) -> '_infiniteSound':
-        u"""
-        Joue un son à l'infini jusqu'à la fin du programme
-
-        Précondition:
-            soundName : str
-                Le nom du son à jouer à l'infini
-
-        Postcondition:
-            Lance la fonction startNewSound en boucle sans jamais s'arrêter
-            dès que le son est terminé
-        """
-        soundThread = multiprocessing.Process(
-            target=self.startNewSound, args=(soundName,))
-        soundThread.start()
-        soundThread.join()
-
-        return self._infiniteSound(soundName)
+        pygame.mixer.init()
 
     def startInfiniteSound(self, soundName: str):
         u"""
@@ -47,10 +33,9 @@ class GameSound:
             l'ajoute dans la liste des sons qui jouent à l'infini.
 
         """
-        infiniteThread = multiprocessing.Process(
-            target=self._infiniteSound, args=(soundName,))
-        self._infinite_music_playing.append(infiniteThread)
-        infiniteThread.start()
+        sound = pygame.mixer.Sound(f'{SOUND_DIR}{soundName}')
+        self._infinite_music_playing.append(sound)
+        sound.play(-1)
 
     def startNewSound(self, soundName: str):
         u"""
@@ -105,11 +90,7 @@ class GameSound:
 
         if num < len(self._infinite_music_playing):
 
-            self.stopAllSounds()
-            self._infinite_music_playing[num].terminate()
-
-            self._infinite_music_playing[num].join()
-            self._infinite_music_playing.pop(num)
+            self._infinite_music_playing[num].stop()
 
     def stopAllSounds(self):
         u"""
@@ -140,6 +121,7 @@ class GameSound:
 
 if __name__ == "__main__":
     sound = GameSound()
-    sound.startNewSound('main.wav')
+    sound.startInfiniteSound('main.wav')
     time.sleep(3)
-    sound.stopSound(0)
+    sound.stopInfiniteSound(0)
+    time.sleep(10)
