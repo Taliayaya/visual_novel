@@ -1,4 +1,3 @@
-from asyncio.windows_events import INFINITE
 import visual_novel.getAbsolutePath as getAbsolutePath
 import os
 
