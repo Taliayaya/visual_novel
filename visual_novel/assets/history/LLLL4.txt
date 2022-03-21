@@ -1,12 +1,12 @@
 =atelier.jpg
--Apprenti@: - "Très bien."
+-Apprenti@apprenti.png,l: - "Très bien."
 =quai_jour.png
 Nous nous dirigeons vers un ponton devant lequel des gondoles passent.
 Il semble assez nerveux et regarde tout autour de lui.
--Apprenti@: - "Voilà."
--Apprenti@: - "C'est le Doge qui a commandité l'assassinat d'hier."
--Apprenti@: - "Je l'ai vu donner des ordres à des soldats."
--Apprenti@: - "Je suis sûr qu'il est responsable."
+-Apprenti@apprenti.png,l: - "Voilà."
+-Apprenti@apprenti.png,l: - "C'est le Doge qui a commandité l'assassinat d'hier."
+-Apprenti@apprenti.png,l: - "Je l'ai vu donner des ordres à des soldats."
+-Apprenti@apprenti.png,l: - "Je suis sûr qu'il est responsable."
 Une voix retentit derrière nous.
 -Capitaine@capitaine.png,r: - "C'est une accusation bien grave jeune homme."
 -Capitaine@capitaine.png,r: - "Je vous arrête tous deux pour diffamation."

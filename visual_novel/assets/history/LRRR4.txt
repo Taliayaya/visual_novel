@@ -3,9 +3,9 @@ Je repart dans la cour du Palais.
 J'y croise un musicien, assis contre un mur.
 Je décide d'aller lui parler.
 Il me regarde d'un air suspicieux.
--Musicien@: - "Vous venez du Palais, vous seriez pas un espion par hasard ?"
--Musicien@: - "Que ce soit clair, je vous dirais rien."
--Musicien@: - "Je vous fait pas confiance."
+-Musicien@musicien.png,r: - "Vous venez du Palais, vous seriez pas un espion par hasard ?"
+-Musicien@musicien.png,r: - "Que ce soit clair, je vous dirais rien."
+-Musicien@musicien.png,r: - "Je vous fait pas confiance."
 Je renonce à le questionner.
 Je n'ai plus aucune piste.
 Mon enquête semble bloquée.

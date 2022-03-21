@@ -1,6 +1,6 @@
 =cour-palais.jpg
--Musicien@: - "Dans ce cas, Monsieur, j'ai le regret de vous dire que je ne sais rien du tout."
--Musicien@: - "Bonne journée."
+-Musicien@musicien.png,r: - "Dans ce cas, Monsieur, j'ai le regret de vous dire que je ne sais rien du tout."
+-Musicien@musicien.png,r: - "Bonne journée."
 Je décide d'aller voir le secrétaire du Doge.
 -Secrétaire@: - "Oui Monsieur, que voulez-vous ?"
 -Secrétaire@: - "Oh, il me semble que vous parliez à l'instant avec le musicien assis dans la cour, n'est-ce pas ?"
