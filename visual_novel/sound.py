@@ -36,6 +36,7 @@ class GameSound:
         sound = pygame.mixer.Sound(f'{SOUND_DIR}{soundName}')
         self._infinite_music_playing.append(sound)
         sound.play(-1)
+        print(self._infinite_music_playing)
 
     def startNewSound(self, soundName: str):
         u"""
@@ -91,6 +92,7 @@ class GameSound:
         if num < len(self._infinite_music_playing):
 
             self._infinite_music_playing[num].stop()
+            self._infinite_music_playing.pop(num)
 
     def stopAllSounds(self):
         u"""
