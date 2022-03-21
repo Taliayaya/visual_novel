@@ -97,6 +97,7 @@ class GameSound:
         Arrête tous les sons en cours et les retire de la liste
         """
         [self.stopSound(num) for num in range(len(self._music_playing))]
+        self._music_playing = []
 
     def stopAllInfiniteSounds(self):
         u"""
@@ -104,6 +105,7 @@ class GameSound:
         """
         [self.stopInfiniteSound(num)
          for num in range(len(self._infinite_music_playing))]
+        self._infinite_music_playing = []
 
     def stopEverything(self):
         u"""

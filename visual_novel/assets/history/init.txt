@@ -1,5 +1,8 @@
+§
+♫turn.wav
 /♫0
 ♫Curiosite.wav
+=quai_nuit.png
 Les senteurs de la nuit embaument l'air.
 Le grand carnaval de Venise est vraiment magnifique. Des masques de toutes couleurs et de toutes formes dissimulent les visages d'arlequins et de rois.
 /♫1

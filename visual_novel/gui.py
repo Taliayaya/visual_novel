@@ -1,4 +1,3 @@
-import string
 import sys
 import tkinter as tk
 from PIL import ImageTk, Image, ImageFilter
@@ -35,7 +34,7 @@ class App:
     def __init__(self) -> None:
 
         self.root = tk.Tk()
-        # Modifie les intéractions avec le close icon
+        # Modifie les interactions avec le close icon
         self.root.protocol('WM_DELETE_WINDOW', self.onClosing)
         self.root.geometry(f'{WIDTH}x{HEIGHT}')
         self.root.resizable(0, 0)
@@ -101,10 +100,46 @@ class App:
             self.root.quit()
             sys.exit(0)
 
+    def easter_egg(self, *arg):
+        """
+        Permet de caser une petite ref à Deltarune
+        Pas de spoil, découvrez vous-même !
+        """
+
+        global variable_de_l_easter_egg        # Une variable globale parce que ça marchait pas sans
+
+        variable_de_l_easter_egg = 0
+        troll = tk.Tk()
+
+        # Attention spoil
+
+        reps = ["Name your vessel : ", "No one can choose who he is in this world", "This is useless",
+        "You can't win", "I won't let you choose who you are", "I told you this was useless","Quit", "Just quit", "Fine, I'll do it myself"]
+
+        def change_rep():
+            global troll
+            global variable_de_l_easter_egg
+            if variable_de_l_easter_egg < len(reps)-1:
+                variable_de_l_easter_egg+=1
+                label.config(text = reps[variable_de_l_easter_egg])
+            else:
+                assert False, "GIVE UP"
+
+
+        label = tk.Label(troll, text=reps[variable_de_l_easter_egg])
+        input = tk.Entry(troll, textvariable=string, width=50)
+        bouton = tk.Button(troll, text = "Ok", command = change_rep)
+        
+        label.pack()
+        input.pack()
+        bouton.pack()
+        troll.mainloop()
+
     def start(self):
         self.setupBackground()
         self.setCharacterMessage('', '', '', False)
         self.homePage()
+        self.root.bind("g", self.easter_egg)
         # self.root.bind("<space>", self.setDialogueBox)
         # self.menu()
         # self.chooseUsername()
@@ -252,24 +287,6 @@ class App:
         if self.currentLine+1 < len(self.history):
             self.currentLine += 1
 
-    def chooseUsername(self):
-        u"""
-        Affiche un input permettant à l'utilisateur
-        de choisir son username au début du jeu.
-
-        Postcondition:
-            Affiche l'input indiquant à l'utilisateur
-            de choisir son nom et un bouton permettant
-            de valider l'input puis commencer le jeu.
-        """
-        label = tk.Label(self.root, text="Choisit ton nom : ")
-        value = tk.StringVar()
-        input = tk.Entry(self.root, textvariable=string, width=50)
-        input.grid(row=3, column=0)
-        bouton = tk.Button(self.root, text="Commencer l'aventure",
-                           command=lambda: self.setCharacterMessage(input.get(), 'No one can choose who he is in this world'))
-        bouton.pack()
-
     def menu(self):
         u"""
         Permet la création du menu supérieur
@@ -413,7 +430,9 @@ class App:
         if changeBg:
             self.char.destroy()
         self.setupBackground(False)
-
+    
+    
+        
 
 if __name__ == "__main__":
     app = App()
