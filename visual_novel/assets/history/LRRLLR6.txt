@@ -1,13 +1,14 @@
 =cour-palais.jpg
--Doge@: - "Bien, je vous souhaite une bonne continuation."
--Doge@: - "Cependant, vos...investigations ont un peu perturbé notre population."
--Doge@: - "Je vous suggère pour votre propre sécurité de quitter Venise le plus vite possible."
--Doge@: - "Je vais demander à une troupe de vous escorter."
+-Doge@doge.png,r: - "Bien, je vous souhaite une bonne continuation."
+-Doge@doge.png,r: - "Cependant, vos...investigations ont un peu perturbé notre population."
+-Doge@doge.png,r: - "Je vous suggère pour votre propre sécurité de quitter Venise le plus vite possible."
+-Doge@doge.png,r: - "Je vais demander à une troupe de vous escorter."
 Une troupe de soldats surgit de derrière la porte.
 =black_screen.png
 Je suis reconduit hors de la ville.
 Viens-je vraiment de me faire chasser comme un malpropre ?
 Mon enquête a échoué.
 Il ne me reste plus qu'à rentrer chez moi.
+♪defeat1.wav
 =gameover.jpg
 Game Over

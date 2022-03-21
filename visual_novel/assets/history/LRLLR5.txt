@@ -4,17 +4,19 @@ Je vais voir le secrétaire du Doge.
 Souhaitez vous attendre ?"
 -Moi@: - "Oui, merci"
 Après un moment d'attente, le Doge est là.
--Doge@: - "Donc...vous vouliez me parler ?"
+-Doge@doge.png,r: - "Donc...vous vouliez me parler ?"
 -Moi@: - "Oui"
--Doge@: - "Êtes vous sûr ?"
+-Doge@doge.png,r: - "Êtes vous sûr ?"
 -Moi@: - "Oui"
--Doge@: - "Je vois...vous êtes quelqu'un d'obstiné."
--Doge@: - "C'est dommage, moins d'obstination aurait pû vous permettre vivre plus longtemps."
--Doge@: - "Mais dans l'état actuel des choses..."
--Doge@: - "Je suis désolé, mais si vous fouinez plus longtemps, vous découvrirez la vérité."
--Doge@: - "Et donc..."
--Doge@: - "Je vais devoir vous éliminer."
--Doge@: - "Ne m'en veuillez pas."
+-Doge@doge.png,r: - "Je vois...vous êtes quelqu'un d'obstiné."
+-Doge@doge.png,r: - "C'est dommage, moins d'obstination aurait pû vous permettre vivre plus longtemps."
+-Doge@doge.png,r: - "Mais dans l'état actuel des choses..."
+-Doge@doge.png,r: - "Je suis désolé, mais si vous fouinez plus longtemps, vous découvrirez la vérité."
+-Doge@doge.png,r: - "Et donc..."
+-Doge@doge.png,r: - "Je vais devoir vous éliminer."
+-Doge@doge.png,r: - "Ne m'en veuillez pas."
+♪defeat1.wav
+♪defeat1.wav
 =gameover.jpg
 Je sens un poignard se frayer un chemin entre mes côtes.
 Game Over
