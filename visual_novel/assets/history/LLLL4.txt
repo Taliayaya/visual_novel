@@ -13,5 +13,7 @@ Une voix retentit derrière nous.
 -Capitaine@capitaine.png,r: - "C'est une accusation bien grave jeune homme."
 -Capitaine@capitaine.png,r: - "Je vous arrête tous deux pour diffamation."
 Je tente de m'enfuir et saute dans le canal quand une pierre me frappe en pleine tête.
+/♫8
 =gameover.jpg
+♪defeat1.wav
 Game over

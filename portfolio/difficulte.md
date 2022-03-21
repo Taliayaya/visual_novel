@@ -14,3 +14,6 @@ De même, permettre d'afficher des images de fond et des personnages a causé de
 
 Le travail de groupe a été la cause de beaucoup de stress. Les deadlines n'étaient pas respectées par l'autre partenaire, ce qui a causé beaucoup de retard pour la réalisation du code. 
 
+## Musiques
+
+Le lancement et surtout l'arrêt des musiques a été compliqué puisque le module utilisé pour le lancement des musiques ne permettait pas de couper les musiques. Il a donc fallu bricoler avec des threads pour mettre en pause les musiques.

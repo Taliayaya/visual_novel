@@ -5,6 +5,6 @@ Elle semble vexée.
 Je me rends donc au Palais et je vais voir le secrétaire du Doge.
 /♫5
 ♫entrance.wav
--Secrétaire@: - "Le Doge n'est pas là mais si vous voulez attendre un peu, je pourrais vous obtenir un rendez-vous."
--Secrétaire@: - "Souhaitez vous attendre ?"
+-Secrétaire@person2.png,r: - "Le Doge n'est pas là mais si vous voulez attendre un peu, je pourrais vous obtenir un rendez-vous."
+-Secrétaire@person2.png,r: - "Souhaitez vous attendre ?"
 #Oui, merci ~LRRL4.txt|Non, ce n'est pas la peine ~LRRR4.txt$

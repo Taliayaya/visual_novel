@@ -8,6 +8,7 @@
 -Doge@doge.png,r: - "Je vais devoir vous éliminer."
 -Doge@doge.png,r: - "Ne m'en veuillez pas."
 Je sens un poignard se frayer un chemin entre mes côtes.
+/♫7
 ♪defeat1.wav
 =gameover.jpg
 Game Over

@@ -1,7 +1,7 @@
 =cour-palais.jpg
--Secrétaire@: - "Dans ce cas, je suppose que vous êtes là pour voir le Doge."
+-Secrétaire@person2.png,r: - "Dans ce cas, je suppose que vous êtes là pour voir le Doge."
 J'acquiesce.
--Secrétaire@: - "Veuillez attendre quelques instants."
+-Secrétaire@person2.png,r: - "Veuillez attendre quelques instants."
 Après un moment d'attente, le Doge est là.
 -Doge@doge.png,r: - "Donc...vous vouliez me parler ?"
 -Moi@: - "Oui"
@@ -17,6 +17,7 @@ Après un moment d'attente, le Doge est là.
 -Doge@doge.png,r: - "Je vais devoir vous éliminer."
 -Doge@doge.png,r: - "Ne m'en veuillez pas."
 Je sens un poignard se frayer un chemin entre mes côtes.
+/♫9
 ♪defeat1.wav
 =gameover.jpg
 Game Over

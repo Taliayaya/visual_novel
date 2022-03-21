@@ -1,4 +1,5 @@
 =cour-palais.jpg
+/♫6
 -Doge@doge.png,r: - "Vraiment ?"
 -Doge@doge.png,r: - "Pourquoi m'avoir attendu dans ce cas ?"
 -Doge@doge.png,r: - "Ah...je vois."
@@ -17,6 +18,7 @@ Il me fait traverser un pont et me conduit à l'Hôtel-Dieu.
 En voyant cela, je me débat.
 Il demande à des passant de l'aide.
 -Secrétaire@: - "C'est un fou, venez m'aider à le maîtriser !"
+/♫7
 ♪defeat1.wav
 Je me retrouve donc enfermé dans une maison de malades et de fous.
 Pour toujours.

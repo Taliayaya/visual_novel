@@ -19,6 +19,8 @@ Pendant que nous progressins dans le tunnel, il rompt le silence.
 -Apprenti@apprenti.png,l: - "Ils ont probablement raison."
 -Apprenti@apprenti.png,l: - "Je ne sert à rien."
 -Apprenti@apprenti.png,l: - "Mais si je disparaissais, quelqu'un serait triste, non ?"
+/♫8
+♫Theme_sombre.wav
 Il s'interrompt.
 -Apprenti@apprenti.png,l: - "Plus un bruit maintenant."
 A travers une fente dans le mur, on apperçoit le bureau du Doge.
@@ -39,5 +41,7 @@ Je la bois sans grand appétit.
 Soudain, une douleur terrible me tord le ventre.
 Je pense fugacement qu'ils m'ont empoisonné pour que je ne parle pas.
 Je m'effondre.
+/♫9
+♪defeat1.wav
 =gameover.jpg
 Game over

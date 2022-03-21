@@ -1,6 +1,6 @@
 =cour-palais.jpg
--Secrétaire@: - "Vraiment ? Très intéressant."
--Secrétaire@: - "Cependant, je n'ai pas beaucoup de temps à vous accorder alors je vous prierais de vous en aller."
+-Secrétaire@person2.png,r: - "Vraiment ? Très intéressant."
+-Secrétaire@person2.png,r: - "Cependant, je n'ai pas beaucoup de temps à vous accorder alors je vous prierais de vous en aller."
 =quai_jour.png
 /♫8
 ♫musique_vive.wav
@@ -23,4 +23,6 @@ Je sens un bâton s'écraser dans mon dos.
 Un autre atterrit sur ma tête.
 =gameover.jpg
 Et tout devient noir.
+/♫10
+♪defeat1.wav
 Game Over

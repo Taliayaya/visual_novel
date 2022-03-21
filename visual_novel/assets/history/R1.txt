@@ -1,4 +1,4 @@
 =gameover.jpg
-♫Theme_sombre.wav
+♪defeat1
 Dans ce cas, pourquoi jouez vous à ce jeu ?
 Game Over

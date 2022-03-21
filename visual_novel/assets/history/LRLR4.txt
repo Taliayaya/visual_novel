@@ -4,8 +4,8 @@
 -Musicien@musicien.png,r: - "Bonne journée."
 ♫entrance.wav
 Je décide d'aller voir le secrétaire du Doge.
--Secrétaire@: - "Oui Monsieur, que voulez-vous ?"
+-Secrétaire@person2.png,r: - "Oui Monsieur, que voulez-vous ?"
 /♫7
 ♫Theme_sombre.wav
--Secrétaire@: - "Oh, il me semble que vous parliez à l'instant avec le musicien assis dans la cour, n'est-ce pas ?"
+-Secrétaire@person2.png,r: - "Oh, il me semble que vous parliez à l'instant avec le musicien assis dans la cour, n'est-ce pas ?"
 # Oui, le musicien semblait savoir des choses~LRLRL5.txt| Non, pas du tout~LRLRR5.txt$
