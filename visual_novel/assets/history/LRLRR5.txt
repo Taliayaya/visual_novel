@@ -7,7 +7,9 @@ Après un moment d'attente, le Doge est là.
 -Moi@: - "Oui"
 -Doge@: - "Êtes vous sûr ?"
 -Moi@: - "Oui"
+/♫8
 -Doge@: - "Je vois...vous êtes quelqu'un d'obstiné."
+♫Theme_sombre.wav
 -Doge@: - "C'est dommage, moins d'obstination aurait pû vous permettre vivre plus longtemps."
 -Doge@: - "Mais dans l'état actuel des choses..."
 -Doge@: - "Je suis désolé, mais si vous fouinez plus longtemps, vous découvrirez la vérité."

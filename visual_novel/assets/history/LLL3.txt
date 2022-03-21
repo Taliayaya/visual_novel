@@ -1,4 +1,6 @@
 =atelier.jpg
+/♫5
+♫musique_triste.wav
 -Léonard@devinci.png,r: - "Oh, très bien."
 -Léonard@devinci.png,r: - "Il est là, je te laisse."
 -Michel-Ange@: - "Bonjour, tu souhaitais me parler ?"
@@ -8,6 +10,8 @@ Je lui demande ce qu'il sais à propos du mort d'hier soir.
 -Michel-Ange@: - "Il en saura sûrement plus que moi."
 Je remarque en effet l'apprenti qui est arrivé entre temps.
 C'est un enfant assez jeune.
+/♫6
+♫Curiosite.wav
 -Apprenti@apprenti.png,l: - "Bonjour M'sieur"
 -Apprenti@apprenti.png,l: - "Vous vouliez me parler ?"
 J'acquiesce.

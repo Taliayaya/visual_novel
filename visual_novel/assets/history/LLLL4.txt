@@ -2,6 +2,8 @@
 -Apprenti@apprenti.png,l: - "Très bien."
 =quai_jour.png
 Nous nous dirigeons vers un ponton devant lequel des gondoles passent.
+/♫7
+♫Theme_sombre.wav
 Il semble assez nerveux et regarde tout autour de lui.
 -Apprenti@apprenti.png,l: - "Voilà."
 -Apprenti@apprenti.png,l: - "C'est le Doge qui a commandité l'assassinat d'hier."

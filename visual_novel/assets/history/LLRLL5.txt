@@ -1,4 +1,6 @@
 =cour-palais.jpg
+/♫8
+♫musique_irlandaise.wav
 Je retourne voir Léonard.
 -Léonard@devinci.png,r: - "Tout va bien ?"
 -Moi@: - "Oui, oui."
@@ -7,6 +9,8 @@ Je retourne voir Léonard.
 -Moi@: - "Après ta présentation au conseil, ne m'attends pas."
 -Moi@: - "J'ai quelque chose à faire."
 La présentation de Léonard se passe sans problème.
+/♫9
+♫entrance.wav
 Je vais parler au chef du conseil.
 Je lui explique tout ce que je sais.
 Il me rassure et m'assure qu'il va prendre les mesures nécessaires.

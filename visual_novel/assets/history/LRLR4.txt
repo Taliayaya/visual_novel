@@ -1,7 +1,11 @@
 =cour-palais.jpg
+/♫6
 -Musicien@musicien.png,r: - "Dans ce cas, Monsieur, j'ai le regret de vous dire que je ne sais rien du tout."
 -Musicien@musicien.png,r: - "Bonne journée."
+♫entrance.wav
 Je décide d'aller voir le secrétaire du Doge.
 -Secrétaire@: - "Oui Monsieur, que voulez-vous ?"
+/♫7
+♫Theme_sombre.wav
 -Secrétaire@: - "Oh, il me semble que vous parliez à l'instant avec le musicien assis dans la cour, n'est-ce pas ?"
 # Oui, le musicien semblait savoir des choses~LRLRL5.txt| Non, pas du tout~LRLRR5.txt$

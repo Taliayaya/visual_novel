@@ -2,9 +2,13 @@
 -Secrétaire@: - "Vraiment ? Très intéressant."
 -Secrétaire@: - "Cependant, je n'ai pas beaucoup de temps à vous accorder alors je vous prierais de vous en aller."
 =quai_jour.png
+/♫8
+♫musique_vive.wav
 Je quitte le Palais et flâne en ville, admirant le travail des fameux verriers de Murano.
 Le soir arrive.
 Je décide de rentrer à mon auberge quand je croise un groupe de gens.
+/♫9
+♫Theme_sombre.wav
 Je reconnais celui de ce matin.
 -Cuisinière@cuisiniere.png,r: - "Vous croyez que c'est sa faute ?"
 -Femme 2@femme2.png,l: - "Il l'a vraiment balancé..."

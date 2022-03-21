@@ -1,11 +1,17 @@
 =cour-palais.jpg
+/♫5
+♫Theme_sombre.wav
 -Moi@: - "Non, je doit continuer mon enquête."
 -Léonard@devinci.png,r: - "Ah, très bien."
 Il semble déçu.
 =quai_jour.png
+/♫6
+♫musique_vive.wav
 Je quitte l'atelier et vais sur les quais.
 Il semble y avoir de l'agitation.
+/♫7
 Une femme harangue la foule.
+♫Theme_sombre.wav
 -Cuisinière@cuisiniere.png,r: - "Ces bourges ont tué mon mari !"
 -Cuisinière@cuisiniere.png,r: - "Comme d'habitude, les riches se débarrassent de nous quand ils ont plus besoin de nous."
 -Cuisinière@cuisiniere.png,r: - "A mort les bourges !"

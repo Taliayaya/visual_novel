@@ -1,7 +1,9 @@
 =cour-palais.jpg
+/♫6
 Je repart dans la cour du Palais.
 J'y croise un musicien, assis contre un mur.
 Je décide d'aller lui parler.
+♫Theme_sombre.wav
 Il me regarde d'un air suspicieux.
 -Musicien@musicien.png,r: - "Vous venez du Palais, vous seriez pas un espion par hasard ?"
 -Musicien@musicien.png,r: - "Que ce soit clair, je vous dirais rien."

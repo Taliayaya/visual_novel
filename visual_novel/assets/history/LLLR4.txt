@@ -6,6 +6,8 @@ Arrivés au niveau d'un pont, il s'arrête, cherche autour de lui.
 Il se dirige vers une petite porte, sous le pont.
 Nous nous retrouvons dans un tunnel assez sombre.
 =black_screen.png
+/♫7
+♫musique_triste.wav
 Pendant que nous progressins dans le tunnel, il rompt le silence.
 -Apprenti@apprenti.png,l: - "Vous êtes-vous jamais senti inutile, M'sieur ?"
 -Apprenti@apprenti.png,l: - "Moi oui."

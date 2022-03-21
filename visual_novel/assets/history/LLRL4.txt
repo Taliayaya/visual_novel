@@ -1,9 +1,13 @@
 =atelier.jpg
 -Léonard@devinci.png,r: - "Encore merci."
+/♫5
+♫musique_douce.wav
 -Léonard@devinci.png,r: - "Mais il commence à être tard, tu devrais rentrer à ton auberge."
 -Moi@: - "En effet, je vais y aller."
 =black_screen.png
 Je rentre à l'auberge et dors jusqu'au lendemain.
+/♫6
+♫Curiosite.wav
 =atelier.jpg
 -Léonard@devinci.png,r: - "Merci de m'accompagner, pour être honnête, je suis un peu nerveux."
 Nous nous rendons vers le palais des doges.
@@ -13,6 +17,8 @@ Je décide d'aller lui parler.
 -Musicien@musicien.png,r: - Oui Monsieur, que me voulez vous ?"
 Je lui demande s'il aurait des informations sur le mort d'hier soir.
 -Musicien@musicien.png,r: - "Oh je vois."
+/♫7
+♫Theme_sombre.wav
 Il baisse la voix.
 -Musicien@musicien.png,r: - "Le Doge est assez vieux."
 -Musicien@musicien.png,r: - "Il doit préparer sa succession."

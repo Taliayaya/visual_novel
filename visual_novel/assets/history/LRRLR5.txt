@@ -4,6 +4,7 @@
 -Doge@: - "Ah...je vois."
 -Doge@: - "Ce n'est pas grave."
 -Doge@: - "Nous allons prendre soin de vous."
+♫Theme_sombre.wav
 Il murmure quelque chose à son secrétaire.
 Celui-ci me sourit gentiment.
 Que se passe-t-il ?

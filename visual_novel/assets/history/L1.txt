@@ -1,5 +1,7 @@
 Le noyé porte des vêtements dont la qualité du tissu indique son rang.
 C'est probablement un archevêque vu le type d'habits qu'il porte.
+/♫3
+♫musique_douce.wav
 Je décide de rentrer à mon auberge et de me reposer.
 =auberge.jpg
 En arrivant, je croise mon logeur.

@@ -1,4 +1,6 @@
 =cour-palais.jpg
+/♫8
+♫musique_irlandaise.wav
 Je retourne voir Léonard.
 -Léonard@devinci.png,r: - "Tout va bien ?"
 -Moi@: - "Oui, oui."
@@ -7,13 +9,17 @@ Je retourne voir Léonard.
 -Moi@: - "Après ta présentation au conseil, ne m'attends pas."
 -Moi@: - "J'ai quelque chose à faire."
 La présentation de Léonard se passe sans problème.
+/♫9
+♫entrance.wav
 Je me dirige vers le bureau du Doge.
 Le secrétaire m'introduit auprès du Doge.
 -Doge@: - "Oui, qu'y a-t-il ?"
 -Moi@: - "C'est vous."
 -Doge@: - "Je ne comprends pas, tout va bien Monsieur ?"
 -Moi@: - "C'est vous qui avez commandité l'assassinat de cet archevêque."
+/♫10
 -Doge@: - "Oh je vois."
+♫Theme_sombre.wav
 -Doge@: - "Et vous avez pensé pouvoir me causer le moindre tort ?"
 -Doge@: - "Malheureusement pour vous, je suis Doge."
 -Doge@: - "Vous ne pouvez pas juste m'accuser et espérer que tout se passe bien."

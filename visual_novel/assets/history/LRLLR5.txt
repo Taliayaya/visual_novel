@@ -3,11 +3,14 @@ Je vais voir le secrétaire du Doge.
 -Secrétaire@: - "Le Doge n'est pas là mais si vous voulez attendre un peu, je pourais vous obtenir un rendez-vous.
 Souhaitez vous attendre ?"
 -Moi@: - "Oui, merci"
+/♫6
+♪entrance.wav
 Après un moment d'attente, le Doge est là.
 -Doge@: - "Donc...vous vouliez me parler ?"
 -Moi@: - "Oui"
 -Doge@: - "Êtes vous sûr ?"
 -Moi@: - "Oui"
+♫Theme_sombre.wav
 -Doge@: - "Je vois...vous êtes quelqu'un d'obstiné."
 -Doge@: - "C'est dommage, moins d'obstination aurait pû vous permettre vivre plus longtemps."
 -Doge@: - "Mais dans l'état actuel des choses..."

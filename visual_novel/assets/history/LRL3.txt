@@ -7,6 +7,8 @@
 Je rassure la femme et me met en direction du Palais.
 =cour-palais.jpg
 Je trouve le fameux musicien et commence à le questionner.
+/♫5
+♫Theme_sombre.wav
 -Musicien@musicien.png,r: - "Donc, pour commencer...je ne vous ai rien dit du tout."
 -Musicien@musicien.png,r: - "Si on vous pose la moindre question sur le sujet, ce n'est pas à moi que vous avez posé des questions."
 -Musicien@musicien.png,r: - "Est-ce clair ?"
