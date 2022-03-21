@@ -242,6 +242,7 @@ class App:
                 self.setCharacterMessage(
                     line["name"], line['text'], '', destroy)
         else:
+            self.soundPlayer.startNewSound('turn.wav')
             # Renvoie vers une zone de choix
             choice1 = line["choice1"]
             choice2 = line["choice2"]

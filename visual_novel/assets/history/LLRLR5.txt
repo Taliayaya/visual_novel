@@ -13,20 +13,21 @@ La présentation de Léonard se passe sans problème.
 ♫entrance.wav
 Je me dirige vers le bureau du Doge.
 Le secrétaire m'introduit auprès du Doge.
--Doge@: - "Oui, qu'y a-t-il ?"
+-Doge@doge.png,r: - "Oui, qu'y a-t-il ?"
 -Moi@: - "C'est vous."
--Doge@: - "Je ne comprends pas, tout va bien Monsieur ?"
+-Doge@doge.png,r: - "Je ne comprends pas, tout va bien Monsieur ?"
 -Moi@: - "C'est vous qui avez commandité l'assassinat de cet archevêque."
 /♫10
--Doge@: - "Oh je vois."
+-Doge@doge.png,r: - "Oh je vois."
 ♫Theme_sombre.wav
--Doge@: - "Et vous avez pensé pouvoir me causer le moindre tort ?"
--Doge@: - "Malheureusement pour vous, je suis Doge."
--Doge@: - "Vous ne pouvez pas juste m'accuser et espérer que tout se passe bien."
+-Doge@doge.png,r: - "Et vous avez pensé pouvoir me causer le moindre tort ?"
+-Doge@doge.png,r: - "Malheureusement pour vous, je suis Doge."
+-Doge@doge.png,r: - "Vous ne pouvez pas juste m'accuser et espérer que tout se passe bien."
 Il sort un poignard.
--Doge@: - "Dans un certain sens, c'est vous le responsable de votre mort."
--Doge@: - "C'était assez stupide de votre part de venir voir un meurtrier."
+-Doge@doge.png,r: - "Dans un certain sens, c'est vous le responsable de votre mort."
+-Doge@doge.png,r: - "C'était assez stupide de votre part de venir voir un meurtrier."
 Je veux partir mais mes jambes ne répondent plus.
 Il me plante son poignard en plein coeur.
+♪defeat1.wav
 =gameover.jpg
 Game over

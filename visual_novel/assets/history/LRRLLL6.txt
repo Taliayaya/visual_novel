@@ -1,12 +1,13 @@
 =cour-palais.jpg
 ♫Theme_sombre.wav
--Doge@: - "Je vois...vous êtes quelqu'un d'obstiné."
--Doge@: - "C'est dommage, moins d'obstination aurait pû vous permettre vivre plus longtemps."
--Doge@: - "Mais dans l'état actuel des choses..."
--Doge@: - "Je suis désolé, mais si vous fouinez plus longtemps, vous découvrirez la vérité."
--Doge@: - "Et donc..."
--Doge@: - "Je vais devoir vous éliminer."
--Doge@: - "Ne m'en veuillez pas."
+-Doge@doge.png,r: - "Je vois...vous êtes quelqu'un d'obstiné."
+-Doge@doge.png,r: - "C'est dommage, moins d'obstination aurait pû vous permettre vivre plus longtemps."
+-Doge@doge.png,r: - "Mais dans l'état actuel des choses..."
+-Doge@doge.png,r: - "Je suis désolé, mais si vous fouinez plus longtemps, vous découvrirez la vérité."
+-Doge@doge.png,r: - "Et donc..."
+-Doge@doge.png,r: - "Je vais devoir vous éliminer."
+-Doge@doge.png,r: - "Ne m'en veuillez pas."
 Je sens un poignard se frayer un chemin entre mes côtes.
+♪defeat1.wav
 =gameover.jpg
 Game Over

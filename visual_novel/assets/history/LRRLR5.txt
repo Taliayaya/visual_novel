@@ -1,9 +1,9 @@
 =cour-palais.jpg
--Doge@: - "Vraiment ?"
--Doge@: - "Pourquoi m'avoir attendu dans ce cas ?"
--Doge@: - "Ah...je vois."
--Doge@: - "Ce n'est pas grave."
--Doge@: - "Nous allons prendre soin de vous."
+-Doge@doge.png,r: - "Vraiment ?"
+-Doge@doge.png,r: - "Pourquoi m'avoir attendu dans ce cas ?"
+-Doge@doge.png,r: - "Ah...je vois."
+-Doge@doge.png,r: - "Ce n'est pas grave."
+-Doge@doge.png,r: - "Nous allons prendre soin de vous."
 ♫Theme_sombre.wav
 Il murmure quelque chose à son secrétaire.
 Celui-ci me sourit gentiment.
@@ -17,11 +17,12 @@ Il me fait traverser un pont et me conduit à l'Hôtel-Dieu.
 En voyant cela, je me débat.
 Il demande à des passant de l'aide.
 -Secrétaire@: - "C'est un fou, venez m'aider à le maîtriser !"
-=gameover.jpg
+♪defeat1.wav
 Je me retrouve donc enfermé dans une maison de malades et de fous.
 Pour toujours.
 Merveilleux.
 Je ne peux même pas finir mon enquête.
 Quelle incroyable vie.
 C'était vraiment une mauvaise idée d'aller parler à un homme aussi puissant que le Doge.
+=gameover.jpg
 Game Over
