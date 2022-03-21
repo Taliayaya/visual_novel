@@ -1,12 +1,14 @@
+import pygame
 import os
 import multiprocessing
 import playsound as ps
 import time
-import pygame
 
 
 SOUND_DIR = 'visual_novel/assets/audio/'
 script_dir = os.path.dirname(__file__)
+
+pygame.mixer.init()
 
 
 class GameSound:
@@ -15,7 +17,6 @@ class GameSound:
     def __init__(self) -> None:
         self._music_playing = []
         self._infinite_music_playing = []
-        pygame.mixer.init()
 
     def startInfiniteSound(self, soundName: str):
         u"""
