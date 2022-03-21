@@ -3,7 +3,6 @@ import multiprocessing
 import playsound as ps
 import time
 import pygame
-import time
 
 
 SOUND_DIR = 'visual_novel/assets/audio/'
