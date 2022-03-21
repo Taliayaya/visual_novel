@@ -10,6 +10,7 @@ Je renonce à le questionner.
 Je n'ai plus aucune piste.
 Mon enquête semble bloquée.
 Je crois bien que je vais devoir rentrer sans savoir la fin de cette histoire.
+/♫
 =gameover.jpg
 ♪defeat1.wav
 Game over

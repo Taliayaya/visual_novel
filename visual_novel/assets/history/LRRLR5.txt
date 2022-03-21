@@ -16,6 +16,7 @@ Il me fait traverser un pont et me conduit à l'Hôtel-Dieu.
 En voyant cela, je me débat.
 Il demande à des passant de l'aide.
 -Secrétaire@: - "C'est un fou, venez m'aider à le maîtriser !"
+/♫
 ♪defeat1.wav
 Je me retrouve donc enfermé dans une maison de malades et de fous.
 Pour toujours.

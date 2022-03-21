@@ -17,6 +17,7 @@ Elle me crache au visage.
 +Tu va payer"
 Je sens un bâton s'écraser dans mon dos.
 Un autre atterrit sur ma tête.
+/♫
 ♪defeat1.wav
 =gameover.jpg
 Et tout devient noir.
