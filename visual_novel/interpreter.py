@@ -112,11 +112,11 @@ def getInfiniteSound(line: str) -> dict:
 
 
 def stopInfinitesound(line: str) -> dict:
-    return {"type": "stop_inf_sound", "num": line[1:-1]}
+    return {"type": "stop_inf_sound", "num": int(line[2:-1])}
 
 
 def stopSound(line: str) -> dict:
-    return {"type": "stop_sound", "num": line[1:-1]}
+    return {"type": "stop_sound", "num": int(line[2:-1])}
 
 
 def stopEverySounds() -> dict:
@@ -144,6 +144,8 @@ def getHistory(file):
                 lineDic = getBackground(line)
             elif line[0] == SOUND_START:
                 lineDic = getSound(line)
+            elif line[0] == INFINITE_SOUND_START:
+                lineDic = getInfiniteSound(line)
             elif line[0] == ADD_LINE:
                 lineDic = addTextToLastLine(line, history[-1])
             elif line[0] == STOP_ALL_SOUNDS:

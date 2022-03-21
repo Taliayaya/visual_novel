@@ -208,29 +208,32 @@ class App:
         elif line["type"] == "sound":
             self.soundPlayer.startNewSound(line['name'])
             self.currentLine += 1
-            return self.setDialogueBox(False)
+            return self.setDialogueBox(True)
 
         elif line["type"] == "inf_sound":
             self.soundPlayer.startInfiniteSound(line["name"])
             self.currentLine += 1
-            return self.setDialogueBox(False)
+            return self.setDialogueBox(True)
+        
         elif line["type"] == 'stop_inf_sound':
             self.soundPlayer.stopInfiniteSound(line['num'])
             self.currentLine += 1
-            return self.setDialogueBox(False)
+            return self.setDialogueBox(True)
+
         elif line['type'] == 'stop_sound':
             self.soundPlayer.stopSound(line["num"])
             self.currentLine += 1
-            return self.setDialogueBox(False)
+            return self.setDialogueBox(True)
+
         elif line['type'] == 'stop_all':
             self.soundPlayer.stopEverything()
             self.currentLine += 1
-            return self.setDialogueBox(False)
+            return self.setDialogueBox(True)
         print(line)
 
        # Renvoie vers l'affichage d'un texte
 
-        if line['type'] != "choice" and line['type'] != 'bg':
+        if line['type'] != "choice" and line['type'] != 'bg' and line['type'] != "sound" and line['type'] != "inf_sound" and line["type"] != "stop_inf_sound" and line["type"] != "stop_sound" and line["type"] != "stop_all":
 
             if 'image' in line:
                 self.setCharacterMessage(
@@ -245,7 +248,7 @@ class App:
             choice2 = line["choice2"]
             self.choiceContainer(choice1, choice2)
             self.isChoosing = True
-        # Augmente d'une ligne tant que l'historie n'est pas finie
+        # Augmente d'une ligne tant que l'histoire n'est pas finie
         if self.currentLine+1 < len(self.history):
             self.currentLine += 1
 
@@ -259,7 +262,7 @@ class App:
             de choisir son nom et un bouton permettant
             de valider l'input puis commencer le jeu.
         """
-        label = tk.Label(self.root, text="Choisi ton nom : ")
+        label = tk.Label(self.root, text="Choisit ton nom : ")
         value = tk.StringVar()
         input = tk.Entry(self.root, textvariable=string, width=50)
         input.grid(row=3, column=0)
