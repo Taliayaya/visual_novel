@@ -3,6 +3,7 @@
 J'acquiesce.
 -Secrétaire@: - "Veuillez attendre quelques instants."
 Après un moment d'attente, le Doge est là.
+♫Theme_sombre.wav
 -Doge@doge.png,r: - "Donc...vous vouliez me parler ?"
 -Moi@: - "Oui"
 -Doge@doge.png,r: - "Êtes vous sûr ?"
