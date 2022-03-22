@@ -1,9 +1,10 @@
 init:
+	pip install .
+deps:
 	pip install -r requirements.txt
-
 test:
-	nosetests tests
+	python tests/basic.test.py
 run:
-	python visual-novel/__init__.py
+	python visual_novel/
 clean:
 	rm -rf __pycache__
