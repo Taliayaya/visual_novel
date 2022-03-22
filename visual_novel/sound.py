@@ -50,16 +50,14 @@ class GameSound:
             Ajoute le son à la liste des sons lancés et joue l'audio
         """
         # Charge le fichier
-        soundFile = f'{SOUND_DIR}{soundName}'
+        sound  = pygame.mixer.Sound(f'{SOUND_DIR}{soundName}')
         # Crée un thread pour lancer en simultané une musique
-        soundThread = multiprocessing.Process(
-            target=ps.playsound, args=(soundFile,))
 
         # Ajoute à la liste des threads de musiques en train de jouer
-        self._music_playing.append(soundThread)
+        self._music_playing.append(sound)
 
         # Lance la musique
-        soundThread.start()
+        sound.play()
 
     def stopSound(self, num: int):
         u"""
@@ -73,8 +71,7 @@ class GameSound:
             Arrête le son et le retire de la liste des sons en cours
         """
         if num < len(self._music_playing):
-            self._music_playing[num].terminate()
-            self._music_playing[num].join()
+            self._music_playing[num].stop()
             self._music_playing.pop(num)
 
     def stopInfiniteSound(self, num: int):
