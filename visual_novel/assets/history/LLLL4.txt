@@ -2,7 +2,7 @@
 -Apprenti@apprenti.png,l: - "Très bien."
 =quai_jour.png
 Nous nous dirigeons vers un ponton devant lequel des gondoles passent.
-/♫7
+/♫0
 ♫Theme_sombre.wav
 Il semble assez nerveux et regarde tout autour de lui.
 -Apprenti@apprenti.png,l: - "Voilà."
@@ -13,7 +13,7 @@ Une voix retentit derrière nous.
 -Capitaine@capitaine.png,r: - "C'est une accusation bien grave jeune homme."
 -Capitaine@capitaine.png,r: - "Je vous arrête tous deux pour diffamation."
 Je tente de m'enfuir et saute dans le canal quand une pierre me frappe en pleine tête.
-/♫8
-=gameover.jpg
+/♫0
 ♪defeat1.wav
+=gameover.jpg
 Game over

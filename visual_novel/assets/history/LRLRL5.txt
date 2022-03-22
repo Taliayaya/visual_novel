@@ -14,13 +14,15 @@ Je reconnais celui de ce matin.
 -Femme 2@femme2.png,l: - "Il l'a vraiment balancé..."
 -Homme@person1.png,r: "Il va payer."
 Je demande ce qu'il se passe, effrayé.
--Cuisinière@cuisiniere.png,r: - "Il se passe que mon musicien s'est fait exécuter pour espionnage."
--Cuisinière@cuisiniere.png,r: - "Et que c'est ta faute."
+-Cuisinière@cuisiniere.png,r: - "Il se passe que mon musicien s'est fait exécuter pour espionnage.
++Et que c'est ta faute."
 Elle me crache au visage.
--Cuisinière@cuisiniere.png,r: - "Et maintenant..."
--Cuisinière@cuisiniere.png,r: - "Tu va payer"
+-Cuisinière@cuisiniere.png,r: - "Et maintenant...
++Tu va payer"
 Je sens un bâton s'écraser dans mon dos.
 Un autre atterrit sur ma tête.
+/♫0
+♪defeat1.wav
 =gameover.jpg
 Et tout devient noir.
 /♫10

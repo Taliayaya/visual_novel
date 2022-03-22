@@ -28,7 +28,11 @@ Il sort un poignard.
 -Doge@doge.png,r: - "C'était assez stupide de votre part de venir voir un meurtrier."
 Je veux partir mais mes jambes ne répondent plus.
 Il me plante son poignard en plein coeur.
+<<<<<<< HEAD
 /♫11
+=======
+/♫0
+>>>>>>> refs/remotes/origin/main
 ♪defeat1.wav
 =gameover.jpg
 Game over

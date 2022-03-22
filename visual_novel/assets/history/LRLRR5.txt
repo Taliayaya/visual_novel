@@ -3,6 +3,8 @@
 J'acquiesce.
 -Secrétaire@person2.png,r: - "Veuillez attendre quelques instants."
 Après un moment d'attente, le Doge est là.
+/♫0
+♫Theme_sombre.wav
 -Doge@doge.png,r: - "Donc...vous vouliez me parler ?"
 -Moi@: - "Oui"
 -Doge@doge.png,r: - "Êtes vous sûr ?"
@@ -17,7 +19,11 @@ Après un moment d'attente, le Doge est là.
 -Doge@doge.png,r: - "Je vais devoir vous éliminer."
 -Doge@doge.png,r: - "Ne m'en veuillez pas."
 Je sens un poignard se frayer un chemin entre mes côtes.
+<<<<<<< HEAD
 /♫9
+=======
+/♫0
+>>>>>>> refs/remotes/origin/main
 ♪defeat1.wav
 =gameover.jpg
 Game Over

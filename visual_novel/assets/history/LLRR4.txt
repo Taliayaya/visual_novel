@@ -19,7 +19,11 @@ La foule me remarque soudain.
 Je suis tétanisé.
 -Cuisinière@cuisiniere.png,r: - "A mort les bourges !"
 Je me prend un coup de fourche.
+<<<<<<< HEAD
 /♫8
+=======
+/♫0
+>>>>>>> refs/remotes/origin/main
 ♪defeat1.wav
 =gameover.jpg
 Game over

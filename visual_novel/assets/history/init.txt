@@ -5,7 +5,7 @@
 =quai_nuit.png
 Les senteurs de la nuit embaument l'air.
 Le grand carnaval de Venise est vraiment magnifique. Des masques de toutes couleurs et de toutes formes dissimulent les visages d'arlequins et de rois.
-/♫1
+/♫0
 ♫Theme_sombre.wav
 Tous profitent de la fête quand soudain un cri retentit.
 La foule s'agite : un homme déguisé en roi mage se tient péniblement debout.
@@ -16,7 +16,7 @@ Des exclamations fusent.
 - Personne 3 @person3.png,l: - "Que s'est-il passé ?"
 Cet homme, ce noyé... ne semble pas particulièrement fragile physiquement.
 Aurait-il vraiment pu se noyer de manière accidentelle ?
-/♫2
+/♫0
 ♫Curiosite.wav
 Et dans le doute, ne vaudrait-il pas mener une enquête ?
 #Oui, il faut mener une enquête~L1.txt|Non, ce n'est pas la peine.~R1.txt$

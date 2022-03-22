@@ -41,7 +41,11 @@ Je la bois sans grand appétit.
 Soudain, une douleur terrible me tord le ventre.
 Je pense fugacement qu'ils m'ont empoisonné pour que je ne parle pas.
 Je m'effondre.
+<<<<<<< HEAD
 /♫9
+=======
+/♫0
+>>>>>>> refs/remotes/origin/main
 ♪defeat1.wav
 =gameover.jpg
 Game over

@@ -154,8 +154,8 @@ class App:
         self.changeFile()
         self.isChoosing = False
         self.chrimage = ''
-        # self.bgimage = 'quai_nuit.png'
         if move:
+            self.bgimage = 'quai_nuit.png'
             self.setupBackground()
             self.setDialogueBox()
 
@@ -249,7 +249,7 @@ class App:
             self.soundPlayer.startInfiniteSound(line["name"])
             self.currentLine += 1
             return self.setDialogueBox(True)
-        
+
         elif line["type"] == 'stop_inf_sound':
             self.soundPlayer.stopInfiniteSound(line['num'])
             self.currentLine += 1
