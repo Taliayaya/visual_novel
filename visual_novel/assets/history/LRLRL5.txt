@@ -12,7 +12,7 @@ Je décide de rentrer à mon auberge quand je croise un groupe de gens.
 Je reconnais celui de ce matin.
 -Cuisinière@cuisiniere.png,r: - "Vous croyez que c'est sa faute ?"
 -Femme 2@femme2.png,l: - "Il l'a vraiment balancé..."
--Homme@person1.png,r: "Il va payer."
+-Homme@person1.png,r: -"Il va payer."
 Je demande ce qu'il se passe, effrayé.
 -Cuisinière@cuisiniere.png,r: - "Il se passe que mon musicien s'est fait exécuter pour espionnage.
 +Et que c'est ta faute."
@@ -25,6 +25,4 @@ Un autre atterrit sur ma tête.
 ♪defeat1.wav
 =gameover.jpg
 Et tout devient noir.
-/♫0
-♪defeat1.wav
 Game Over
