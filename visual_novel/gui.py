@@ -106,7 +106,8 @@ class App:
         Pas de spoil, découvrez vous-même !
         """
 
-        global variable_de_l_easter_egg        # Une variable globale parce que ça marchait pas sans
+        # Une variable globale parce que ça marchait pas sans
+        global variable_de_l_easter_egg
 
         variable_de_l_easter_egg = 0
         troll = tk.Tk()
@@ -114,22 +115,21 @@ class App:
         # Attention spoil
 
         reps = ["Name your vessel : ", "No one can choose who he is in this world", "This is useless",
-        "You can't win", "I won't let you choose who you are", "I told you this was useless","Quit", "Just quit", "Fine, I'll do it myself"]
+                "You can't win", "I won't let you choose who you are", "I told you this was useless", "Quit", "Just quit", "Fine, I'll do it myself"]
 
         def change_rep():
             global troll
             global variable_de_l_easter_egg
             if variable_de_l_easter_egg < len(reps)-1:
-                variable_de_l_easter_egg+=1
-                label.config(text = reps[variable_de_l_easter_egg])
+                variable_de_l_easter_egg += 1
+                label.config(text=reps[variable_de_l_easter_egg])
             else:
                 assert False, "GIVE UP"
 
-
         label = tk.Label(troll, text=reps[variable_de_l_easter_egg])
         input = tk.Entry(troll, width=50)
-        bouton = tk.Button(troll, text = "Ok", command = change_rep)
-        
+        bouton = tk.Button(troll, text="Ok", command=change_rep)
+
         label.pack()
         input.pack()
         bouton.pack()
@@ -287,13 +287,13 @@ class App:
         if self.currentLine+1 < len(self.history):
             self.currentLine += 1
 
-
     def set_help_box(self):
         u"""
         Permet d'ouvrir une boite informative indiquant comment avancer dans le jeu.
         """
         print("help")
-        tkinter.messagebox.showinfo("Quitter le jeu", "Êtes-vous sûr de vouloir quitter le jeu ?\nToute progression non-sauvegardée sera perdue. ")
+        tkinter.messagebox.showinfo(
+            "Quitter le jeu", "Êtes-vous sûr de vouloir quitter le jeu ?\nToute progression non-sauvegardée sera perdue. ")
 
     def menu(self):
         u"""
@@ -324,10 +324,11 @@ class App:
 
         # HELP MENU
         self.help = tk.Menu(self.menuContainer, tearoff=0)
-        self.menuContainer.add_cascade(label="Aide", menu=self.help, command = self.set_help_box)
+        self.help.add_command(label="Comment jouer ?",
+                              command=self.set_help_box)
+        self.menuContainer.add_cascade(label="Aide", menu=self.help)
 
         self.root.config(menu=self.menuContainer)
-
 
     def setupBackground(self, changeBg=True):
         u"""
@@ -434,9 +435,7 @@ class App:
         if changeBg:
             self.char.destroy()
         self.setupBackground(False)
-    
-    
-        
+
 
 if __name__ == "__main__":
     app = App()
