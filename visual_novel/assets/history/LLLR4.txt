@@ -6,7 +6,7 @@ Arrivés au niveau d'un pont, il s'arrête, cherche autour de lui.
 Il se dirige vers une petite porte, sous le pont.
 Nous nous retrouvons dans un tunnel assez sombre.
 =black_screen.png
-/♫7
+/♫0
 ♫musique_triste.wav
 Pendant que nous progressins dans le tunnel, il rompt le silence.
 -Apprenti@apprenti.png,l: - "Vous êtes-vous jamais senti inutile, M'sieur ?"
@@ -19,7 +19,7 @@ Pendant que nous progressins dans le tunnel, il rompt le silence.
 -Apprenti@apprenti.png,l: - "Ils ont probablement raison."
 -Apprenti@apprenti.png,l: - "Je ne sert à rien."
 -Apprenti@apprenti.png,l: - "Mais si je disparaissais, quelqu'un serait triste, non ?"
-/♫8
+/♫0
 ♫Theme_sombre.wav
 Il s'interrompt.
 -Apprenti@apprenti.png,l: - "Plus un bruit maintenant."
@@ -41,11 +41,7 @@ Je la bois sans grand appétit.
 Soudain, une douleur terrible me tord le ventre.
 Je pense fugacement qu'ils m'ont empoisonné pour que je ne parle pas.
 Je m'effondre.
-<<<<<<< HEAD
-/♫9
-=======
 /♫0
->>>>>>> refs/remotes/origin/main
 ♪defeat1.wav
 =gameover.jpg
 Game over

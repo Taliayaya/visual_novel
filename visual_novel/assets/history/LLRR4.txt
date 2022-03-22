@@ -1,15 +1,15 @@
 =cour-palais.jpg
-/♫5
+/♫0
 ♫Theme_sombre.wav
 -Moi@: - "Non, je doit continuer mon enquête."
 -Léonard@devinci.png,r: - "Ah, très bien."
 Il semble déçu.
 =quai_jour.png
-/♫6
+/♫0
 ♫musique_vive.wav
 Je quitte l'atelier et vais sur les quais.
 Il semble y avoir de l'agitation.
-/♫7
+/♫0
 Une femme harangue la foule.
 ♫Theme_sombre.wav
 -Cuisinière@cuisiniere.png,r: - "Ces bourges ont tué mon mari !"
@@ -19,11 +19,7 @@ La foule me remarque soudain.
 Je suis tétanisé.
 -Cuisinière@cuisiniere.png,r: - "A mort les bourges !"
 Je me prend un coup de fourche.
-<<<<<<< HEAD
-/♫8
-=======
 /♫0
->>>>>>> refs/remotes/origin/main
 ♪defeat1.wav
 =gameover.jpg
 Game over
