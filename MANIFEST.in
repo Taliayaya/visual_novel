@@ -1,4 +1,6 @@
 include visual_novel/assets
 include visual_novel/assets/history/*
-include visual_novel/assets/images/*
-include visual_novel/assets/saves/*
+include visual_novel/assets/images/bg/*
+include visual_novel/assets/images/chr/*
+include visual_novel/assets/audio/*
+include visual_novel/assets/menu/*
