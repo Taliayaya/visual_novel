@@ -2,12 +2,12 @@
 -Secrétaire@person2.png,r: - "Vraiment ? Très intéressant."
 -Secrétaire@person2.png,r: - "Cependant, je n'ai pas beaucoup de temps à vous accorder alors je vous prierais de vous en aller."
 =quai_jour.png
-/♫8
+/♫0
 ♫musique_vive.wav
 Je quitte le Palais et flâne en ville, admirant le travail des fameux verriers de Murano.
 Le soir arrive.
 Je décide de rentrer à mon auberge quand je croise un groupe de gens.
-/♫9
+/♫0
 ♫Theme_sombre.wav
 Je reconnais celui de ce matin.
 -Cuisinière@cuisiniere.png,r: - "Vous croyez que c'est sa faute ?"
@@ -25,6 +25,6 @@ Un autre atterrit sur ma tête.
 ♪defeat1.wav
 =gameover.jpg
 Et tout devient noir.
-/♫10
+/♫0
 ♪defeat1.wav
 Game Over

@@ -1,5 +1,5 @@
 =quai_jour.png
-/♫4
+/♫0
 ♫musique_vive.wav
 En me rendant au palais des Doges, je croise un attroupement avec une femme au centre.
 -Femme@cuisiniere.png,r: - "Oui, moi je vous dis que le mort a un lien avec le palais."
