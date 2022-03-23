@@ -8,4 +8,4 @@ Je décide d'aller voir le secrétaire du Doge.
 /♫0
 ♫Theme_sombre.wav
 -Secrétaire@person2.png,r: - "Oh, il me semble que vous parliez à l'instant avec le musicien assis dans la cour, n'est-ce pas ?"
-# Oui, le musicien semblait savoir des choses~LRLRL5.txt| Non, pas du tout~LRLRR5.txt$
+# "Oui, le musicien semblait savoir des choses."~LRLRL5.txt| "Non, pas du tout."~LRLRR5.txt$

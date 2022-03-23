@@ -14,11 +14,11 @@ La présentation de Léonard se passe sans problème.
 Je me dirige vers le bureau du Doge.
 Le secrétaire m'introduit auprès du Doge.
 -Doge@doge.png,r: - "Oui, qu'y a-t-il ?"
--Moi@: - "C'est vous."
--Doge@doge.png,r: - "Je ne comprends pas, tout va bien Monsieur ?"
--Moi@: - "C'est vous qui avez commandité l'assassinat de cet archevêque."
+-Moi@: - "C'est vous !"
+-Doge@doge.png,r: - "Je ne comprends pas, tout va bien, Monsieur ?"
+-Moi@: - "C'est vous qui avez commandité l'assassinat de cet archevêque !"
 /♫0
--Doge@doge.png,r: - "Oh je vois."
+-Doge@doge.png,r: - "Oh, je vois."
 ♫Theme_sombre.wav
 -Doge@doge.png,r: - "Et vous avez pensé pouvoir me causer le moindre tort ?"
 -Doge@doge.png,r: - "Malheureusement pour vous, je suis Doge."

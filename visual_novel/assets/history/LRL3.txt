@@ -1,15 +1,15 @@
 =quai_jour.png
--Cuisinière@cuisiniere.png,r: - "Bah si vous voulez vraiment en savoir plus sur ce que j'dis, 'pouvez allez voir le musicien qui joue dans la cour du Palais."
+-Cuisinière@cuisiniere.png,r: - "Bah, si vous voulez vraiment en savoir plus sur ce que j'dis, 'pouvez allez voir le musicien qui joue dans la cour du Palais."
 -Cuisinière@cuisiniere.png,r: - "Il a vu et entendu des choses intéressantes."
--Femme 2@femme2.png,l: - "Tu veux surtout pousser les badauds à aller le voir."
--Femme 2@femme2.png,l: - "C'est mignon l'amour mais tes manigances ça va pas l'aider pour les fins de mois."
+-Femme 2@femme2.png,l: - "Tu veux surtout pousser les badauds à aller le voir, histoire qu'ils lui donnent des piécettes !"
+-Femme 2@femme2.png,l: - "C'est mignon, l'amour, mais tes manigances, ça va pas l'aider pour les fins de mois."
 -Cuisinière@cuisiniere.png,r: - "Si Monsieur veut pas aller voir mon musicien, je vais pas le forcer."
-Je rassure la femme et me met en direction du Palais.
+Je rassure la femme et me mets en direction du Palais.
 =cour-palais.jpg
 Je trouve le fameux musicien et commence à le questionner.
 /♫0
 ♫Theme_sombre.wav
--Musicien@musicien.png,r: - "Donc, pour commencer...je ne vous ai rien dit du tout."
+-Musicien@musicien.png,r: - "Donc, pour commencer... je ne vous ai rien dit du tout."
 -Musicien@musicien.png,r: - "Si on vous pose la moindre question sur le sujet, ce n'est pas à moi que vous avez posé des questions."
 -Musicien@musicien.png,r: - "Est-ce clair ?"
-#Oui ~LRLL4.txt|Non ~LRLR4.txt$
+#"Oui." ~LRLL4.txt|"Non." ~LRLR4.txt$

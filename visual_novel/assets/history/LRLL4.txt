@@ -3,7 +3,7 @@
 -Musicien@musicien.png,r: - "Il doit préparer sa succession."
 -Musicien@musicien.png,r: - "Cependant, selon les lois de Venise, le Doge est élu par un conseil."
 -Musicien@musicien.png,r: - "Donc pour que son fils puisse accéder au poste de Doge, il lui faut éliminer toute menace ou..."
--Musicien@musicien.png,r: - "...concurrent."
+-Musicien@musicien.png,r: - "... concurrent."
 -Musicien@musicien.png,r: - "Vous comprenez dans ce cas que la mort d'un jeune archevêque brillant est une aubaine pour lui."
 -Musicien@musicien.png,r: - "De plus, je travaille assez tard le soir, à chanter et jouer de la vielle."
 -Musicien@musicien.png,r: - "Et hier, peu avant que le carnaval ne commence, il y a eu un grand remue-ménage dans la cour."

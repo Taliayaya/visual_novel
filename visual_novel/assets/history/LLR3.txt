@@ -10,4 +10,4 @@ Il soulève le drap.
 -Léonard@devinci.png,r: - "Merci, je suis touché."
 -Léonard@devinci.png,r: - "D'ailleurs, je vais la livrer demain."
 -Léonard@devinci.png,r: - "Voudrais-tu m'accompagner ?"
-#Oui~LLRL4.txt|Non~LLRR4.txt$
+#"Oui."~LLRL4.txt|"Non."~LLRR4.txt$

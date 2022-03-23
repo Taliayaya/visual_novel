@@ -5,16 +5,16 @@ J'acquiesce.
 Après un moment d'attente, le Doge est là.
 /♫0
 ♫Theme_sombre.wav
--Doge@doge.png,r: - "Donc...vous vouliez me parler ?"
--Moi@: - "Oui"
--Doge@doge.png,r: - "Êtes vous sûr ?"
--Moi@: - "Oui"
+-Doge@doge.png,r: - "Donc... vous vouliez me parler ?"
+-Moi@: - "Oui."
+-Doge@doge.png,r: - "Êtes-vous sûr ?"
+-Moi@: - "Oui."
 /♫0
--Doge@doge.png,r: - "Je vois...vous êtes quelqu'un d'obstiné."
+-Doge@doge.png,r: - "Je vois... vous êtes quelqu'un d'obstiné."
 ♫Theme_sombre.wav
--Doge@doge.png,r: - "C'est dommage, moins d'obstination aurait pû vous permettre vivre plus longtemps."
+-Doge@doge.png,r: - "C'est dommage, moins d'obstination aurait pu vous permettre de vivre plus longtemps."
 -Doge@doge.png,r: - "Mais dans l'état actuel des choses..."
--Doge@doge.png,r: - "Je suis désolé, mais si vous fouinez plus longtemps, vous découvrirez la vérité."
+-Doge@doge.png,r: - "Je suis désolé, mais si vous fouinez plus, vous découvrirez la vérité."
 -Doge@doge.png,r: - "Et donc..."
 -Doge@doge.png,r: - "Je vais devoir vous éliminer."
 -Doge@doge.png,r: - "Ne m'en veuillez pas."

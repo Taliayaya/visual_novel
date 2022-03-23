@@ -1,6 +1,6 @@
 =cour-palais.jpg
 Je vais voir le secrétaire du Doge.
--Secrétaire@person2.png,r: - "Le Doge n'est pas là mais si vous voulez attendre un peu, je pourrai vous obtenir un rendez-vous."
+-Secrétaire@person2.png,r: - "Le Doge n'est pas là, mais si vous voulez attendre un peu, je pourrai vous obtenir un rendez-vous."
 -Secrétaire@person2.png,r: - "Souhaitez-vous attendre ?"
 -Moi@: - "Oui, merci."
 /♫0

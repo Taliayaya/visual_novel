@@ -1,6 +1,4 @@
 §
-♫turn.wav
-/♫0
 ♫Curiosite.wav
 =quai_nuit.png
 Les senteurs de la nuit embaument l'air.

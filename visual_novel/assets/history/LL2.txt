@@ -14,4 +14,4 @@ Au milieu de la foule, je reconnais une tête familière.
 -Léonard@devinci.png,r: - "Pas en public ! Les gens sont assez peu tolérants sur ce genre de sujets."
 -Moi@: - "Oui, pardon, excuse-moi."
 -Léonard@devinci.png,r: - "Tu voulais poser des questions à Michel-Ange ?"
-#Oui, désolé ~L/LLL3.txt| Non, ce n'est pas la peine, je souhaite continuer à parler avec toi~R/LLR3.txt$
+#"Oui, désolé." ~L/LLL3.txt| "Non, ce n'est pas la peine, je souhaite continuer à parler avec toi."~R/LLR3.txt$
