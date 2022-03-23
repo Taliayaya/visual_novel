@@ -32,3 +32,5 @@ Il me plante son poignard en plein coeur.
 ♪defeat1.wav
 =gameover.jpg
 Game over
+=credits.png
+Crédits

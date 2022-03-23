@@ -16,3 +16,5 @@ Je crois bien que je vais devoir rentrer sans savoir le fin mot de cette histoir
 /♫0
 =gameover.jpg
 Game over
+=credits.png
+Crédits

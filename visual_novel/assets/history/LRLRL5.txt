@@ -26,3 +26,5 @@ Un autre atterrit sur ma tête.
 =gameover.jpg
 Et tout devient noir.
 Game Over
+=credits.png
+Crédits

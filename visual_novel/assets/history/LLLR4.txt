@@ -45,3 +45,5 @@ Je m'effondre.
 ♪defeat1.wav
 =gameover.jpg
 Game over
+=credits.png
+Crédits

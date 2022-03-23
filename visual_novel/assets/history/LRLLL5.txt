@@ -13,3 +13,5 @@ Il est condamné à la prison à vie pour avoir tenté de renverser la républiq
 ♪victory.wav
 =record-coupe.png
 GG ^^
+=credits.png
+Crédits

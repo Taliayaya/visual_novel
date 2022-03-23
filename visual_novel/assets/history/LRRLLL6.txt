@@ -12,3 +12,5 @@ Je sens un poignard se frayer un chemin entre mes côtes.
 ♪defeat1.wav
 =gameover.jpg
 Game Over
+=credits.png
+Crédits

@@ -17,3 +17,5 @@ Je tente de m'enfuir et saute dans le canal quand une pierre me frappe en pleine
 ♪defeat1.wav
 =gameover.jpg
 Game over
+=credits.png
+Crédits

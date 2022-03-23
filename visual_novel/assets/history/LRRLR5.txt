@@ -28,3 +28,5 @@ Quelle incroyable vie.
 C'était vraiment une mauvaise idée d'aller parler à un homme aussi puissant que le Doge.
 =gameover.jpg
 Game Over
+=credits.png
+Crédits
