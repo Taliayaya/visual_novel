@@ -2,7 +2,7 @@
 Ses yeux s'éclairent.
 -Léonard@devinci.png,r: - "Vraiment ?"
 -Léonard@devinci.png,r: - "J'en suis ravi."
--Léonard@devinci.png,r: - "Pour être honnête, je ne suis pas juste ici pour voir l'atelier de Michel-Ange"
+-Léonard@devinci.png,r: - "Pour être honnête, je ne suis pas juste ici pour voir l'atelier de Michel-Ange."
 -Léonard@devinci.png,r: - "Le conseil de Venise m'a demandé de concevoir une nouvelle machine de guerre."
 -Léonard@devinci.png,r: - "Regarde, elle est là sous ce drap."
 Il soulève le drap.

@@ -8,8 +8,8 @@ Nous nous retrouvons dans un tunnel assez sombre.
 =black_screen.png
 /♫0
 ♫musique_triste.wav
-Pendant que nous progressins dans le tunnel, il rompt le silence.
--Apprenti@apprenti.png,l: - "Vous êtes-vous jamais senti inutile, M'sieur ?"
+Pendant que nous progressons dans le tunnel, il rompt le silence.
+-Apprenti@apprenti.png,l: - "Vous-êtes-vous jamais senti inutile, M'sieur ?"
 -Apprenti@apprenti.png,l: - "Moi oui."
 -Apprenti@apprenti.png,l: - "Avant que je devienne apprenti, j'étais un gamin des rues."
 -Apprenti@apprenti.png,l: - "Je me sentais comme un poids pour les autres."
@@ -17,7 +17,7 @@ Pendant que nous progressins dans le tunnel, il rompt le silence.
 -Apprenti@apprenti.png,l: - "Quand les maîtres peignent une toile, ils ne me laissent quasiment pas les aider."
 -Apprenti@apprenti.png,l: - "Je le vois bien dans leurs yeux, ils ont peur que je gâche tout."
 -Apprenti@apprenti.png,l: - "Ils ont probablement raison."
--Apprenti@apprenti.png,l: - "Je ne sert à rien."
+-Apprenti@apprenti.png,l: - "Je ne sers à rien."
 -Apprenti@apprenti.png,l: - "Mais si je disparaissais, quelqu'un serait triste, non ?"
 /♫0
 ♫Theme_sombre.wav
@@ -32,7 +32,7 @@ Il continue à voix basse.
 -Apprenti@apprenti.png,l: - "Je crois que c'est le Doge qui a commandité le meurtre d'hier soir."
 Une voix s'élève derrière nous.
 -Capitaine@capitaine.png,r: - "Et moi je crois que vous en savez trop."
-Un homme en armure se tient devant nous.
+Nous nous retournons. Un homme en armure se tient devant nous.
 Plusieurs autres soldats semblent le suivre.
 Nous sommes rapidement arrêtés, malgré une résistance de ma part.
 =cour-palais.jpg

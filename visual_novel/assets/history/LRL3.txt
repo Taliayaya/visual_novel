@@ -3,7 +3,7 @@
 -Cuisinière@cuisiniere.png,r: - "Il a vu et entendu des choses intéressantes."
 -Femme 2@femme2.png,l: - "Tu veux surtout pousser les badauds à aller le voir."
 -Femme 2@femme2.png,l: - "C'est mignon l'amour mais tes manigances ça va pas l'aider pour les fins de mois."
--Cuisinière@cuisiniere.png,r: - "Si Monsieur veux pas aller voir mon musicien, je vais pas le forcer."
+-Cuisinière@cuisiniere.png,r: - "Si Monsieur veut pas aller voir mon musicien, je vais pas le forcer."
 Je rassure la femme et me met en direction du Palais.
 =cour-palais.jpg
 Je trouve le fameux musicien et commence à le questionner.

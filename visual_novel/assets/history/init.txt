@@ -18,5 +18,5 @@ Cet homme, ce noyé... ne semble pas particulièrement fragile physiquement.
 Aurait-il vraiment pu se noyer de manière accidentelle ?
 /♫0
 ♫Curiosite.wav
-Et dans le doute, ne vaudrait-il pas mener une enquête ?
+Et dans le doute, ne faudrait-il pas mener une enquête ?
 #Oui, il faut mener une enquête~L1.txt|Non, ce n'est pas la peine.~R1.txt$

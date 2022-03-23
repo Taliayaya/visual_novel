@@ -100,46 +100,44 @@ class App:
             self.root.quit()
             sys.exit(0)
 
-    def easter_egg(self, *arg):
+    def easter_egg(self, arg):
         u"""
         Permet de caser une petite ref à Deltarune
         Pas de spoil, découvrez vous-même !
         """
 
-        # Une variable globale parce que ça marchait pas sans
-        global variable_de_l_easter_egg
-
-        variable_de_l_easter_egg = 0
-        troll = tk.Tk()
+        self.variable_de_l_easter_egg = 0
+        self.troll = tk.Tk()
 
         # Attention spoil
 
-        reps = ["Name your vessel : ", "No one can choose who he is in this world", "This is useless",
+        self.reps = ["Name your vessel : ", "No one can choose who he is in this world", "This is useless",
                 "You can't win", "I won't let you choose who you are", "I told you this was useless", "Quit", "Just quit", "Fine, I'll do it myself"]
 
-        def change_rep():
-            global troll
-            global variable_de_l_easter_egg
-            if variable_de_l_easter_egg < len(reps)-1:
-                variable_de_l_easter_egg += 1
-                label.config(text=reps[variable_de_l_easter_egg])
-            else:
-                assert False, "GIVE UP"
-
-        label = tk.Label(troll, text=reps[variable_de_l_easter_egg])
-        input = tk.Entry(troll, width=50)
-        bouton = tk.Button(troll, text="Ok", command=change_rep)
+        label = tk.Label(self.troll, text=self.reps[self.variable_de_l_easter_egg])
+        input = tk.Entry(self.troll, width=50)
+        bouton = tk.Button(self.troll, text="Ok", command=lambda: self.change_rep(label))
 
         label.pack()
         input.pack()
         bouton.pack()
-        troll.mainloop()
+        self.troll.mainloop()
+
+    def change_rep(self, label):
+        """
+        Fonction utilisée par l'easter egg pour changer les répliques
+        """
+        if self.variable_de_l_easter_egg < len(self.reps)-1:
+            self.variable_de_l_easter_egg += 1
+            label.config(text=self.reps[self.variable_de_l_easter_egg])
+        else:
+            assert False, "GIVE UP"
 
     def start(self):
         self.setupBackground()
         self.setCharacterMessage('', '', '', False)
         self.homePage()
-        self.root.bind("g", self.easter_egg)
+        self.root.bind("<g>", self.easter_egg)
         # self.root.bind("<space>", self.setDialogueBox)
         # self.menu()
         # self.chooseUsername()
@@ -291,9 +289,8 @@ class App:
         u"""
         Permet d'ouvrir une boite informative indiquant comment avancer dans le jeu.
         """
-        print("help")
         tkinter.messagebox.showinfo(
-            "Quitter le jeu", "Êtes-vous sûr de vouloir quitter le jeu ?\nToute progression non-sauvegardée sera perdue. ")
+            "Aide", "Pour avancer dans l'histoire, appuyer sur espace\nPour faire un choix, cliquer un des boutons apparus à l'écran\n????G????")
 
     def menu(self):
         u"""

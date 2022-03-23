@@ -5,13 +5,13 @@ Je me rends à l'atelier.
 Il y a beaucoup de badauds attroupés, admirant les oeuvres peintes par de grands maîtres, à travers la fenêtre.
 Au milieu de la foule, je reconnais une tête familière.
 -Moi@: - "Leonardo da Vinci !"
--Léonard @devinci.png,r: - "Que fait-tu ici ?"
+-Léonard@devinci.png,r: - "Que fais-tu ici ?"
 -Moi@: - "Je suis venu pour le carnaval, mais il y a eu un cadavre retrouvé hier soir et...
 +Je voulais en savoir plus alors mon aubergiste m'a suggéré de venir ici."
 -Moi@: - "Et toi ?"
 -Léonard@devinci.png,r: - "Mon ami Michel-Ange m'a invité ici pour me montrer son atelier de peinture."
 -Moi@: - "Michel-Ange ? Ce n'est pas celui que tu..."
--Léonard@devinci.png,r: - "Pas en public ! Les gens sont assez peu tolérants sur ce genre de sujets"
--Moi@: - "Oui, pardon, excuse moi."
+-Léonard@devinci.png,r: - "Pas en public ! Les gens sont assez peu tolérants sur ce genre de sujets."
+-Moi@: - "Oui, pardon, excuse-moi."
 -Léonard@devinci.png,r: - "Tu voulais poser des questions à Michel-Ange ?"
 #Oui, désolé ~L/LLL3.txt| Non, ce n'est pas la peine, je souhaite continuer à parler avec toi~R/LLR3.txt$
