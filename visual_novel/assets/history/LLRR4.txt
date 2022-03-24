@@ -1,7 +1,7 @@
 =cour-palais.jpg
 /♫0
 ♫Theme_sombre.wav
--Moi@: - "Non, je doit continuer mon enquête."
+-Moi@: - "Non, je dois continuer mon enquête."
 -Léonard@devinci.png,r: - "Ah, très bien."
 Il semble déçu.
 =quai_jour.png
@@ -23,3 +23,5 @@ Je me prend un coup de fourche.
 ♪defeat1.wav
 =gameover.jpg
 Game over
+=credits.png
+Crédits

@@ -14,17 +14,17 @@ Nous nous rendons vers le palais des doges.
 =cour-palais.jpg
 Dans la cour, nous croisons un musicien.
 Je décide d'aller lui parler.
--Musicien@musicien.png,r: - Oui Monsieur, que me voulez vous ?"
+-Musicien@musicien.png,r: - Oui Monsieur, que me voulez-vous ?"
 Je lui demande s'il aurait des informations sur le mort d'hier soir.
--Musicien@musicien.png,r: - "Oh je vois."
+-Musicien@musicien.png,r: - "Oh, je vois."
 /♫0
 ♫Theme_sombre.wav
 Il baisse la voix.
 -Musicien@musicien.png,r: - "Le Doge est assez vieux."
 -Musicien@musicien.png,r: - "Il doit préparer sa succession."
 -Musicien@musicien.png,r: - "Cependant, selon les lois de Venise, le Doge est élu par un conseil."
--Musicien@musicien.png,r: - "Donc pour que son fils puisse accéder au poste de Doge, il lui faut éliminer toute menace ou..."
--Musicien@musicien.png,r: - "concurrent."
+-Musicien@musicien.png,r: - "Donc, pour que son fils puisse accéder au poste de Doge, il lui faut éliminer toute menace ou..."
+-Musicien@musicien.png,r: - "... concurrent."
 -Musicien@musicien.png,r: - "Vous comprenez dans ce cas que la mort d'un jeune archevêque brillant est une aubaine pour lui."
 -Musicien@musicien.png,r: - "De plus, je travaille assez tard le soir, à chanter et jouer de la vielle."
 -Musicien@musicien.png,r: - "Et hier, peu avant que le carnaval ne commence, il y a eu un grand remue-ménage dans la cour."
@@ -38,7 +38,7 @@ Voilà l'affaire résolue.
 Par un musicien dans la cour du Palais.
 Que faudrait-il faire maintenant ?
 Il est impossible de faire arrêter le Doge par les voies normales.
-Faudrait-il aller voir le conseil et tenter de faire arrêter le Doge avec des mesures exeptionnelles ?
+Faudrait-il aller voir le conseil et tenter de faire arrêter le Doge avec des mesures exceptionnelles ?
 Faudrait-il tenter de confronter le Doge ?
-Que doit-je faire ?
+Que dois-je faire ?
 #Aller voir le conseil ~LLRLL5.txt| Aller voir le doge ~LLRLR5.txt$

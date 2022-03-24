@@ -2,7 +2,7 @@
 /♫0
 -Doge@doge.png,r: - "Vraiment ?"
 -Doge@doge.png,r: - "Pourquoi m'avoir attendu dans ce cas ?"
--Doge@doge.png,r: - "Ah...je vois."
+-Doge@doge.png,r: - "Ah... je vois."
 -Doge@doge.png,r: - "Ce n'est pas grave."
 -Doge@doge.png,r: - "Nous allons prendre soin de vous."
 ♫Theme_sombre.wav
@@ -15,8 +15,8 @@ Le secrétaire me prend par l'épaule.
 -Secrétaire@: - "Venez avec moi."
 =quai_jour.png
 Il me fait traverser un pont et me conduit à l'Hôtel-Dieu.
-En voyant cela, je me débat.
-Il demande à des passant de l'aide.
+En voyant cela, je me débats.
+Il demande à des passants de l'aide.
 -Secrétaire@: - "C'est un fou, venez m'aider à le maîtriser !"
 /♫0
 ♪defeat1.wav
@@ -28,3 +28,5 @@ Quelle incroyable vie.
 C'était vraiment une mauvaise idée d'aller parler à un homme aussi puissant que le Doge.
 =gameover.jpg
 Game Over
+=credits.png
+Crédits

@@ -1,20 +1,20 @@
 =cour-palais.jpg
 Je vais voir le secrétaire du Doge.
--Secrétaire@: - "Le Doge n'est pas là mais si vous voulez attendre un peu, je pourais vous obtenir un rendez-vous.
-Souhaitez vous attendre ?"
--Moi@: - "Oui, merci"
+-Secrétaire@person2.png,r: - "Le Doge n'est pas là, mais si vous voulez attendre un peu, je pourrai vous obtenir un rendez-vous."
+-Secrétaire@person2.png,r: - "Souhaitez-vous attendre ?"
+-Moi@: - "Oui, merci."
 /♫0
 ♪entrance.wav
 Après un moment d'attente, le Doge est là.
--Doge@doge.png,r: - "Donc...vous vouliez me parler ?"
--Moi@: - "Oui"
--Doge@doge.png,r: - "Êtes vous sûr ?"
--Moi@: - "Oui"
+-Doge@doge.png,r: - "Donc... vous vouliez me parler ?"
+-Moi@: - "Oui."
+-Doge@doge.png,r: - "Êtes-vous sûr ?"
+-Moi@: - "Oui."
 ♫Theme_sombre.wav
--Doge@doge.png,r: - "Je vois...vous êtes quelqu'un d'obstiné."
--Doge@doge.png,r: - "C'est dommage, moins d'obstination aurait pû vous permettre vivre plus longtemps."
+-Doge@doge.png,r: - "Je vois... vous êtes quelqu'un d'obstiné."
+-Doge@doge.png,r: - "C'est dommage, moins d'obstination aurait pu vous permettre de vivre plus longtemps."
 -Doge@doge.png,r: - "Mais dans l'état actuel des choses..."
--Doge@doge.png,r: - "Je suis désolé, mais si vous fouinez plus longtemps, vous découvrirez la vérité."
+-Doge@doge.png,r: - "Je suis désolé, mais si vous fouinez plus, vous découvrirez la vérité."
 -Doge@doge.png,r: - "Et donc..."
 -Doge@doge.png,r: - "Je vais devoir vous éliminer."
 -Doge@doge.png,r: - "Ne m'en veuillez pas."
@@ -23,3 +23,5 @@ Après un moment d'attente, le Doge est là.
 =gameover.jpg
 Je sens un poignard se frayer un chemin entre mes côtes.
 Game Over
+=credits.png
+Crédits

@@ -1,5 +1,7 @@
 =gameover.jpg
 /♫0
 ♪defeat1.wav
-Dans ce cas, pourquoi jouez vous à ce jeu ?
+Dans ce cas, pourquoi jouez-vous à ce jeu ?
 Game Over
+=credits.png
+Crédits

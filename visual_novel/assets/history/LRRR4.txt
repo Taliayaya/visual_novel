@@ -1,18 +1,20 @@
 =cour-palais.jpg
 /♫0
-Je repart dans la cour du Palais.
+Je repars dans la cour du Palais.
 J'y croise un musicien, assis contre un mur.
 Je décide d'aller lui parler.
 ♫Theme_sombre.wav
 Il me regarde d'un air suspicieux.
 -Musicien@musicien.png,r: - "Vous venez du Palais, vous seriez pas un espion par hasard ?"
--Musicien@musicien.png,r: - "Que ce soit clair, je vous dirais rien."
--Musicien@musicien.png,r: - "Je vous fait pas confiance."
+-Musicien@musicien.png,r: - "Que ce soit clair, je vous dirai rien."
+-Musicien@musicien.png,r: - "Je vous fais pas confiance."
 Je renonce à le questionner.
 Je n'ai plus aucune piste.
 Mon enquête semble bloquée.
-Je crois bien que je vais devoir rentrer sans savoir la fin de cette histoire.
+Je crois bien que je vais devoir rentrer sans savoir le fin mot de cette histoire.
 ♪defeat1.wav
 /♫0
 =gameover.jpg
 Game over
+=credits.png
+Crédits

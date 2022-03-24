@@ -2,11 +2,11 @@
 /♫0
 ♫musique_vive.wav
 En me rendant au palais des Doges, je croise un attroupement avec une femme au centre.
--Femme@cuisiniere.png,r: - "Oui, moi je vous dis que le mort a un lien avec le palais."
+-Femme@cuisiniere.png,r: - "Oui, moi je vous dis que le mort a un lien avec le Palais."
 -Femme@cuisiniere.png,r: - "Y a tout le monde qu'est bizarre là-bas."
 -Femme@cuisiniere.png,r: - "Et je sais de quoi je parle, j'y suis cuisinière."
--Femme 2@femme2.png,l: - "Encore en train de raconter des salades, non ?"
+-Femme 2@femme2.png,l: - "Tu serais pas encore en train de raconter des salades, non ?"
 -Femme 2@femme2.png,l: - "Bien sûr que tout le monde est bizarre au Palais, le mort est quelqu'un d'important."
--Cuisinière@cuisiniere.png,r: - "Des morts importants il y en a tout les jours, à cause de bandits. Pourquoi çui-là poserait plus de problèmes que les autres ?"
+-Cuisinière@cuisiniere.png,r: - "Des morts importants, il y en a tous les jours, à cause de bandits. Pourquoi çui-là poserait plus de problèmes que les autres ?"
 -Cuisinière@cuisiniere.png,r: - "Hep vous, vous aussi vous trouvez qu'elle est bizarre cette mort, pas vrai ?"
-#Oui, je suis d'accord et voudrais en savoir plus.~LRL3.txt|Je souhaite juste continuer mon chemin...~LRR3.txt$
+#"Oui, je suis d'accord et voudrais en savoir plus."~LRL3.txt|"Je souhaite juste continuer mon chemin..."~LRR3.txt$
